@@ -153,7 +153,8 @@ try:
             print ('\n' + R + '[-]' + C + ' Unable to Get IP : ' + W + str(e))
             os.remove(pid_path)
             sys.exit()
-                
+
+    #Set scan data.                
     start_time = datetime.datetime.now()
     meta.update({'Version': str(version)})
     meta.update({'Date': str(datetime.date.today())})
@@ -162,6 +163,7 @@ try:
     meta.update({'Start Time': str(start_time.strftime('%I:%M:%S %p'))})
     data['module-FinalRecon'] = meta
 
+    #Check output
     if output != 'None':
         fpath = usr_data
         fname = str(fpath) + str(hostname) + '.' + str(output)
@@ -176,10 +178,12 @@ try:
             
     from modules.export import export
     
+    #Header Information.
     if headinfo == True:
         from modules.headers import headers
         headers(target, output, data)
-        
+
+    #WhoIs scan.    
     if whois == True:
         from scans.whois import whois_lookup
         whois_lookup(ip, output, data)
@@ -191,10 +195,10 @@ try:
         output = 'None'
         os.remove(pid_path)
         sys.exit()
-        
+
+    #Set time scan process.    
     end_time = datetime.datetime.now() - start_time
-    print ('\n' + G + '[+]' + C + ' Completed in ' + W + str(end_time) + '\n')
-    
+    print ('\n' + G + '[+]' + C + ' Completed in ' + W + str(end_time) + '\n')    
     @atexit.register
     def call_export():
         meta.update({'End Time': str(datetime.datetime.now().strftime('%I:%M:%S %p'))})
