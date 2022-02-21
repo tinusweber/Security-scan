@@ -7,3 +7,5 @@ lxml
 dnslib
 tldextract
 icmplib
+webtech
+cfscrape

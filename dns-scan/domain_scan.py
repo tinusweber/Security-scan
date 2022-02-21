@@ -36,7 +36,7 @@ else:
 
 with open(path_to_script + '/requirements.txt', 'r') as rqr:
 	pkg_list = rqr.read().strip().split('\n')
-
+banner()	
 print('\n' + G + '[+]' + C + ' Checking Dependencies...' + W + '\n')
 
 for pkg in pkg_list:
