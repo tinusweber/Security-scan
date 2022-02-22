@@ -127,7 +127,6 @@ except SystemExit:
 	sys.exit()
 
 target = args.url
-
 full = args.full
 headinfo = args.headers
 whois = args.whois
