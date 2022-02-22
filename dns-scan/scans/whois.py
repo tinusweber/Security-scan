@@ -37,8 +37,10 @@ def whois_lookup(ip, output, data):
 			collect.update({'Error':str(e)})
 		pass
 	
+	#If output is not empty define whois_output
 	if output != 'None':
 		whois_output(output, data, collect)
 
+#Define output data
 def whois_output(output, data, collect):
 	data['module-Whois Lookup'] = collect

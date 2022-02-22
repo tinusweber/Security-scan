@@ -36,7 +36,6 @@ else:
 
 with open(path_to_script + '/requirements.txt', 'r') as rqr:
 	pkg_list = rqr.read().strip().split('\n')
-banner()	
 print('\n' + G + '[+]' + C + ' Checking Dependencies...' + W + '\n')
 
 for pkg in pkg_list:
@@ -64,11 +63,37 @@ parser.add_argument('--whois', help='Whois Lookup', action='store_true')
 #parser.add_argument('--sub', help='Sub-Domain Enumeration', action='store_true')
 #parser.add_argument('--trace', help='Traceroute', action='store_true')
 #parser.add_argument('--dir', help='Directory Search', action='store_true')
-#parser.add_argument('--ps', help='Fast Port Scan', action='store_true')
+parser.add_argument('--ps', help='Fast Port Scan', action='store_true')
 #parser.add_argument('--full', help='Full Recon', action='store_true')
 
+#Argument voor extra opties.
 ext_help = parser.add_argument_group('Extra Options')
 ext_help.add_argument('-o', help='Export Output [ Default : txt ] [ Available : xml, csv ]')
+ext_help.add_argument('-e', help='File Extensions [ Example : txt, xml, php ]')
+
+ext_help.add_argument('-p', type=int, help='Port for Traceroute [ Default : 80 / 33434 ]')
+ext_help.add_argument('-t', type=int, help='Number of Threads [ Default : 30 ]')
+ext_help.add_argument('-T', type=float, help='Request Timeout [ Default : 30.0 ]')
+ext_help.add_argument('-w', help='Path to Wordlist [ Default : wordlists/dirb_common.txt ]')
+ext_help.add_argument('-r', action='store_true', help='Allow Redirect [ Default : False ]')
+ext_help.add_argument('-s', action='store_false', help='Toggle SSL Verification [ Default : True ]')
+ext_help.add_argument('-sp', type=int, help='Specify SSL Port [ Default : 443 ]')
+ext_help.add_argument('-d', help='Custom DNS Servers [ Default : 1.1.1.1 ]')
+ext_help.add_argument('-m', help='Traceroute Mode [ Default : UDP ] [ Available : TCP, ICMP ]')
+ext_help.add_argument('-tt', type=float, help='Traceroute Timeout [ Default : 1.0 ]')
+ext_help.set_defaults(
+	t = 30,
+	T = 30.0,
+	w = path_to_script + '/wordlists/dirb_common.txt',
+	r = False,
+	s = True,
+	sp = 443,
+	d = '1.1.1.1',
+	e = '',
+	m = 'UDP',
+	p = 33434,
+	tt = 1.0,
+	o = 'txt')
 
 try:
 	args = parser.parse_args()
@@ -84,7 +109,7 @@ whois = args.whois
 #dns = args.dns
 #trace = args.trace
 #dirrec = args.dir
-#pscan = args.ps
+pscan = args.ps
 #full = args.full
 #threads = args.t
 #tout = args.T
@@ -96,7 +121,7 @@ whois = args.whois
 #filext = args.e
 #subd = args.sub
 #mode = args.m
-#port = args.p
+port = args.p
 #tr_tout = args.tt
 output = args.o
 
@@ -132,7 +157,7 @@ def full_recon():
 #	from scans.traceroute import troute
 	from scans.whois import whois_lookup
 #	from scans.dirrec import hammer
-#	from scans.portscan import ps
+	from scans.portscan import ps
 #	from scans.subdom import subdomains
 	headers(target, output, data)
 #	cert(hostname, sslp, output, data)
@@ -143,7 +168,7 @@ def full_recon():
 #	else:
 #		pass
 #	troute(ip, mode, port, tr_tout, output, data)
-#	ps(ip, output, data)
+	ps(ip, output, data)
 #	crawler(target, output, data)
 #	hammer(target, threads, tout, wdlist, redir, sslv, dserv, output, data, filext)
 
@@ -187,7 +212,7 @@ try:
 	meta.update({'Target': str(target)})
 	meta.update({'IP Address': str(ip)})
 	meta.update({'Start Time': str(start_time.strftime('%I:%M:%S %p'))})
-	data['module-FinalRecon'] = meta
+	data['module-dns_scan'] = meta
 
 	if output != 'None':
 		fpath = usr_data

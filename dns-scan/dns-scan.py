@@ -1,15 +1,8 @@
+from inspect import trace
 import os
 import sys
 import atexit
 import importlib.util
-
-import json
-import socket
-import requests
-import datetime
-import ipaddress
-import tldextract
-import argparse
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -18,9 +11,13 @@ W = '\033[0m'  # white
 
 version = '1.0.2'
 home = os.getenv('HOME')
-pid_path = home + '/.local/share/dns-scan/dns-scan.pid'
-usr_data = home + '/.local/share/dns-scan/dumps/'
-conf_path = home + '/.config/dns-scan'
+#pid_path = home + '/.local/share/dns-scan/dns-scan.pid'
+#usr_data = home + '/.local/share/dns-scan/dumps/'
+#conf_path = home + '/.config/dns-scan'
+pid_path = home + '/Tools/Security-scan/dns-scan/output/dns-scan.pid'
+usr_data = home + '/Tools/Security-scan/dns-scan/output/dumps/'
+conf_path = home + '/Tools/Security-scan/dns-scan/conf'
+
 path_to_script = os.path.dirname(os.path.realpath(__file__))
 src_conf_path = path_to_script + '/conf/'
 fail = False
@@ -79,17 +76,48 @@ if fail == True:
 	os.remove(pid_path)
 	sys.exit()
 
+import argparse
+
 #Argument usage.
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description='Domain scan | v{}'.format(version))
 parser.add_argument('url', help='Target URL')
 
 #Argument scans.
 parser.add_argument('--headers', help='Header Information', action='store_true')
 parser.add_argument('--whois', help='Whois Lookup', action='store_true')
+parser.add_argument('--ps', help='Fast Port Scan', action='store_true')
+parser.add_argument('--full', help='Full Recon', action='store_true')
+parser.add_argument('--sslinfo', help='SSL Certificate Information', action='store_true')
+parser.add_argument('--sub', help='Sub-Domain Enumeration', action='store_true')
 
 #Argument voor extra opties.
 ext_help = parser.add_argument_group('Extra Options')
 ext_help.add_argument('-o', help='Export Output [ Default : txt ] [ Available : xml, csv ]')
+ext_help.add_argument('-e', help='File Extensions [ Example : txt, xml, php ]')
+
+ext_help.add_argument('-p', type=int, help='Port for Traceroute [ Default : 80 / 33434 ]')
+ext_help.add_argument('-t', type=int, help='Number of Threads [ Default : 30 ]')
+ext_help.add_argument('-T', type=float, help='Request Timeout [ Default : 30.0 ]')
+ext_help.add_argument('-w', help='Path to Wordlist [ Default : wordlists/dirb_common.txt ]')
+ext_help.add_argument('-r', action='store_true', help='Allow Redirect [ Default : False ]')
+ext_help.add_argument('-s', action='store_false', help='Toggle SSL Verification [ Default : True ]')
+ext_help.add_argument('-sp', type=int, help='Specify SSL Port [ Default : 443 ]')
+ext_help.add_argument('-d', help='Custom DNS Servers [ Default : 1.1.1.1 ]')
+ext_help.add_argument('-m', help='Traceroute Mode [ Default : UDP ] [ Available : TCP, ICMP ]')
+ext_help.add_argument('-tt', type=float, help='Traceroute Timeout [ Default : 1.0 ]')
+ext_help.set_defaults(
+	t = 30,
+	T = 30.0,
+	w = path_to_script + '/wordlists/dirb_common.txt',
+	r = False,
+	s = True,
+	sp = 443,
+	d = '1.1.1.1',
+	e = '',
+	m = 'UDP',
+	p = 33434,
+	tt = 1.0,
+	o = 'txt')
 
 #Parse arguments.
 try:
@@ -98,23 +126,59 @@ except SystemExit:
 	os.remove(pid_path)
 	sys.exit()
 
+target = args.url
+
+full = args.full
+headinfo = args.headers
+whois = args.whois
+pscan = args.ps
+port = args.p
+sslinfo = args.sslinfo
+#sslv = args.s
+sslp = args.sp
+#crawl = args.crawl
+#dns = args.dns
+#trace = args.trace
+#dirrec = args.dir
+#threads = args.t
+tout = args.T
+#wdlist = args.w
+#redir = args.r
+#dserv = args.d
+filext = args.e
+subd = args.sub
+mode = args.m
+tr_tout = args.tt
+
+output = args.o
+
+import json
+import socket
+import requests
+import datetime
+import ipaddress
+import tldextract
+
 type_ip = False
 data = {}
 meta = {}
 
-target = args.url
-
-headinfo = args.headers
-whois = args.whois
-
-output = args.o
-
 #Define full reconnaissance.
 def full_recon():
-	from modules.headers import headers
-	from scans.whois import whois_lookup
-	headers(target, output, data)
-	whois_lookup(ip, output, data)
+    from modules.headers import headers
+    from scans.whois import whois_lookup
+    from scans.portscan import ps
+    from scans.sslinfo import cert
+    from scans.subdom import subdomains
+    headers(target, output, data)
+    whois_lookup(ip, output, data)
+    ps(ip, output, data)
+    cert(hostname, sslp, output, data)
+    if type_ip == False:
+        subdomains(domain, tout, output, data, conf_path)
+    else:
+        pass
+    
     
 try:
     logo()
@@ -134,17 +198,15 @@ try:
         pass
         
     print (G + '[+]' + C + ' Target : ' + W + target)
-
     ext = tldextract.extract(target)
     domain = ext.registered_domain
     hostname = '.'.join(part for part in ext if part)
-        
+
+    #Check of IP geldig adress is.    
     try:
         ipaddress.ip_address(hostname)
         type_ip = True
         ip = hostname
-    
-    #Check of IP geldig adress is.
     except:
         try:
             ip = socket.gethostbyname(hostname)
@@ -156,12 +218,13 @@ try:
 
     #Set scan data.                
     start_time = datetime.datetime.now()
+
     meta.update({'Version': str(version)})
     meta.update({'Date': str(datetime.date.today())})
     meta.update({'Target': str(target)})
     meta.update({'IP Address': str(ip)})
     meta.update({'Start Time': str(start_time.strftime('%I:%M:%S %p'))})
-    data['module-FinalRecon'] = meta
+    data['module-dns_scan'] = meta
 
     #Check output
     if output != 'None':
@@ -169,8 +232,8 @@ try:
         fname = str(fpath) + str(hostname) + '.' + str(output)
         
         if not os.path.exists(fpath):
-            os.makedirs(fpath)
-            output = {
+                os.makedirs(fpath)
+        output = {
 		    'format': output,
 		    'file': fname,
 		    'export': False
@@ -178,6 +241,10 @@ try:
             
     from modules.export import export
     
+    #Full scan
+    if full == True:
+        full_recon()
+
     #Header Information.
     if headinfo == True:
         from modules.headers import headers
@@ -189,8 +256,31 @@ try:
         whois_lookup(ip, output, data)
     else:
         pass
-    
-    if any([headinfo, whois]) != True:
+
+    #Port scan.
+    if pscan == True:
+        from scans.portscan import ps
+        ps(ip, output, data)
+
+    #Scan SSL information
+    if sslinfo == True:
+        from scans.sslinfo import cert
+        cert(hostname, sslp, output, data)
+
+    #Scan Sub Domains
+    if subd == True and type_ip == False:
+        from scans.subdom import subdomains
+        subdomains(domain, tout, output, data, conf_path)
+    elif subd == True and type_ip == True:
+        print(R + '[-]' + C + ' Sub-Domain Enumeration is Not Supported for IP Addresses' + W + '\n')
+        os.remove(pid_path)
+        sys.exit()
+    else:
+        pass
+
+
+    #crawl, dns, trace,  dirrec
+    if any([full, headinfo, whois, pscan, sslinfo, subd]) != True: 
         print ('\n' + R + '[-] Error : ' + C + 'At least One Argument is Required with URL' + W)
         output = 'None'
         os.remove(pid_path)
@@ -198,7 +288,8 @@ try:
 
     #Set time scan process.    
     end_time = datetime.datetime.now() - start_time
-    print ('\n' + G + '[+]' + C + ' Completed in ' + W + str(end_time) + '\n')    
+    print ('\n' + G + '[+]' + C + ' Completed in ' + W + str(end_time) + '\n')
+    
     @atexit.register
     def call_export():
         meta.update({'End Time': str(datetime.datetime.now().strftime('%I:%M:%S %p'))})
@@ -208,8 +299,7 @@ try:
             export(output, data)
             
     os.remove(pid_path)
-    sys.exit()
-    
+    sys.exit() 
 except KeyboardInterrupt:
     print (R + '[-]' + C + ' Keyboard Interrupt.' + W + '\n')
     os.remove(pid_path)

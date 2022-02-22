@@ -12,6 +12,8 @@ Y = '\033[33m' # yellow
 root = ''
 
 def export(output, data):
+
+    #if export file is not equal to a txt extension.
     if output['format'] != 'txt':
         if output['export'] == True:
             fname = output['file']
@@ -27,6 +29,8 @@ def export(output, data):
                     exit()
         else:
             pass
+    
+    #If export file is equal to txt extension.
     elif output['format'] == 'txt':
         fname = output['file']
         print(Y + '[!]' + C + ' Exporting to ' + W + fname + '\n')
@@ -56,6 +60,7 @@ def txt_unpack(outfile, k, v):
     else:
         pass
 
+#Export as TXT
 def txt_export(data, outfile):
     for k, v in data.items():
         if k.startswith('module'):
@@ -75,9 +80,10 @@ def txt_export(data, outfile):
             outfile.write(' : ')
             outfile.write(str(v) + '\n')
 
+#Export as XML
 def xml_export(output, data, outfile):
     global root
-    root = ET.Element('finalrecon')
+    root = ET.Element('dns-scan')
     modules = ET.Element('modules')
 
     for k, v in data.items():
@@ -121,6 +127,7 @@ def xml_export(output, data, outfile):
     else:
         pass
 
+#Export as CSV
 def csv_export(output, data, outfile):
     global root
     key_list = []
