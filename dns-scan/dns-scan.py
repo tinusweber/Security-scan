@@ -177,8 +177,7 @@ def full_recon():
         subdomains(domain, tout, output, data, conf_path)
     else:
         pass
-    
-    
+       
 try:
     logo()
 
