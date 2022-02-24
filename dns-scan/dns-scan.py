@@ -133,17 +133,8 @@ whois = args.whois
 pscan = args.ps
 port = args.p
 sslinfo = args.sslinfo
-#sslv = args.s
 sslp = args.sp
-#crawl = args.crawl
-#dns = args.dns
-#trace = args.trace
-#dirrec = args.dir
-#threads = args.t
 tout = args.T
-#wdlist = args.w
-#redir = args.r
-#dserv = args.d
 filext = args.e
 subd = args.sub
 mode = args.m
@@ -165,18 +156,18 @@ meta = {}
 #Define full reconnaissance.
 def full_recon():
     from modules.headers import headers
-    from scans.whois import whois_lookup
-    from scans.portscan import ps
     from scans.sslinfo import cert
+    from scans.whois import whois_lookup
+    from scans.portscan import ps  
     from scans.subdom import subdomains
     headers(target, output, data)
-    whois_lookup(ip, output, data)
-    ps(ip, output, data)
     cert(hostname, sslp, output, data)
+    whois_lookup(ip, output, data)
     if type_ip == False:
         subdomains(domain, tout, output, data, conf_path)
     else:
         pass
+    ps(ip, output, data)
        
 try:
     logo()
@@ -276,8 +267,6 @@ try:
     else:
         pass
 
-
-    #crawl, dns, trace,  dirrec
     if any([full, headinfo, whois, pscan, sslinfo, subd]) != True: 
         print ('\n' + R + '[-] Error : ' + C + 'At least One Argument is Required with URL' + W)
         output = 'None'
