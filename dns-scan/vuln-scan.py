@@ -214,243 +214,242 @@ tool_names = [
                 ["aspnet_config_err","ASP.Net Misconfiguratie - Controleert op ASP.Net Misconfiguratie.","wget",1],
 
                 #3
-                ["wp_check","WordPress Checker - Checks for WordPress Installation.","wget",1],
+                ["wp_check","WordPress Checker - Controles voor WordPress-installatie.","wget",1],
 
                 #4
-                ["drp_check", "Drupal Checker - Checks for Drupal Installation.","wget",1],
+                ["drp_check", "Drupal Checker - Controles voor Drupal-installatie.","wget",1],
 
                 #5
-                ["joom_check", "Joomla Checker - Checks for Joomla Installation.","wget",1],
+                ["joom_check", "Joomla Checker - Controleert op Joomla-installatie.","wget",1],
 
                 #6
-                ["uniscan","Uniscan - Checks for robots.txt & sitemap.xml","uniscan",1],
+                ["uniscan","Uniscan - Controles op robots.txt & sitemap.xml","uniscan",1],
 
                 #7
-                ["wafw00f","Wafw00f - Checks for Application Firewalls.","wafw00f",1],
+                ["wafw00f","Wafw00f - Controles voor applicatie-firewalls.","wafw00f",1],
 
                 #8
                 ["nmap","Nmap - Fast Scan [Only Few Port Checks]","nmap",1],
 
                 #9
-                ["theHarvester","The Harvester - Scans for emails using Google's passive search.","theHarvester",1],
+                ["theHarvester","The Harvester - Scant op e-mails met de passieve zoekfunctie van Google.","theHarvester",1],
 
                 #10
-                ["dnsrecon","DNSRecon - Attempts Multiple Zone Transfers on Nameservers.","dnsrecon",1],
+                ["dnsrecon","DNSRecon - Pogingen om meerdere zones over te dragen op naamservers.","dnsrecon",1],
 
                 #11
                 #["fierce","Fierce - Attempts Zone Transfer [No Brute Forcing]","fierce",1],
 
                 #12
-                ["dnswalk","DNSWalk - Attempts Zone Transfer.","dnswalk",1],
+                ["dnswalk","DNSWalk - Pogingen Zone Transfer.","dnswalk",1],
 
                 #13
-                ["whois","WHOis - Checks for Administrator's Contact Information.","whois",1],
+                ["whois","WHOis - Controles voor de contactgegevens van de beheerder.","whois",1],
 
                 #14
-                ["nmap_header","Nmap [XSS Filter Check] - Checks if XSS Protection Header is present.","nmap",1],
+                ["nmap_header","Nmap [XSS Filter Check] - Controleert of XSS Protection Header aanwezig is.","nmap",1],
 
                 #15
-                ["nmap_sloris","Nmap [Slowloris DoS] - Checks for Slowloris Denial of Service Vulnerability.","nmap",1],
+                ["nmap_sloris","Nmap [Slowloris DoS] - Controles op een denial-of-service-kwetsbaarheid van Slowloris.","nmap",1],
 
                 #16
-                ["sslyze_hbleed","SSLyze - Checks only for Heartbleed Vulnerability.","sslyze",1],
+                ["sslyze_hbleed","SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.","sslyze",1],
 
                 #17
-                ["nmap_hbleed","Nmap [Heartbleed] - Checks only for Heartbleed Vulnerability.","nmap",1],
+                ["nmap_hbleed","Nmap [Heartbleed] - Controleert alleen op Heartbleed-kwetsbaarheid.","nmap",1],
 
                 #18
-                ["nmap_poodle","Nmap [POODLE] - Checks only for Poodle Vulnerability.","nmap",1],
+                ["nmap_poodle","Nmap [POODLE] - Controleert alleen op Poodle-kwetsbaarheid.","nmap",1],
 
                 #19
-                ["nmap_ccs","Nmap [OpenSSL CCS Injection] - Checks only for CCS Injection.","nmap",1],
+                ["nmap_ccs","Nmap [OpenSSL CCS Injection] - Controleert alleen voor CCS-injectie.","nmap",1],
 
                 #20
-                ["nmap_freak","Nmap [FREAK] - Checks only for FREAK Vulnerability.","nmap",1],
+                ["nmap_freak","Nmap [FREAK] - Controleert alleen op FREAK-kwetsbaarheid.","nmap",1],
 
                 #21
-                ["nmap_logjam","Nmap [LOGJAM] - Checks for LOGJAM Vulnerability.","nmap",1],
+                ["nmap_logjam","Nmap [LOGJAM] - Controles op LOGJAM-kwetsbaarheid.","nmap",1],
 
                 #22
-                ["sslyze_ocsp","SSLyze - Checks for OCSP Stapling.","sslyze",1],
+                ["sslyze_ocsp","SSLyze - Controles voor OCSP-nieten.","sslyze",1],
 
                 #23
-                ["sslyze_zlib","SSLyze - Checks for ZLib Deflate Compression.","sslyze",1],
+                ["sslyze_zlib","SSLyze - Controles voor ZLib Deflate-compressie.","sslyze",1],
 
                 #24
-                ["sslyze_reneg","SSLyze - Checks for Secure Renegotiation Support and Client Renegotiation.","sslyze",1],
+                ["sslyze_reneg","SSLyze - Controles voor veilige heronderhandelingsondersteuning en klantheronderhandeling.","sslyze",1],
 
                 #25
-                ["sslyze_resum","SSLyze - Checks for Session Resumption Support with [Session IDs/TLS Tickets].","sslyze",1],
+                ["sslyze_resum","SSLyze - Controles voor ondersteuning voor sessiehervatting met [Session IDs/TLS Tickets].","sslyze",1],
 
                 #26
-                ["lbd","LBD - Checks for DNS/HTTP Load Balancers.","lbd",1],
+                ["lbd","LBD - Controleert op DNS/HTTP Load Balancers.","lbd",1],
 
                 #27
-                ["golismero_dns_malware","Golismero - Checks if the domain is spoofed or hijacked.","golismero",1],
+                ["golismero_dns_malware","Golismero - Controleert of het domein is spoofed of hijacked.","golismero",1],
 
                 #28
-                ["golismero_heartbleed","Golismero - Checks only for Heartbleed Vulnerability.","golismero",1],
+                ["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
 
                 #29
-                ["golismero_brute_url_predictables","Golismero - BruteForces for certain files on the Domain.","golismero",1],
+                ["golismero_brute_url_predictables","Golismero - BruteForces voor bepaalde bestanden op het domein.","golismero",1],
 
                 #30
-                ["golismero_brute_directories","Golismero - BruteForces for certain directories on the Domain.","golismero",1],
+                ["golismero_brute_directories","Golismero - BruteForces voor bepaalde mappen op het domein.","golismero",1],
 
                 #31
                 ["golismero_sqlmap","Golismero - SQLMap [Retrieves only the DB Banner]","golismero",1],
 
                 #32
-                ["dirb","DirB - Brutes the target for Open Directories.","dirb",1],
+                ["dirb","DirB - Brutes het doelwit voor Open Directory's.","dirb",1],
 
                 #33
-                ["xsser","XSSer - Checks for Cross-Site Scripting [XSS] Attacks.","xsser",1],
+                ["xsser","XSSer - Controle voor Cross-Site Scripting [XSS] Attacks.","xsser",1],
 
                 #34
-                ["golismero_ssl_scan","Golismero SSL Scans - Performs SSL related Scans.","golismero",1],
+                ["golismero_ssl_scan","Golismero SSL Scans - Voert SSL-gerelateerde scans uit.","golismero",1],
 
                 #35
-                ["golismero_zone_transfer","Golismero Zone Transfer - Attempts Zone Transfer.","golismero",1],
+                ["golismero_zone_transfer","Golismero Zone Transfer - Pogingen Zone Transfer.","golismero",1],
 
                 #36
-                ["golismero_nikto","Golismero Nikto Scans - Uses Nikto Plugin to detect vulnerabilities.","golismero",1],
+                ["golismero_nikto","Golismero Nikto Scans - Gebruikt Nikto Plugin om kwetsbaarheden te detecteren.","golismero",1],
 
                 #37
-                ["golismero_brute_subdomains","Golismero Subdomains Bruter - Brute Forces Subdomain Discovery.","golismero",1],
+                ["golismero_brute_subdomains","Golismero Subdomains Bruter - Brute Forces Subdomein ontdekken.","golismero",1],
 
                 #38
-                ["dnsenum_zone_transfer","DNSEnum - Attempts Zone Transfer.","dnsenum",1],
+                ["dnsenum_zone_transfer","DNSEnum - Pogingen Zone Transfer.","dnsenum",1],
 
                 #39
-                ["fierce_brute_subdomains","Fierce Subdomains Bruter - Brute Forces Subdomain Discovery.","fierce",1],
+                ["fierce_brute_subdomains","Fierce Subdomains Bruter - Brute Forces Subdomein ontdekken.","fierce",1],
 
                 #40
-                ["dmitry_email","DMitry - Passively Harvests Emails from the Domain.","dmitry",1],
+                ["dmitry_email","DMitry - Verzamelt passief e-mails van het domein.","dmitry",1],
 
                 #41
-                ["dmitry_subdomains","DMitry - Passively Harvests Subdomains from the Domain.","dmitry",1],
+                ["dmitry_subdomains","DMitry - Verzamelt passief subdomeinen van het domein.","dmitry",1],
 
                 #42
-                ["nmap_telnet","Nmap [TELNET] - Checks if TELNET service is running.","nmap",1],
+                ["nmap_telnet","Nmap [TELNET] - Controleert of de TELNET-service actief is.","nmap",1],
 
                 #43
-                ["nmap_ftp","Nmap [FTP] - Checks if FTP service is running.","nmap",1],
+                ["nmap_ftp","Nmap [FTP] - Controleert of de FTP-service actief is.","nmap",1],
 
                 #44
-                ["nmap_stuxnet","Nmap [STUXNET] - Checks if the host is affected by STUXNET Worm.","nmap",1],
+                ["nmap_stuxnet","Nmap [STUXNET] - Controleert of de host wordt beïnvloed door STUXNET Worm.","nmap",1],
 
                 #45
-                ["webdav","WebDAV - Checks if WEBDAV enabled on Home directory.","davtest",1],
+                ["webdav","WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.","davtest",1],
 
                 #46
-                ["golismero_finger","Golismero - Does a fingerprint on the Domain.","golismero",1],
+                ["golismero_finger","Golismero - Voltooid een fingerprint op het domein.","golismero",1],
 
                 #47
-                ["uniscan_filebrute","Uniscan - Brutes for Filenames on the Domain.","uniscan",1],
+                ["uniscan_filebrute","Uniscan - Brutes voor bestandsnamen op het domein.","uniscan",1],
 
                 #48
-                ["uniscan_dirbrute", "Uniscan - Brutes Directories on the Domain.","uniscan",1],
+                ["uniscan_dirbrute", "Uniscan - Brutes Directory's op het domein.","uniscan",1],
 
                 #49
-                ["uniscan_ministresser", "Uniscan - Stress Tests the Domain.","uniscan",1],
+                ["uniscan_ministresser", "Uniscan - Stress test het domein.","uniscan",1],
 
                 #50
-                ["uniscan_rfi","Uniscan - Checks for LFI, RFI and RCE.","uniscan",1],
+                ["uniscan_rfi","Uniscan - Controles op LFI, RFI en RCE.","uniscan",1],
 
                 #51
-                ["uniscan_xss","Uniscan - Checks for XSS, SQLi, BSQLi & Other Checks.","uniscan",1],
+                ["uniscan_xss","Uniscan - Controles voor XSS, SQLi, BSQLi en andere controles.","uniscan",1],
 
                 #52
-                ["nikto_xss","Nikto - Checks for Apache Expect XSS Header.","nikto",1],
+                ["nikto_xss","Nikto - Controles voor Apache Verwacht XSS Header.","nikto",1],
 
                 #53
-                ["nikto_subrute","Nikto - Brutes Subdomains.","nikto",1],
+                ["nikto_subrute","Nikto - Brute subdomeinen.","nikto",1],
 
                 #54
-                ["nikto_shellshock","Nikto - Checks for Shellshock Bug.","nikto",1],
+                ["nikto_shellshock","Nikto - Controles op Shellshock-bug.","nikto",1],
 
                 #55
-                ["nikto_internalip","Nikto - Checks for Internal IP Leak.","nikto",1],
+                ["nikto_internalip","Nikto - Controles op intern IP-lek.","nikto",1],
 
                 #56
-                ["nikto_putdel","Nikto - Checks for HTTP PUT DEL.","nikto",1],
+                ["nikto_putdel","Nikto - Controles voor HTTP PUT DEL.","nikto",1],
 
                 #57
-                ["nikto_headers","Nikto - Checks the Domain Headers.","nikto",1],
+                ["nikto_headers","Nikto - Controleert de domeinheaders.","nikto",1],
 
                 #58
-                ["nikto_ms01070","Nikto - Checks for MS10-070 Vulnerability.","nikto",1],
+                ["nikto_ms01070","Nikto - Controles op MS10-070-beveiligingslek.","nikto",1],
 
                 #59
-                ["nikto_servermsgs","Nikto - Checks for Server Issues.","nikto",1],
+                ["nikto_servermsgs","Nikto - Controles op serverproblemen.","nikto",1],
 
                 #60
-                ["nikto_outdated","Nikto - Checks if Server is Outdated.","nikto",1],
+                ["nikto_outdated","Nikto - Controleert of de server verouderd is.","nikto",1],
 
                 #61
-                ["nikto_httpoptions","Nikto - Checks for HTTP Options on the Domain.","nikto",1],
+                ["nikto_httpoptions","Nikto - Controles op HTTP-opties op het domein.","nikto",1],
 
                 #62
                 ["nikto_cgi","Nikto - Enumerates CGI Directories.","nikto",1],
 
                 #63
-                ["nikto_ssl","Nikto - Performs SSL Checks.","nikto",1],
+                ["nikto_ssl","Nikto - Voert SSL-controles uit.","nikto",1],
 
                 #64
-                ["nikto_sitefiles","Nikto - Checks for any interesting files on the Domain.","nikto",1],
+                ["nikto_sitefiles","Nikto - Controleert op interessante bestanden op het domein.","nikto",1],
 
                 #65
-                ["nikto_paths","Nikto - Checks for Injectable Paths.","nikto",1],
+                ["nikto_paths","Nikto - Controles op injecteerbare paden.","nikto",1],
 
                 #66
-                ["dnsmap_brute","DNSMap - Brutes Subdomains.","dnsmap",1],
+                ["dnsmap_brute","DNSMap - Brute subdomeinen.","dnsmap",1],
 
                 #67
-                ["nmap_sqlserver","Nmap - Checks for MS-SQL Server DB","nmap",1],
+                ["nmap_sqlserver","Nmap - Controles voor MS-SQL Server DB","nmap",1],
 
                 #68
-                ["nmap_mysql", "Nmap - Checks for MySQL DB","nmap",1],
+                ["nmap_mysql", "Nmap - Controles voor MySQL DB","nmap",1],
 
                 #69
-                ["nmap_oracle", "Nmap - Checks for ORACLE DB","nmap",1],
+                ["nmap_oracle", "Nmap - Controles voor ORACLE DB","nmap",1],
 
                 #70
-                ["nmap_rdp_udp","Nmap - Checks for Remote Desktop Service over UDP","nmap",1],
+                ["nmap_rdp_udp","Nmap - Controles voor Remote Desktop Service via UDP","nmap",1],
 
                 #71
-                ["nmap_rdp_tcp","Nmap - Checks for Remote Desktop Service over TCP","nmap",1],
+                ["nmap_rdp_tcp","Nmap - Controles voor Remote Desktop Service via TCP","nmap",1],
 
                 #72
-                ["nmap_full_ps_tcp","Nmap - Performs a Full TCP Port Scan","nmap",1],
+                ["nmap_full_ps_tcp","Nmap - Voert een Full TCP Port Scan uit","nmap",1],
 
                 #73
-                ["nmap_full_ps_udp","Nmap - Performs a Full UDP Port Scan","nmap",1],
+                ["nmap_full_ps_udp","Nmap - Voert een Full UDP Port Scan uit","nmap",1],
 
                 #74
-                ["nmap_snmp","Nmap - Checks for SNMP Service","nmap",1],
+                ["nmap_snmp","Nmap - Controles voor SNMP-service","nmap",1],
 
                 #75
-                ["aspnet_elmah_axd","Checks for ASP.net Elmah Logger","wget",1],
+                ["aspnet_elmah_axd","Controles voor ASP.net Elmah Logger","wget",1],
 
                 #76
-                ["nmap_tcp_smb","Checks for SMB Service over TCP","nmap",1],
+                ["nmap_tcp_smb","Controles voor SMB-service via TCP","nmap",1],
 
                 #77
-                ["nmap_udp_smb","Checks for SMB Service over UDP","nmap",1],
+                ["nmap_udp_smb","Controles voor SMB-service via UDP","nmap",1],
 
                 #78
-                ["wapiti","Wapiti - Checks for SQLi, RCE, XSS and Other Vulnerabilities","wapiti",1],
+                ["wapiti","Wapiti - Controles op SQLi, RCE, XSS en andere kwetsbaarheden","wapiti",1],
 
                 #79
-                ["nmap_iis","Nmap - Checks for IIS WebDAV","nmap",1],
+                ["nmap_iis","Nmap - Controles voor IIS WebDAV","nmap",1],
 
                 #80
-                ["whatweb","WhatWeb - Checks for X-XSS Protection Header","whatweb",1],
+                ["whatweb","WhatWeb - Controles voor X-XSS Protection Header","whatweb",1],
 
                 #81
-                ["amass","AMass - Brutes Domain for Subdomains","amass",1]
+                ["amass","AMass - Brutes-domein voor subdomeinen","amass",1]
             ]
-
 
 # Command that is used to initiate the tool (with parameters and extra params)
 tool_cmd   = [
@@ -698,251 +697,250 @@ tool_cmd   = [
                 ["amass enum -d ",""]
             ]
 
-
 # Tool Responses (Begins) [Responses + Severity (c - critical | h - high | m - medium | l - low | i - informational) + Reference for Vuln Definition and Remediation]
 tool_resp   = [
                 #1
-                ["Does not have an IPv6 Address. It is good to have one.","i",1],
+                ["Heeft geen IPv6-adres. Het is goed om er een te hebben.","i",1],
 
                 #2
-                ["ASP.Net is misconfigured to throw server stack errors on screen.","m",2],
+                ["ASP.Net is verkeerd geconfigureerd om server stack errors op het scherm te krijgen.","m",2],
 
                 #3
-                ["WordPress Installation Found. Check for vulnerabilities corresponds to that version.","i",3],
+                ["WordPress-installatie gevonden. Controleer op kwetsbaarheden komt overeen met die versie.","i",3],
 
                 #4
-                ["Drupal Installation Found. Check for vulnerabilities corresponds to that version.","i",4],
+                ["Drupal-installatie gevonden. Controleer op kwetsbaarheden komt overeen met die versie.","i",4],
 
                 #5
-                ["Joomla Installation Found. Check for vulnerabilities corresponds to that version.","i",5],
+                ["Joomla installatie gevonden. Controleer op kwetsbaarheden komt overeen met die versie.","i",5],
 
                 #6
-                ["robots.txt/sitemap.xml found. Check those files for any information.","i",6],
+                ["robots.txt/sitemap.xml gevonden. Controleer die bestanden op informatie.","i",6],
 
                 #7
-                ["No Web Application Firewall Detected","m",7],
+                ["Geen firewall voor webapplicatie gedetecteerd","m",7],
 
                 #8
-                ["Some ports are open. Perform a full-scan manually.","l",8],
+                ["Sommige poorten zijn open. Voer handmatig een volledige scan uit.","l",8],
 
                 #9
-                ["Email Addresses Found.","l",9],
+                ["E-mailadressen gevonden.","l",9],
 
                 #10
-                ["Zone Transfer Successful using DNSRecon. Reconfigure DNS immediately.","h",10],
+                ["Zone Transfer Succesvol met DNSRecon. Configureer DNS onmiddellijk opnieuw.","h",10],
 
                 #11
                 #["Zone Transfer Successful using fierce. Reconfigure DNS immediately.","h",10],
 
                 #12
-                ["Zone Transfer Successful using dnswalk. Reconfigure DNS immediately.","h",10],
+                ["Zone Transfer Succesvol met dnswalk. Configureer DNS onmiddellijk opnieuw.","h",10],
 
                 #13
-                ["Whois Information Publicly Available.","i",11],
+                ["Whois-informatie openbaar beschikbaar.","i",11],
 
                 #14
-                ["XSS Protection Filter is Disabled.","m",12],
+                ["XSS-beschermingsfilter is uitgeschakeld.","m",12],
 
                 #15
-                ["Vulnerable to Slowloris Denial of Service.","c",13],
+                ["Kwetsbaar voor Slowloris Denial of Service.","c",13],
 
                 #16
-                ["HEARTBLEED Vulnerability Found with SSLyze.","h",14],
+                ["HEARTBLEED-kwetsbaarheid gevonden met SSLyze.","h",14],
 
                 #17
-                ["HEARTBLEED Vulnerability Found with Nmap.","h",14],
+                ["HEARTBLEED-kwetsbaarheid gevonden met Nmap.","h",14],
 
                 #18
-                ["POODLE Vulnerability Detected.","h",15],
+                ["POODLE-kwetsbaarheid gedetecteerd.","h",15],
 
                 #19
-                ["OpenSSL CCS Injection Detected.","h",16],
+                ["OpenSSL CCS-injectie gedetecteerd.","h",16],
 
                 #20
-                ["FREAK Vulnerability Detected.","h",17],
+                ["FREAK kwetsbaarheid gedetecteerd.","h",17],
 
                 #21
-                ["LOGJAM Vulnerability Detected.","h",18],
+                ["LOGJAM-kwetsbaarheid gedetecteerd.","h",18],
 
                 #22
-                ["Unsuccessful OCSP Response.","m",19],
+                ["Onsuccesvolle OCSP-reactie.","m",19],
 
                 #23
-                ["Server supports Deflate Compression.","m",20],
+                ["Server ondersteunt Deflate Compression.","m",20],
 
                 #24
-                ["Secure Client Initiated Renegotiation is supported.","m",21],
+                ["Beveiligde door de klant geïnitieerde heronderhandeling wordt ondersteund.","m",21],
 
                 #25
-                ["Secure Resumption unsupported with (Sessions IDs/TLS Tickets).","m",22],
+                ["Veilige hervatting niet ondersteund met (sessie-ID's/TLS-tickets).","m",22],
 
                 #26
-                ["No DNS/HTTP based Load Balancers Found.","l",23],
+                ["Geen op DNS/HTTP gebaseerde load balancers gevonden.","l",23],
 
                 #27
-                ["Domain is spoofed/hijacked.","h",24],
+                ["Domein is spoofed/hijacked.","h",24],
 
                 #28
-                ["HEARTBLEED Vulnerability Found with Golismero.","h",14],
+                ["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
 
                 #29
-                ["Open Files Found with Golismero BruteForce.","m",25],
+                ["Open bestanden gevonden met Golismero BruteForce.","m",25],
 
                 #30
-                ["Open Directories Found with Golismero BruteForce.","m",26],
+                ["Open mappen gevonden met Golismero BruteForce.","m",26],
 
                 #31
-                ["DB Banner retrieved with SQLMap.","l",27],
+                ["DB Banner opgehaald met SQLMap.","l",27],
 
                 #32
-                ["Open Directories Found with DirB.","m",26],
+                ["Open mappen gevonden met DirB.","m",26],
 
                 #33
-                ["XSSer found XSS vulnerabilities.","c",28],
+                ["XSSer heeft XSS-kwetsbaarheden gevonden.","c",28],
 
                 #34
-                ["Found SSL related vulnerabilities with Golismero.","m",29],
+                ["SSL-gerelateerde kwetsbaarheden gevonden met Golismero.","m",29],
 
                 #35
-                ["Zone Transfer Successful with Golismero. Reconfigure DNS immediately.","h",10],
+                ["Zoneoverdracht succesvol met Golismero. Configureer DNS onmiddellijk opnieuw.","h",10],
 
                 #36
-                ["Golismero Nikto Plugin found vulnerabilities.","m",30],
+                ["Golismero Nikto Plugin heeft kwetsbaarheden gevonden.","m",30],
 
                 #37
-                ["Found Subdomains with Golismero.","m",31],
+                ["Subdomeinen gevonden met Golismero.","m",31],
 
                 #38
-                ["Zone Transfer Successful using DNSEnum. Reconfigure DNS immediately.","h",10],
+                ["Zone Transfer Succesvol met DNSEnum. Configureer DNS onmiddellijk opnieuw.","h",10],
 
                 #39
-                ["Found Subdomains with Fierce.","m",31],
+                ["Subdomeinen gevonden met Fierce.","m",31],
 
                 #40
-                ["Email Addresses discovered with DMitry.","l",9],
+                ["E-mailadressen ontdekt met DMitry.","l",9],
 
                 #41
-                ["Subdomains discovered with DMitry.","m",31],
+                ["Subdomeinen ontdekt met DMitry.","m",31],
 
                 #42
-                ["Telnet Service Detected.","h",32],
+                ["Telnet-service gedetecteerd.","h",32],
 
                 #43
-                ["FTP Service Detected.","c",33],
+                ["FTP-service gedetecteerd.","c",33],
 
                 #44
-                ["Vulnerable to STUXNET.","c",34],
+                ["Kwetsbaar voor STUXNET.","c",34],
 
                 #45
-                ["WebDAV Enabled.","m",35],
+                ["WebDAV ingeschakeld.","m",35],
 
                 #46
-                ["Found some information through Fingerprinting.","l",36],
+                ["Informatie gevonden via Fingerprinting.","l",36],
 
                 #47
-                ["Open Files Found with Uniscan.","m",25],
+                ["Open bestanden gevonden met Uniscan.","m",25],
 
                 #48
-                ["Open Directories Found with Uniscan.","m",26],
+                ["Open mappen gevonden met Uniscan.","m",26],
 
                 #49
-                ["Vulnerable to Stress Tests.","h",37],
+                ["Kwetsbaar voor stresstests.","h",37],
 
                 #50
-                ["Uniscan detected possible LFI, RFI or RCE.","h",38],
+                ["Uniscan heeft mogelijke LFI, RFI of RCE gedetecteerd.","h",38],
 
                 #51
-                ["Uniscan detected possible XSS, SQLi, BSQLi.","h",39],
+                ["Uniscan heeft mogelijke XSS, SQLi, BSQLi gedetecteerd.","h",39],
 
                 #52
-                ["Apache Expect XSS Header not present.","m",12],
+                ["Apache verwacht XSS-header niet aanwezig.","m",12],
 
                 #53
-                ["Found Subdomains with Nikto.","m",31],
+                ["Subdomeinen gevonden met Nikto.","m",31],
 
                 #54
-                ["Webserver vulnerable to Shellshock Bug.","c",40],
+                ["Webserver kwetsbaar voor Shellshock Bug.","c",40],
 
                 #55
-                ["Webserver leaks Internal IP.","l",41],
+                ["Webserver lekt interne IP.","l",41],
 
                 #56
-                ["HTTP PUT DEL Methods Enabled.","m",42],
+                ["HTTP PUT DEL-methoden ingeschakeld.","m",42],
 
                 #57
-                ["Some vulnerable headers exposed.","m",43],
+                ["Enkele kwetsbare headers zichtbaar.","m",43],
 
                 #58
-                ["Webserver vulnerable to MS10-070.","h",44],
+                ["Webserver kwetsbaar voor MS10-070.","h",44],
 
                 #59
-                ["Some issues found on the Webserver.","m",30],
+                ["Enkele problemen gevonden op de webserver.","m",30],
 
                 #60
-                ["Webserver is Outdated.","h",45],
+                ["Webserver is verouderd.","h",45],
 
                 #61
-                ["Some issues found with HTTP Options.","l",42],
+                ["Sommige problemen gevonden met HTTP-opties.","l",42],
 
                 #62
-                ["CGI Directories Enumerated.","l",26],
+                ["CGI-directories opgesomd.","l",26],
 
                 #63
-                ["Vulnerabilities reported in SSL Scans.","m",29],
+                ["Kwetsbaarheden gemeld in SSL-scans.","m",29],
 
                 #64
-                ["Interesting Files Detected.","m",25],
+                ["Interessante bestanden gedetecteerd.","m",25],
 
                 #65
-                ["Injectable Paths Detected.","l",46],
+                ["Injecteerbare Paths gedetecteerd.","l",46],
 
                 #66
-                ["Found Subdomains with DNSMap.","m",31],
+                ["Gevonden subdomeinen met DNSMap.","m",31],
 
                 #67
-                ["MS-SQL DB Service Detected.","l",47],
+                ["MS-SQL DB-service gedetecteerd.","l",47],
 
                 #68
-                ["MySQL DB Service Detected.","l",47],
+                ["MySQL DB-service gedetecteerd.","l",47],
 
                 #69
-                ["ORACLE DB Service Detected.","l",47],
+                ["ORACLE DB-service gedetecteerd.","l",47],
 
                 #70
-                ["RDP Server Detected over UDP.","h",48],
+                ["RDP-server gedetecteerd via UDP.","h",48],
 
                 #71
-                ["RDP Server Detected over TCP.","h",48],
+                ["RDP-server gedetecteerd via TCP.","h",48],
 
                 #72
-                ["TCP Ports are Open","l",8],
+                ["TCP-poorten zijn open","l",8],
 
                 #73
-                ["UDP Ports are Open","l",8],
+                ["UDP-poorten zijn open","l",8],
 
                 #74
-                ["SNMP Service Detected.","m",49],
+                ["SNMP-service gedetecteerd.","m",49],
 
                 #75
-                ["Elmah is Configured.","m",50],
+                ["Elmah is geconfigureerd.","m",50],
 
                 #76
-                ["SMB Ports are Open over TCP","m",51],
+                ["SMB-poorten zijn open via TCP","m",51],
 
                 #77
-                ["SMB Ports are Open over UDP","m",51],
+                ["SMB-poorten zijn open via UDP","m",51],
 
                 #78
-                ["Wapiti discovered a range of vulnerabilities","h",30],
+                ["Wapiti ontdekte een reeks kwetsbaarheden","h",30],
 
                 #79
-                ["IIS WebDAV is Enabled","m",35],
+                ["IIS WebDAV is ingeschakeld","m",35],
 
                 #80
-                ["X-XSS Protection is not Present","m",12],
+                ["X-XSS-beveiliging is niet aanwezig","m",12],
 
                 #81
-                ["Found Subdomains with AMass","m",31]
+                ["Gevonden subdomeinen met AMass","m",31]
             ]
 
 # Tool Responses (Ends)
@@ -1195,108 +1193,108 @@ tool_status = [
 
 # Vulnerabilities and Remediation
 tools_fix = [
-                    [1, "Not a vulnerability, just an informational alert. The host does not have IPv6 support. IPv6 provides more security as IPSec (responsible for CIA - Confidentiality, Integrity and Availablity) is incorporated into this model. So it is good to have IPv6 Support.",
-                            "It is recommended to implement IPv6. More information on how to implement IPv6 can be found from this resource. https://www.cisco.com/c/en/us/solutions/collateral/enterprise/cisco-on-cisco/IPv6-Implementation_CS.html"],
-                    [2, "Sensitive Information Leakage Detected. The ASP.Net application does not filter out illegal characters in the URL. The attacker injects a special character (%7C~.aspx) to make the application spit sensitive information about the server stack.",
-                            "It is recommended to filter out special charaters in the URL and set a custom error page on such situations instead of showing default error messages. This resource helps you in setting up a custom error page on a Microsoft .Net Application. https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs"],
-                    [3, "It is not bad to have a CMS in WordPress. There are chances that the version may contain vulnerabilities or any third party scripts associated with it may possess vulnerabilities",
-                            "It is recommended to conceal the version of WordPress. This resource contains more information on how to secure your WordPress Blog. https://codex.wordpress.org/Hardening_WordPress"],
-                    [4, "It is not bad to have a CMS in Drupal. There are chances that the version may contain vulnerabilities or any third party scripts associated with it may possess vulnerabilities",
-                            "It is recommended to conceal the version of Drupal. This resource contains more information on how to secure your Drupal Blog. https://www.drupal.org/docs/7/site-building-best-practices/ensure-that-your-site-is-secure"],
-                    [5, "It is not bad to have a CMS in Joomla. There are chances that the version may contain vulnerabilities or any third party scripts associated with it may possess vulnerabilities",
-                            "It is recommended to conceal the version of Joomla. This resource contains more information on how to secure your Joomla Blog. https://www.incapsula.com/blog/10-tips-to-improve-your-joomla-website-security.html"],
-                    [6, "Sometimes robots.txt or sitemap.xml may contain rules such that certain links that are not supposed to be accessed/indexed by crawlers and search engines. Search engines may skip those links but attackers will be able to access it directly.",
-                            "It is a good practice not to include sensitive links in the robots or sitemap files."],
-                    [7, "Without a Web Application Firewall, An attacker may try to inject various attack patterns either manually or using automated scanners. An automated scanner may send hordes of attack vectors and patterns to validate an attack, there are also chances for the application to get DoS`ed (Denial of Service)",
-                            "Web Application Firewalls offer great protection against common web attacks like XSS, SQLi, etc. They also provide an additional line of defense to your security infrastructure. This resource contains information on web application firewalls that could suit your application. https://www.gartner.com/reviews/market/web-application-firewall"],
-                    [8, "Open Ports give attackers a hint to exploit the services. Attackers try to retrieve banner information through the ports and understand what type of service the host is running",
-                            "It is recommended to close the ports of unused services and use a firewall to filter the ports wherever necessary. This resource may give more insights. https://security.stackexchange.com/a/145781/6137"],
-                    [9, "Chances are very less to compromise a target with email addresses. However, attackers use this as a supporting data to gather information around the target. An attacker may make use of the username on the email address and perform brute-force attacks on not just email servers, but also on other legitimate panels like SSH, CMS, etc with a password list as they have a legitimate name. This is however a shoot in the dark scenario, the attacker may or may not be successful depending on the level of interest",
-                            "Since the chances of exploitation is feeble there is no need to take action. Perfect remediation would be choosing different usernames for different services will be more thoughtful."],
-                    [10, "Zone Transfer reveals critical topological information about the target. The attacker will be able to query all records and will have more or less complete knowledge about your host.",
-                            "Good practice is to restrict the Zone Transfer by telling the Master which are the IPs of the slaves that can be given access for the query. This SANS resource  provides more information. https://www.sans.org/reading-room/whitepapers/dns/securing-dns-zone-transfer-868"],
-                    [11, "The email address of the administrator and other information (address, phone, etc) is available publicly. An attacker may use these information to leverage an attack. This may not be used to carry out a direct attack as this is not a vulnerability. However, an attacker makes use of these data to build information about the target.",
-                            "Some administrators intentionally would have made this information public, in this case it can be ignored. If not, it is recommended to mask the information. This resource provides information on this fix. http://www.name.com/blog/how-tos/tutorial-2/2013/06/protect-your-personal-information-with-whois-privacy/"],
-                    [12, "As the target is lacking this header, older browsers will be prone to Reflected XSS attacks.",
-                            "Modern browsers does not face any issues with this vulnerability (missing headers). However, older browsers are strongly recommended to be upgraded."],
-                    [13, "This attack works by opening multiple simultaneous connections to the web server and it keeps them alive as long as possible by continously sending partial HTTP requests, which never gets completed. They easily slip through IDS by sending partial requests.",
-                            "If you are using Apache Module, `mod_antiloris` would help. For other setup you can find more detailed remediation on this resource. https://www.acunetix.com/blog/articles/slow-http-dos-attacks-mitigate-apache-http-server/"],
-                    [14, "This vulnerability seriously leaks private information of your host. An attacker can keep the TLS connection alive and can retrieve a maximum of 64K of data per heartbeat.",
-                            "PFS (Perfect Forward Secrecy) can be implemented to make decryption difficult. Complete remediation and resource information is available here. http://heartbleed.com/"],
-                    [15, "By exploiting this vulnerability, an attacker will be able gain access to sensitive data in a n encrypted session such as session ids, cookies and with those data obtained, will be able to impersonate that particular user.",
-                            "This is a flaw in the SSL 3.0 Protocol. A better remediation would be to disable using the SSL 3.0 protocol. For more information, check this resource. https://www.us-cert.gov/ncas/alerts/TA14-290A"],
-                    [16, "This attacks takes place in the SSL Negotiation (Handshake) which makes the client unaware of the attack. By successfully altering the handshake, the attacker will be able to pry on all the information that is sent from the client to server and vice-versa",
-                            "Upgrading OpenSSL to latest versions will mitigate this issue. This resource gives more information about the vulnerability and the associated remediation. http://ccsinjection.lepidum.co.jp/"],
-                    [17, "With this vulnerability the attacker will be able to perform a MiTM attack and thus compromising the confidentiality factor.",
-                            "Upgrading OpenSSL to latest version will mitigate this issue. Versions prior to 1.1.0 is prone to this vulnerability. More information can be found in this resource. https://bobcares.com/blog/how-to-fix-sweet32-birthday-attacks-vulnerability-cve-2016-2183/"],
-                    [18, "With the LogJam attack, the attacker will be able to downgrade the TLS connection which allows the attacker to read and modify any data passed over the connection.",
-                            "Make sure any TLS libraries you use are up-to-date, that servers you maintain use 2048-bit or larger primes, and that clients you maintain reject Diffie-Hellman primes smaller than 1024-bit. More information can be found in this resource. https://weakdh.org/"],
-                    [19, "Allows remote attackers to cause a denial of service (crash), and possibly obtain sensitive information in applications that use OpenSSL, via a malformed ClientHello handshake message that triggers an out-of-bounds memory access.",
-                            " OpenSSL versions 0.9.8h through 0.9.8q and 1.0.0 through 1.0.0c are vulnerable. It is recommended to upgrade the OpenSSL version. More resource and information can be found here. https://www.openssl.org/news/secadv/20110208.txt"],
-                    [20, "Otherwise termed as BREACH atack, exploits the compression in the underlying HTTP protocol. An attacker will be able to obtain email addresses, session tokens, etc from the TLS encrypted web traffic.",
-                            "Turning off TLS compression does not mitigate this vulnerability. First step to mitigation is to disable Zlib compression followed by other measures mentioned in this resource. http://breachattack.com/"],
-                    [21, "Otherwise termed as Plain-Text Injection attack, which allows MiTM attackers to insert data into HTTPS sessions, and possibly other types of sessions protected by TLS or SSL, by sending an unauthenticated request that is processed retroactively by a server in a post-renegotiation context.",
-                            "Detailed steps of remediation can be found from these resources. https://securingtomorrow.mcafee.com/technical-how-to/tips-securing-ssl-renegotiation/ https://www.digicert.com/news/2011-06-03-ssl-renego/ "],
-                    [22, "This vulnerability allows attackers to steal existing TLS sessions from users.",
-                            "Better advice is to disable session resumption. To harden session resumption, follow this resource that has some considerable information. https://wiki.crashtest-security.com/display/KB/Harden+TLS+Session+Resumption"],
-                    [23, "This has nothing to do with security risks, however attackers may use this unavailability of load balancers as an advantage to leverage a denial of service attack on certain services or on the whole application itself.",
-                            "Load-Balancers are highly encouraged for any web application. They improve performance times as well as data availability on during times of server outage. To know more information on load balancers and setup, check this resource. https://www.digitalocean.com/community/tutorials/what-is-load-balancing"],
-                    [24, "An attacker can forwarded requests that comes to the legitimate URL or web application to a third party address or to the attacker's location that can serve malware and affect the end user's machine.",
-                            "It is highly recommended to deploy DNSSec on the host target. Full deployment of DNSSEC will ensure the end user is connecting to the actual web site or other service corresponding to a particular domain name. For more information, check this resource. https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"],
-                    [25, "Attackers may find considerable amount of information from these files. There are even chances attackers may get access to critical information from these files.",
-                            "It is recommended to block or restrict access to these files unless necessary."],
-                    [26, "Attackers may find considerable amount of information from these directories. There are even chances attackers may get access to critical information from these directories.",
-                            "It is recommended to block or restrict access to these directories unless necessary."],
-                    [27, "May not be SQLi vulnerable. An attacker will be able to know that the host is using a backend for operation.",
-                            "Banner Grabbing should be restricted and access to the services from outside would should be made minimum."],
-                    [28, "An attacker will be able to steal cookies, deface web application or redirect to any third party address that can serve malware.",
-                            "Input validation and Output Sanitization can completely prevent Cross Site Scripting (XSS) attacks. XSS attacks can be mitigated in future by properly following a secure coding methodology. The following comprehensive resource provides detailed information on fixing this vulnerability. https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet"],
-                    [29, "SSL related vulnerabilities breaks the confidentiality factor. An attacker may perform a MiTM attack, intrepret and eavesdrop the communication.",
-                            "Proper implementation and upgraded version of SSL and TLS libraries are very critical when it comes to blocking SSL related vulnerabilities."],
-                    [30, "Particular Scanner found multiple vulnerabilities that an attacker may try to exploit the target.",
-                            "Refer to RS-Vulnerability-Report to view the complete information of the vulnerability, once the scan gets completed."],
-                    [31, "Attackers may gather more information from subdomains relating to the parent domain. Attackers may even find other services from the subdomains and try to learn the architecture of the target. There are even chances for the attacker to find vulnerabilities as the attack surface gets larger with more subdomains discovered.",
-                            "It is sometimes wise to block sub domains like development, staging to the outside world, as it gives more information to the attacker about the tech stack. Complex naming practices also help in reducing the attack surface as attackers find hard to perform subdomain bruteforcing through dictionaries and wordlists."],
-                    [32, "Through this deprecated protocol, an attacker may be able to perform MiTM and other complicated attacks.",
-                            "It is highly recommended to stop using this service and it is far outdated. SSH can be used to replace TELNET. For more information, check this resource https://www.ssh.com/ssh/telnet"],
-                    [33, "This protocol does not support secure communication and there are likely high chances for the attacker to eavesdrop the communication. Also, many FTP programs have exploits available in the web such that an attacker can directly crash the application or either get a SHELL access to that target.",
-                            "Proper suggested fix is use an SSH protocol instead of FTP. It supports secure communication and chances for MiTM attacks are quite rare."],
-                    [34, "The StuxNet is level-3 worm that exposes critical information of the target organization. It was a cyber weapon that was designed to thwart the nuclear intelligence of Iran. Seriously wonder how it got here? Hope this isn't a false positive Nmap ;)",
-                            "It is highly recommended to perform a complete rootkit scan on the host. For more information refer to this resource. https://www.symantec.com/security_response/writeup.jsp?docid=2010-071400-3123-99&tabid=3"],
-                    [35, "WebDAV is supposed to contain multiple vulnerabilities. In some case, an attacker may hide a malicious DLL file in the WebDAV share however, and upon convincing the user to open a perfectly harmless and legitimate file, execute code under the context of that user",
-                            "It is recommended to disable WebDAV. Some critical resource regarding disbling WebDAV can be found on this URL. https://www.networkworld.com/article/2202909/network-security/-webdav-is-bad---says-security-researcher.html"],
-                    [36, "Attackers always do a fingerprint of any server before they launch an attack. Fingerprinting gives them information about the server type, content- they are serving, last modification times etc, this gives an attacker to learn more information about the target",
-                            "A good practice is to obfuscate the information to outside world. Doing so, the attackers will have tough time understanding the server's tech stack and therefore leverage an attack."],
-                    [37, "Attackers mostly try to render web applications or service useless by flooding the target, such that blocking access to legitimate users. This may affect the business of a company or organization as well as the reputation",
-                            "By ensuring proper load balancers in place, configuring rate limits and multiple connection restrictions, such attacks can be drastically mitigated."],
-                    [38, "Intruders will be able to remotely include shell files and will be able to access the core file system or they will be able to read all the files as well. There are even higher chances for the attacker to remote execute code on the file system.",
-                            "Secure code practices will mostly prevent LFI, RFI and RCE attacks. The following resource gives a detailed insight on secure coding practices. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
-                    [39, "Hackers will be able to steal data from the backend and also they can authenticate themselves to the website and can impersonate as any user since they have total control over the backend. They can even wipe out the entire database. Attackers can also steal cookie information of an authenticated user and they can even redirect the target to any malicious address or totally deface the application.",
-                            "Proper input validation has to be done prior to directly querying the database information. A developer should remember not to trust an end-user's input. By following a secure coding methodology attacks like SQLi, XSS and BSQLi. The following resource guides on how to implement secure coding methodology on application development. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
-                    [40, "Attackers exploit the vulnerability in BASH to perform remote code execution on the target. An experienced attacker can easily take over the target system and access the internal sources of the machine",
-                            "This vulnerability can be mitigated by patching the version of BASH. The following resource gives an indepth analysis of the vulnerability and how to mitigate it. https://www.symantec.com/connect/blogs/shellshock-all-you-need-know-about-bash-bug-vulnerability https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-shellshock-bash-vulnerability"],
-                    [41, "Gives attacker an idea on how the address scheming is done internally on the organizational network. Discovering the private addresses used within an organization can help attackers in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure.",
-                            "Restrict the banner information to the outside world from the disclosing service. More information on mitigating this vulnerability can be found here. https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed"],
-                    [42, "There are chances for an attacker to manipulate files on the webserver.",
-                            "It is recommended to disable the HTTP PUT and DEL methods incase if you don't use any REST API Services. Following resources helps you how to disable these methods. http://www.techstacks.com/howto/disable-http-methods-in-tomcat.html https://docs.oracle.com/cd/E19857-01/820-5627/gghwc/index.html https://developer.ibm.com/answers/questions/321629/how-to-disable-http-methods-head-put-delete-option/"],
-                    [43, "Attackers try to learn more about the target from the amount of information exposed in the headers. An attacker may know what type of tech stack a web application is emphasizing and many other information.",
-                            "Banner Grabbing should be restricted and access to the services from outside would should be made minimum."],
-                    [44, "An attacker who successfully exploited this vulnerability could read data, such as the view state, which was encrypted by the server. This vulnerability can also be used for data tampering, which, if successfully exploited, could be used to decrypt and tamper with the data encrypted by the server.",
-                            "Microsoft has released a set of patches on their website to mitigate this issue. The information required to fix this vulnerability can be inferred from this resource. https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-070"],
-                    [45, "Any outdated web server may contain multiple vulnerabilities as their support would've been ended. An attacker may make use of such an opportunity to leverage attacks.",
-                            "It is highly recommended to upgrade the web server to the available latest version."],
-                    [46, "Hackers will be able to manipulate the URLs easily through a GET/POST request. They will be able to inject multiple attack vectors in the URL with ease and able to monitor the response as well",
-                            "By ensuring proper sanitization techniques and employing secure coding practices it will be impossible for the attacker to penetrate through. The following resource gives a detailed insight on secure coding practices. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
-                    [47, "Since the attacker has knowledge about the particular type of backend the target is running, they will be able to launch a targetted exploit for the particular version. They may also try to authenticate with default credentials to get themselves through.",
-                            "Timely security patches for the backend has to be installed. Default credentials has to be changed. If possible, the banner information can be changed to mislead the attacker. The following resource gives more information on how to secure your backend. http://kb.bodhost.com/secure-database-server/"],
-                    [48, "Attackers may launch remote exploits to either crash the service or tools like ncrack to try brute-forcing the password on the target.",
-                            "It is recommended to block the service to outside world and made the service accessible only through the a set of allowed IPs only really neccessary. The following resource provides insights on the risks and as well as the steps to block the service. https://www.perspectiverisk.com/remote-desktop-service-vulnerabilities/"],
-                    [49, "Hackers will be able to read community strings through the service and enumerate quite a bit of information from the target. Also, there are multiple Remote Code Execution and Denial of Service vulnerabilities related to SNMP services.",
-                            "Use a firewall to block the ports from the outside world. The following article gives wide insight on locking down SNMP service. https://www.techrepublic.com/article/lock-it-down-dont-allow-snmp-to-compromise-network-security/"],
-                    [50, "Attackers will be able to find the logs and error information generated by the application. They will also be able to see the status codes that was generated on the application. By combining all these information, the attacker will be able to leverage an attack.",
-                            "By restricting access to the logger application from the outside world will be more than enough to mitigate this weakness."],
-                    [51, "Cyber Criminals mainly target this service as it is very easier for them to perform a remote attack by running exploits. WannaCry Ransomware is one such example.",
-                            "Exposing SMB Service to the outside world is a bad idea, it is recommended to install latest patches for the service in order not to get compromised. The following resource provides a detailed information on SMB Hardening concepts. https://kb.iweb.com/hc/en-us/articles/115000274491-Securing-Windows-SMB-and-NetBios-NetBT-Services"]
+                    [1, "Geen kwetsbaarheid, maar een informatieve waarschuwing. De host heeft geen IPv6-ondersteuning. IPv6 biedt meer veiligheid, omdat IPSec (verantwoordelijk voor CIA - Confidentiality, Integrity and Availablity) in dit model is opgenomen. Het is dus goed om IPv6-ondersteuning te hebben.",
+                            "Het wordt aanbevolen om IPv6 te implementeren. Meer informatie over het implementeren van IPv6 vindt u in deze bron. https://www.cisco.com/c/en/us/solutions/collateral/enterprise/cisco-on-cisco/IPv6-Implementation_CS.html"],
+                    [2, "Gevoelige informatie Lekkage gedetecteerd. De ASP.Net applicatie filtert geen illegal characters uit de URL. De aanvaller injecteert een speciaal teken (%7C~.aspx) om de applicatie gevoelige informatie over de serverstack te laten verstrekken.",
+                            "Het wordt aanbevolen om special characters in de URL uit te filteren en een aangepaste foutpagina in te stellen voor dergelijke situaties in plaats van standaardfoutmeldingen weer te geven. Deze bron helpt u bij het opzetten van een aangepaste foutpagina op een Microsoft .Net-applicatie. https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs"],
+                    [3, "Het is niet erg om een CMS in WordPress te hebben. Er is een kans dat de versie kwetsbaarheden bevat of dat eventuele scripts van derden die eraan zijn gekoppeld kwetsbaarheden bevatten.",
+                            "Het wordt aanbevolen om de versie van WordPress te verbergen. Deze bron bevat meer informatie over hoe u uw WordPress-blog kunt beveiligen. https://codex.wordpress.org/Hardening_WordPress"],
+                    [4, "Het is niet erg om een CMS in Drupal te hebben. Er is een kans dat de versie kwetsbaarheden bevat of dat eventuele scripts van derden die eraan zijn gekoppeld kwetsbaarheden bevatten.",
+                            "Het wordt aanbevolen om de versie van Drupal te verbergen. Deze bron bevat meer informatie over hoe u uw Drupal Blog kunt beveiligen. https://www.drupal.org/docs/7/site-building-best-practices/ensure-that-your-site-is-secure"],
+                    [5, "Het is niet erg om een CMS in Joomla te hebben. Er is een kans dat de versie kwetsbaarheden bevat of dat eventuele scripts van derden die eraan zijn gekoppeld kwetsbaarheden bevatten",
+                            "Het wordt aanbevolen om de versie van Joomla te verbergen. Deze bron bevat meer informatie over hoe u uw Joomla Blog kunt beveiligen. https://www.incapsula.com/blog/10-tips-to-improve-your-joomla-website-security.html"],
+                    [6, "Soms bevatten robots.txt of sitemap.xml regels die ervoor zorgen dat bepaalde links die niet bedoeld zijn om te worden geopend/geïndexeerd door crawlers en zoekmachines. Zoekmachines kunnen deze links overslaan, maar aanvallers hebben er direct toegang toe.",
+                            "Het is een goede gewoonte om geen gevoelige links op te nemen in de robots of sitemapbestanden."],
+                    [7, "Zonder een Web Application Firewall kan een aanvaller proberen om verschillende aanvalspatronen handmatig of met behulp van geautomatiseerde scanners te injecteren. Een geautomatiseerde scanner kan hordes aanvalsvectoren en patronen verzenden om een aanval te valideren, er zijn ook kansen voor de applicatie om DoS`ed (Denial of Service) te krijgen",
+                            "Web Application Firewalls bieden uitstekende bescherming tegen veelvoorkomende webaanvallen zoals XSS, SQLi, enz. Ze bieden ook een extra verdedigingslinie voor uw beveiligingsinfrastructuur. Deze bron bevat informatie over firewalls voor webapplicatie die geschikt kunnen zijn voor uw toepassing. https://www.gartner.com/reviews/market/web-application-firewall"],
+                    [8, "Open poorten geven aanvallers een hint om de services te misbruiken. Aanvallers proberen bannerinformatie op te halen via de poorten en begrijpen welk type service de host gebruikt",
+                            "Het wordt aanbevolen om de poorten van ongebruikte services te sluiten en waar nodig een firewall te gebruiken om de poorten te filteren. Deze bron kan meer inzicht geven. https://security.stackexchange.com/a/145781/6137"],
+                    [9, "De kans is heel klein om een doelwit te compromitteren met e-mailadressen. Aanvallers gebruiken dit echter als ondersteunende gegevens om informatie over het doelwit te verzamelen. Een aanvaller kan gebruik maken van de gebruikersnaam op het e-mailadres en brute-force aanvallen uitvoeren op niet alleen e-mailservers, maar ook op andere legitieme panelen zoals SSH, CMS, enz. met een wachtwoordlijst, omdat ze een legitieme naam hebben. Dit is echter een shoot in the dark-scenario, de aanvaller kan al dan niet succesvol zijn, afhankelijk van het interesseniveau",
+                            "Aangezien de kans op uitbuiting gering is, is er geen noodzaak om actie te ondernemen. Een perfecte oplossing zou zijn om verschillende gebruikersnamen voor verschillende services te kiezen."],
+                    [10, "Zone Transfer onthult belangrijke topologische informatie over het doelwit. De aanvaller kan alle records opvragen en heeft min of meer volledige kennis over uw host.",
+                            "Een goede gewoonte is om de zone Transfer te beperken door de master te vertellen wat de IP's zijn van de slaves die toegang kunnen krijgen voor de query. Deze SANS-bron biedt meer informatie. https://www.sans.org/reading-room/whitepapers/dns/securing-dns-zone-transfer-868"],
+                    [11, "Het e-mailadres van de beheerder en andere informatie (adres, telefoon, enz.) is openbaar beschikbaar. Een aanvaller kan deze informatie gebruiken om een aanval uit te voeren. Dit mag niet worden gebruikt om een directe aanval uit te voeren, aangezien dit geen kwetsbaarheid is. Een aanvaller maakt echter gebruik van deze gegevens om informatie over het doelwit op te bouwen.",
+                            "Sommige beheerders zouden deze informatie opzettelijk openbaar hebben gemaakt, in dit geval kan deze worden genegeerd. Zo niet, dan is het aan te raden de informatie te maskeren. Deze bron biedt informatie over deze oplossing. http://www.name.com/blog/how-tos/tutorial-2/2013/06/protect-your-personal-information-with-whois-privacy/"],
+                    [12, "Omdat het doelwit deze header mist, zijn oudere browsers vatbaar voor Reflected XSS-aanvallen.",
+                            "Moderne browsers hebben geen problemen met deze kwetsbaarheid (missing headers). Oudere browsers worden echter sterk aanbevolen om te worden geüpgraded."],
+                    [13, "Deze aanval werkt door meerdere gelijktijdige verbindingen met de webserver te openen en houdt ze zo lang mogelijk in leven door continu gedeeltelijke HTTP-verzoeken te verzenden, die nooit worden voltooid. Ze glippen gemakkelijk door IDS door gedeeltelijke verzoeken te verzenden.",
+                            "Als je Apache Module gebruikt, zou `mod_antiloris` helpen. Voor andere instellingen kunt u meer gedetailleerde oplossingen vinden op deze bron. https://www.acunetix.com/blog/articles/slow-http-dos-attacks-mitigate-apache-http-server/"],
+                    [14, "Dit beveiligingslek lekt ernstig privégegevens van uw host. Een aanvaller kan de TLS-verbinding in leven houden en kan maximaal 64K aan data per heartbeat ophalen.",
+                            "PFS (Perfect Forward Secrecy) kan worden geïmplementeerd om decodering moeilijk te maken. Volledige herstel- en broninformatie is hier beschikbaar. http://heartbleed.com/"],
+                    [15, "Door misbruik te maken van dit beveiligingslek, kan een aanvaller toegang krijgen tot gevoelige gegevens in een versleutelde sessie, zoals sessie-ID's, cookies en met de verkregen gegevens kan hij zich voor die specifieke gebruiker voordoen.",
+                            "Dit is een fout in het SSL 3.0-protocol. Een betere oplossing zou zijn om het gebruik van het SSL 3.0-protocol uit te schakelen. Raadpleeg deze bron voor meer informatie. https://www.us-cert.gov/ncas/alerts/TA14-290A"],
+                    [16, "Deze aanval vindt plaats in de SSL Negotiation (Handshake) waardoor de client niet op de hoogte is van de aanval. Door de handshake met succes te wijzigen, kan de aanvaller alle informatie die van de client naar de server wordt verzonden en vice versa, proberen te achterhalen",
+                            "Het upgraden van OpenSSL naar de nieuwste versies verhelpt dit probleem. Deze bron geeft meer informatie over de kwetsbaarheid en het bijbehorende herstel. http://ccsinjection.lepidum.co.jp/"],
+                    [17, "Met deze kwetsbaarheid kan de aanvaller een MiTM-aanval uitvoeren en daarmee de vertrouwelijkheidsfactor in gevaar brengen.",
+                            "Het upgraden van OpenSSL naar de nieuwste versie verhelpt dit probleem. Versies ouder dan 1.1.0 zijn gevoelig voor dit beveiligingslek. Meer informatie is te vinden in deze bron. https://bobcares.com/blog/how-to-fix-sweet32-birthday-attacks-vulnerability-cve-2016-2183/"],
+                    [18, "Met de LogJam-aanval kan de aanvaller de TLS-verbinding downgraden, waardoor de aanvaller alle gegevens die via de verbinding worden doorgegeven, kan lezen en wijzigen.",
+                            "Zorg ervoor dat alle TLS-libraries die u gebruikt up-to-date zijn, dat servers die u onderhoudt gebruik maken van 2048-bits of grotere priemgetallen en dat clients die u onderhoudt Diffie-Hellman-primes kleiner dan 1024-bits weigeren. Meer informatie is te vinden in deze bron. https://weakdh.org/"],
+                    [19, "Stelt remote attacker in staat een denial of service (crash) te veroorzaken en mogelijk gevoelige informatie te verkrijgen in applicaties die OpenSSL gebruiken, via een misvormd ClientHello-handshakebericht dat een out-of-bounds geheugentoegang activeert.",
+                            "OpenSSL-versies 0.9.8h tot 0.9.8q en 1.0.0 tot 1.0.0c zijn kwetsbaar. Het wordt aanbevolen om de OpenSSL-versie te upgraden. Meer bronnen en informatie vindt u hier. https://www.openssl.org/news/secadv/20110208.txt"],
+                    [20, "Ook wel BREACH-aanval genoemd, maakt gebruik van de compression in het onderliggende HTTP-protocol. Een aanvaller kan e-mailadressen, sessietokens, enz. verkrijgen van het TLS-gecodeerde webverkeer.",
+                            "Het uitschakelen van TLS compression verkleint dit beveiligingslek niet. De eerste stap naar mitigatie is om Zlib compression uit te schakelen, gevolgd door andere maatregelen die in deze bron worden genoemd. http://breachattack.com/"],
+                    [21, "Wordt ook wel Plain-Text Injection-aanval genoemd, waarmee MiTM-aanvallers gegevens kunnen invoegen in HTTPS-sessies, en mogelijk andere soorten sessies die worden beschermd door TLS of SSL, door een niet-geverifieerd verzoek te verzenden dat met terugwerkende kracht wordt verwerkt door een server in een context na pot-renegotiation.",
+                            "Gedetailleerde herstelstappen zijn te vinden in deze bronnen. https://securingtomorrow.mcafee.com/technical-how-to/tips-securing-ssl-renegotiation/ https://www.digicert.com/news/2011-06-03-ssl-renego/"],
+                    [22, "Door dit beveiligingslek kunnen aanvallers bestaande TLS-sessies van gebruikers stelen.",
+                            "Beter advies is om het hervatten van sessies uit te schakelen. Volg deze bron met aanzienlijke informatie om de hervatting van de sessie te verharden. https://wiki.crashtest-security.com/display/KB/Harden+TLS+Session+Resumption"],
+                    [23, "Dit heeft niets te maken met beveiligingsrisico's, maar aanvallers kunnen deze onbeschikbaarheid van load balancers gebruiken als een voordeel om een denial-of-service-aanval op bepaalde services of op de hele applicatie zelf uit te voeren.",
+                            "Load-balancers worden sterk aanbevolen voor webapplicaties. Ze verbeteren de prestatietijden en de beschikbaarheid van gegevens in tijden van serveruitval. Raadpleeg deze bron voor meer informatie over load balancers en instellingen. https://www.digitalocean.com/community/tutorials/what-is-load-balancing"],
+                    [24, "Een aanvaller kan verzoeken die naar de legitieme URL of webapplicatie komen, doorsturen naar een adres van een derde partij of naar de locatie van de aanvaller die malware kan leveren en de computer van de eindgebruiker kan beïnvloeden.",
+                            "Het wordt ten zeerste aanbevolen om DNSSec op het hostdoel te implementeren. Volledige implementatie van DNSSEC zorgt ervoor dat de eindgebruiker verbinding maakt met de daadwerkelijke website of andere service die overeenkomt met een bepaalde domeinnaam. Raadpleeg deze bron voor meer informatie. https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"],
+                    [25, "Aanvallers kunnen een aanzienlijke hoeveelheid informatie uit deze bestanden vinden. Er is zelfs een kans dat aanvallers toegang krijgen tot kritieke informatie uit deze bestanden.",
+                            "Het wordt aanbevolen om de toegang tot deze bestanden te blokkeren of te beperken, tenzij dit nodig is."],
+                    [26, "Aanvallers kunnen een aanzienlijke hoeveelheid informatie uit deze mappen vinden. Er is zelfs een kans dat aanvallers toegang krijgen tot kritieke informatie uit deze mappen.",
+                            "Het wordt aanbevolen om de toegang tot deze mappen te blokkeren of te beperken, tenzij dat nodig is."],
+                    [27, "Mag niet SQLi-kwetsbaar zijn. Een aanvaller kan weten dat de host een backend gebruikt voor bewerking.",
+                            "Banner Grabbing moet worden beperkt en de toegang tot de diensten van buitenaf moet tot een minimum worden beperkt."],
+                    [28, "Een aanvaller kan cookies stelen, webapplicaties onleesbaar maken of omleiden naar elk adres van een derde partij dat malware kan leveren.",
+                            "Inputvalidatie en Output Sanitization kunnen Cross Site Scripting (XSS)-aanvallen volledig voorkomen. XSS-aanvallen kunnen in de toekomst worden beperkt door een veilige coderingsmethode op de juiste manier te volgen. De volgende uitgebreide bron biedt gedetailleerde informatie over het oplossen van dit beveiligingslek. https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet"],
+                    [29, "SSL-gerelateerde kwetsbaarheden doorbreken de vertrouwelijkheidsfactor. Een aanvaller kan een MiTM-aanval uitvoeren, de communicatie interpreteren en afluisteren.",
+                            "Een juiste implementatie en geüpgradede versie van SSL- en TLS libraries zijn erg belangrijk als het gaat om het blokkeren van SSL-gerelateerde kwetsbaarheden."],
+                    [30, "Particular Scanner heeft meerdere kwetsbaarheden gevonden die een aanvaller kan proberen het doelwit te misbruiken.",
+                            "Raadpleeg RS-Vulnerability-Report om de volledige informatie over de kwetsbaarheid te bekijken, zodra de scan is voltooid."],
+                    [31, "Aanvallers kunnen meer informatie verzamelen uit subdomeinen die betrekking hebben op het bovenliggende domein. Aanvallers kunnen zelfs andere services van de subdomeinen vinden en proberen de architectuur van het doelwit te leren. Er zijn zelfs kansen voor de aanvaller om kwetsbaarheden te vinden naarmate het aanvalsoppervlak groter wordt naarmate er meer subdomeinen worden ontdekt.",
+                            "Soms is het verstandig om subdomeinen zoals development, staging naar de buitenwereld te blokkeren, omdat dit de aanvaller meer informatie geeft over de tech stack. Complexe naamgevingspraktijken helpen ook bij het verkleinen van het aanvalsoppervlak, aangezien aanvallers moeite hebben om subdomein bruteforcing uit te voeren via dictionaries en wordlists."],
+                    [32, "Via dit verouderde protocol kan een aanvaller mogelijk MiTM en andere gecompliceerde aanvallen uitvoeren.",
+                            "Het wordt ten zeerste aanbevolen om te stoppen met het gebruik van deze service en deze is ver achterhaald. SSH kan worden gebruikt om TELNET te vervangen. Raadpleeg deze bron voor meer informatie https://www.ssh.com/ssh/telnet"],
+                    [33, "Dit protocol ondersteunt geen beveiligde communicatie en de kans is groot dat de aanvaller de communicatie afluistert. Ook hebben veel FTP-programma's exploits beschikbaar op het web, zodat een aanvaller de applicatie direct kan laten crashen of ofwel een SHELL-toegang tot dat doel kan krijgen.",
+                            "De juiste voorgestelde oplossing is het gebruik van een SSH-protocol in plaats van FTP. Het ondersteunt veilige communicatie en de kans op MiTM-aanvallen is vrij zeldzaam."],
+                    [34, "Het StuxNet is een worm van niveau 3 die kritieke informatie van de doelorganisatie blootlegt. Het was een cyberwapen dat was ontworpen om de nucleaire inlichtingendienst van Iran te dwarsbomen. Vraag je je serieus af hoe het hier is gekomen? Ik hoop dat dit geen vals-positieve Nmap is;)",
+                            "Het wordt ten zeerste aanbevolen om een volledige rootkit-scan op de host uit te voeren. Raadpleeg deze bron voor meer informatie. https://www.symantec.com/security_response/writeup.jsp?docid=2010-071400-3123-99&tabid=3"],
+                    [35, "WebDAV zou meerdere kwetsbaarheden moeten bevatten. In sommige gevallen kan een aanvaller echter een kwaadaardig DLL-bestand in de WebDAV-share verbergen en de gebruiker overtuigen om een volkomen onschadelijk en legitiem bestand te openen, code uitvoeren in de context van die gebruiker",
+                            "Het wordt aanbevolen om WebDAV uit te schakelen. Een kritische bron met betrekking tot het uitschakelen van WebDAV is te vinden op deze URL. https://www.networkworld.com/article/2202909/network-security/-webdav-is-bad---says-security-researcher.html"],
+                    [36, "Aanvallers maken altijd een fingerprint van een server voordat ze een aanval lanceren. Fingerprints geven ze informatie over het servertype, de inhoud die ze serveren, de laatste wijzigingstijden enz. Dit geeft een aanvaller meer informatie over het doelwit",
+                            "Een goede gewoonte is om de informatie voor de buitenwereld te verdoezelen. Door dit te doen, zullen de aanvallers moeite hebben om de technische stack van de server te begrijpen en daarom een aanval gebruiken."],
+                    [37, "Aanvallers proberen meestal webapplicaties of -service onbruikbaar te maken door het doelwit te overspoelen, zodat de toegang voor legitieme gebruikers wordt geblokkeerd. Dit kan van invloed zijn op de bedrijfsvoering van een bedrijf of organisatie, evenals op de reputatie",
+                            "Door ervoor te zorgen dat de juiste load balancers aanwezig zijn, snelheidslimieten en meerdere verbindingsbeperkingen te configureren, kunnen dergelijke aanvallen drastisch worden beperkt."],
+                    [38, "Indringers kunnen op afstand shell-files toevoegen en hebben toegang tot het kernbestandssysteem of ze kunnen ook alle bestanden lezen. Er zijn zelfs nog grotere kansen voor de aanvaller om op afstand code uit te voeren op het bestandssysteem.",
+                            "Veilige codepraktijken zullen vooral LFI-, RFI- en RCE-aanvallen voorkomen. De volgende bron geeft een gedetailleerd inzicht in veilige coderingspraktijken. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
+                    [39, "Hackers kunnen gegevens van de backend stelen en ze kunnen zichzelf ook authenticeren op de website en kunnen zich voordoen als elke gebruiker, aangezien ze volledige controle hebben over de backend. Ze kunnen zelfs de hele database wissen. Aanvallers kunnen ook cookie-informatie van een geverifieerde gebruiker stelen en ze kunnen het doelwit zelfs omleiden naar een kwaadaardig adres of de applicatie volledig onleesbaar maken.",
+                            "De juiste invoervalidatie moet worden uitgevoerd voordat de database-informatie rechtstreeks wordt opgevraagd. Een ontwikkelaar moet onthouden dat hij de input van een eindgebruiker niet mag vertrouwen. Door een veilige coderingsmethode te volgen, vallen aanvallen zoals SQLi, XSS en BSQLi. De volgende hulpbrongidsen over het implementeren van veilige coderingsmethodologie bij applicatie ontwikkeling. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
+                    [40, "Aanvallers misbruiken het beveiligingslek in BASH om externe code op het doelwit uit te voeren. Een ervaren aanvaller kan gemakkelijk het doelsysteem overnemen en toegang krijgen tot de interne bronnen van de machine",
+                            "Dit beveiligingslek kan worden verholpen door de versie van BASH te patchen. De volgende bron geeft een diepgaande analyse van de kwetsbaarheid en hoe deze te verminderen. https://www.symantec.com/connect/blogs/shellshock-all-you-need-know-about-bash-bug-vulnerability https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-shellshock-bash-vulnerability"],
+                    [41, "Geeft de aanvaller een idee over hoe de adresschets intern op het organisatienetwerk wordt uitgevoerd. Het ontdekken van de privéadressen die binnen een organisatie worden gebruikt, kan aanvallers helpen bij het uitvoeren van netwerklaagaanvallen die erop gericht zijn de interne infrastructuur van de organisatie binnen te dringen.",
+                            "Beperk de bannerinformatie tot de buitenwereld van de openbaarmakingsservice. Meer informatie over het verminderen van dit beveiligingslek vindt u hier. https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed"],
+                    [42, "Er zijn kansen voor een aanvaller om bestanden op de webserver te manipuleren.",
+                            "Het wordt aanbevolen om de HTTP PUT- en DEL-methoden uit te schakelen als u geen REST API-services gebruikt. De volgende bronnen helpen u deze methoden uit te schakelen.http://www.techstacks.com/howto/disable-http-methods-in-tomcat.html https://docs.oracle.com/cd/E19857-01/820-5627/gghwc/index.html https://developer.ibm.com/answers/questions/321629/how-to-disable-http-methods-head-put-delete-option/"],
+                    [43, "Aanvallers proberen meer over het doelwit te weten te komen uit de hoeveelheid informatie die in de headers wordt weergegeven. Een aanvaller weet mogelijk welk type tech stack een webapplicatie benadrukt en vele andere informatie.",
+                            "Banner Grabbing moet worden beperkt en de toegang tot de diensten van buitenaf moet tot een minimum worden beperkt."],
+                    [44, "Een aanvaller die misbruik weet te maken van dit beveiligingslek, kan gegevens lezen, zoals de weergavestatus, die door de server zijn versleuteld. Dit beveiligingslek kan ook worden gebruikt voor gegevensmanipulatie, die, indien succesvol misbruikt, kan worden gebruikt om de gegevens die door de server zijn versleuteld te ontsleutelen en ermee te knoeien.",
+                            "Microsoft heeft een reeks patches op hun website uitgebracht om dit probleem te verhelpen. De informatie die nodig is om dit beveiligingslek te verhelpen, kan worden afgeleid uit deze bron. https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-070"],
+                    [45, "Elke verouderde webserver kan meerdere kwetsbaarheden bevatten, omdat hun ondersteuning zou zijn beëindigd. Een aanvaller kan van een dergelijke mogelijkheid gebruikmaken om aanvallen uit te voeren.",
+                            "Het wordt ten zeerste aanbevolen om de webserver te upgraden naar de beschikbare nieuwste versie."],
+                    [46, "Hackers kunnen de URL's gemakkelijk manipuleren via een GET/POST request. Ze kunnen gemakkelijk meerdere aanvalsvectoren in de URL injecteren en ook de reactie monitoren",
+                            "Door te zorgen voor de juiste ontsmettingstechnieken en veilige coderingspraktijken te gebruiken, zal het voor de aanvaller onmogelijk zijn om door te dringen. De volgende bron geeft een gedetailleerd inzicht in veilige coderingspraktijken. https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices"],
+                    [47, "Aangezien de aanvaller kennis heeft van het specifieke type backend dat het doelwit gebruikt, kan hij een gerichte exploit voor de specifieke versie lanceren. Ze kunnen ook proberen zich te authenticeren met standaardreferenties om zichzelf erdoorheen te krijgen.",
+                            "Tijdige beveiligingspatches voor de backend moeten worden geïnstalleerd. Standaardreferenties moeten worden gewijzigd. Indien mogelijk kan de bannerinformatie worden gewijzigd om de aanvaller te misleiden. De volgende bron geeft meer informatie over hoe u uw backend kunt beveiligen. http://kb.bodhost.com/secure-database-server/"],
+                    [48, "Aanvallers kunnen externe exploits lanceren om de service te laten crashen of tools zoals ncrack om het wachtwoord op het doelwit te brute-forcen.",
+                            "Het wordt aanbevolen om de service voor de buitenwereld te blokkeren en de service alleen toegankelijk te maken via een reeks toegestane IP's die alleen echt nodig zijn. De volgende bron biedt inzicht in de risico's en de stappen om de service te blokkeren. https://www.perspectiverisk.com/remote-desktop-service-vulnerabilities/"],
+                    [49, "Hackers kunnen community-strings via de service lezen en behoorlijk wat informatie van het doelwit opsommen. Er zijn ook meerdere kwetsbaarheden voor het uitvoeren van externe code en denial of service gerelateerd aan SNMP-services.",
+                            "Gebruik een firewall om de poorten van de buitenwereld te blokkeren. Het volgende artikel geeft een breed inzicht in het vergrendelen van de SNMP-service. https://www.techrepublic.com/article/lock-it-down-dont-allow-snmp-to-compromise-network-security/"],
+                    [50, "Aanvallers kunnen de logbestanden en error informatie vinden die door de applicatie zijn gegenereerd. Ze kunnen ook de statuscodes zien die in de applicatie zijn gegenereerd. Door al deze informatie te combineren, kan de aanvaller een aanval gebruiken.",
+                            "Door de toegang tot de loggerapplicatie van de buitenwereld te beperken, zal meer dan voldoende zijn om deze zwakte te verminderen."],
+                    [51, "Cybercriminelen richten zich voornamelijk op deze service, omdat het voor hen veel gemakkelijker is om een aanval op afstand uit te voeren door exploits uit te voeren. WannaCry Ransomware is zo'n voorbeeld.",
+                            "SMB Service aan de buitenwereld blootstellen is een slecht idee, het wordt aanbevolen om de nieuwste patches voor de service te installeren om niet gecompromitteerd te raken. De volgende bron biedt gedetailleerde informatie over SMB-verhardingsconcepten. https://kb.iweb.com/hc/en-us/articles/115000274491-Securing-Windows-SMB-and-NetBios-NetBT-Services"]
             ]
 
 # Tool Set
@@ -1309,8 +1307,8 @@ def get_parser():
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('-h', '--help', action='store_true', 
                         help='Show help message and exit.')
-    parser.add_argument('-u', '--update', action='store_true', 
-                        help='Update RapidScan.')
+    #parser.add_argument('-u', '--update', action='store_true', 
+    #                    help='Update RapidScan.')
     parser.add_argument('-s', '--skip', action='append', default=[],
                         help='Skip some tools', choices=[t[0] for t in tools_precheck])
     parser.add_argument('-n', '--nospinner', action='store_true', 
@@ -1369,30 +1367,6 @@ if args_namespace.help or (not args_namespace.update \
     and not args_namespace.target):
     logo()
     helper()
-elif args_namespace.update:
-    logo()
-    print("RapidScan is updating....Please wait.\n")
-    spinner.start()
-    # Checking internet connectivity first...
-    rs_internet_availability = check_internet()
-    if rs_internet_availability == 0:
-        print("\t"+ bcolors.BG_ERR_TXT + "There seems to be some problem connecting to the internet. Please try again or later." +bcolors.ENDC)
-        spinner.stop()
-        sys.exit(1)
-    cmd = 'sha1sum rapidscan.py | grep .... | cut -c 1-40'
-    oldversion_hash = subprocess.check_output(cmd, shell=True)
-    oldversion_hash = oldversion_hash.strip()
-    os.system('wget -N https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py -O rapidscan.py > /dev/null 2>&1')
-    newversion_hash = subprocess.check_output(cmd, shell=True)
-    newversion_hash = newversion_hash.strip()
-    if oldversion_hash == newversion_hash :
-        clear()
-        print("\t"+ bcolors.OKBLUE +"You already have the latest version of RapidScan." + bcolors.ENDC)
-    else:
-        clear()
-        print("\t"+ bcolors.OKGREEN +"RapidScan successfully updated to the latest version." +bcolors.ENDC)
-    spinner.stop()
-    sys.exit(1)
 
 elif args_namespace.target:
 
@@ -1402,7 +1376,7 @@ elif args_namespace.target:
     os.system('clear')
     os.system('setterm -cursor off')
     logo()
-    print(bcolors.BG_HEAD_TXT+"[ Checking Available Security Scanning Tools Phase... Initiated. ]"+bcolors.ENDC)
+    print(bcolors.BG_HEAD_TXT+"[ Beschikbare tools voor beveiligingsscans controleren Fase... Gestart. ]"+bcolors.ENDC)
 
     unavail_tools_names = list()
 
@@ -1413,15 +1387,15 @@ elif args_namespace.target:
             output, err = p.communicate()
             val = output + err
         except:
-            print("\t"+bcolors.BG_ERR_TXT+"RapidScan was terminated abruptly..."+bcolors.ENDC)
+            print("\t"+bcolors.BG_ERR_TXT+"DNS-Scan werd abrupt beëindigd..."+bcolors.ENDC)
             sys.exit(1)
         
         # If the tool is not found or it's part of the --skip argument(s), disabling it
-        if b"not found" in val or tools_precheck[rs_avail_tools][arg1] in args_namespace.skip :
-            if b"not found" in val:
-                print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.BADFAIL+"...unavailable."+bcolors.ENDC)
+        if b"Niet gevonden" in val or tools_precheck[rs_avail_tools][arg1] in args_namespace.skip :
+            if b"Niet gevonden" in val:
+                print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.BADFAIL+"...Niet beschikbaar."+bcolors.ENDC)
             elif tools_precheck[rs_avail_tools][arg1] in args_namespace.skip :
-                print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.BADFAIL+"...skipped."+bcolors.ENDC)
+                print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.BADFAIL+"...Overgeslagen."+bcolors.ENDC)
             
             for scanner_index, scanner_val in enumerate(tool_names):
                 if scanner_val[2] == tools_precheck[rs_avail_tools][arg1]:
@@ -1429,22 +1403,22 @@ elif args_namespace.target:
                     unavail_tools_names.append(tools_precheck[rs_avail_tools][arg1])
 
         else:
-            print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.OKGREEN+"...available."+bcolors.ENDC)
+            print("\t"+bcolors.OKBLUE+tools_precheck[rs_avail_tools][arg1]+bcolors.ENDC+bcolors.OKGREEN+"...beschikbaar."+bcolors.ENDC)
         rs_avail_tools = rs_avail_tools + 1
         clear()
     unavail_tools_names = list(set(unavail_tools_names))
     if len(unavail_tools_names) == 0:
-        print("\t"+bcolors.OKGREEN+"All Scanning Tools are available. Complete vulnerability checks will be performed by RapidScan."+bcolors.ENDC)
+        print("\t"+bcolors.OKGREEN+"Alle scantools zijn beschikbaar. Volledige kwetsbaarheidscontroles worden uitgevoerd door RapidScan."+bcolors.ENDC)
     else:
-        print("\t"+bcolors.WARNING+"Some of these tools "+bcolors.BADFAIL+str(unavail_tools_names)+bcolors.ENDC+bcolors.WARNING+" are unavailable or will be skipped. RapidScan will still perform the rest of the tests. Install these tools to fully utilize the functionality of RapidScan."+bcolors.ENDC)
-    print(bcolors.BG_ENDL_TXT+"[ Checking Available Security Scanning Tools Phase... Completed. ]"+bcolors.ENDC)
+        print("\t"+bcolors.WARNING+"Sommige van deze tools "+bcolors.BADFAIL+str(unavail_tools_names)+bcolors.ENDC+bcolors.WARNING+" zijn niet beschikbaar of worden overgeslagen. DNS-Scan zal de rest van de tests nog steeds uitvoeren. Installeer deze tools om de functionaliteit van DNS-Scan volledig te benutten."+bcolors.ENDC)
+    print(bcolors.BG_ENDL_TXT+"[ Beschikbare tools voor beveiligingsscannen controleren Fase... Voltooid. ]"+bcolors.ENDC)
     print("\n")
-    print(bcolors.BG_HEAD_TXT+"[ Preliminary Scan Phase Initiated... Loaded "+str(tool_checks)+" vulnerability checks. ]"+bcolors.ENDC)
+    print(bcolors.BG_HEAD_TXT+"[ Voorlopige scanfase gestart... Loaded "+str(tool_checks)+" kwetsbaarheidscontroles. ]"+bcolors.ENDC)
     #while (tool < 1):
     while(tool < len(tool_names)):
-        print("["+tool_status[tool][arg3]+tool_status[tool][arg4]+"] Deploying "+str(tool+1)+"/"+str(tool_checks)+" | "+bcolors.OKBLUE+tool_names[tool][arg2]+bcolors.ENDC,)
+        print("["+tool_status[tool][arg3]+tool_status[tool][arg4]+"] Inzetten "+str(tool+1)+"/"+str(tool_checks)+" | "+bcolors.OKBLUE+tool_names[tool][arg2]+bcolors.ENDC,)
         if tool_names[tool][arg4] == 0:
-            print(bcolors.WARNING+"\nScanning Tool Unavailable. Skipping Test...\n"+bcolors.ENDC)
+            print(bcolors.WARNING+"\nScantool niet beschikbaar. Test overslaan...\n"+bcolors.ENDC)
             rs_skipped_checks = rs_skipped_checks + 1
             tool = tool + 1
             continue
@@ -1453,7 +1427,7 @@ elif args_namespace.target:
         except Exception as e:
             print("\n")
         scan_start = time.time()
-        temp_file = "/tmp/rapidscan_temp_"+tool_names[tool][arg1]
+        temp_file = "/tmp/dns-scan_temp_"+tool_names[tool][arg1]
         cmd = tool_cmd[tool][arg1]+target+tool_cmd[tool][arg2]+" > "+temp_file+" 2>&1"
 
         try:
@@ -1470,7 +1444,7 @@ elif args_namespace.target:
                 rs_total_elapsed = rs_total_elapsed + elapsed
                 #print(bcolors.OKBLUE+"\b...Completed in "+display_time(int(elapsed))+bcolors.ENDC+"\n")
                 sys.stdout.write(ERASE_LINE)
-                print(bcolors.OKBLUE+"\nScan Completed in "+display_time(int(elapsed))+bcolors.ENDC, end='\r', flush=True)
+                print(bcolors.OKBLUE+"\nScan voltooid in "+display_time(int(elapsed))+bcolors.ENDC, end='\r', flush=True)
                 print("\n")
                 #clear()
                 rs_tool_output_file = open(temp_file).read()
@@ -1492,29 +1466,27 @@ elif args_namespace.target:
                 scan_stop = time.time()
                 elapsed = scan_stop - scan_start
                 rs_total_elapsed = rs_total_elapsed + elapsed
-                #sys.stdout.write(CURSOR_UP_ONE) 
                 sys.stdout.write(ERASE_LINE)
-                #print("-" * terminal_size(), end='\r', flush=True)
-                print(bcolors.OKBLUE+"\nScan Interrupted in "+display_time(int(elapsed))+bcolors.ENDC, end='\r', flush=True)
-                print("\n"+bcolors.WARNING + "\tTest Skipped. Performing Next. Press Ctrl+Z to Quit RapidScan.\n" + bcolors.ENDC)
+                print(bcolors.OKBLUE+"\nScan onderbroken in "+display_time(int(elapsed))+bcolors.ENDC, end='\r', flush=True)
+                print("\n"+bcolors.WARNING + "\tTest overgeslagen. Volgende uitvoeren. Druk op Ctrl+Z om dns-scan af te sluiten.\n" + bcolors.ENDC)
                 rs_skipped_checks = rs_skipped_checks + 1
 
         tool=tool+1
 
-    print(bcolors.BG_ENDL_TXT+"[ Preliminary Scan Phase Completed. ]"+bcolors.ENDC)
+    print(bcolors.BG_ENDL_TXT+"[ Voorlopige scanfase voltooid. ]"+bcolors.ENDC)
     print("\n")
 
     #################### Report & Documentation Phase ###########################
-    print(bcolors.BG_HEAD_TXT+"[ Report Generation Phase Initiated. ]"+bcolors.ENDC)
+    print(bcolors.BG_HEAD_TXT+"[ Rapportgeneratiefase gestart. ]"+bcolors.ENDC)
     if len(rs_vul_list)==0:
-        print("\t"+bcolors.OKGREEN+"No Vulnerabilities Detected."+bcolors.ENDC)
+        print("\t"+bcolors.OKGREEN+"Geen kwetsbaarheid gedecteerd."+bcolors.ENDC)
     else:
         with open("RS-Vulnerability-Report", "a") as report:
             while(rs_vul < len(rs_vul_list)):
                 vuln_info = rs_vul_list[rs_vul].split('*')
                 report.write(vuln_info[arg2])
                 report.write("\n------------------------\n\n")
-                temp_report_name = "/tmp/rapidscan_temp_"+vuln_info[arg1]
+                temp_report_name = "/tmp/dns-scan_temp_"+vuln_info[arg1]
                 with open(temp_report_name, 'r') as temp_report:
                     data = temp_report.read()
                     report.write(data)
@@ -1522,7 +1494,7 @@ elif args_namespace.target:
                 temp_report.close()
                 rs_vul = rs_vul + 1
 
-            print("\tComplete Vulnerability Report for "+bcolors.OKBLUE+target+bcolors.ENDC+" named "+bcolors.OKGREEN+"`RS-Vulnerability-Report`"+bcolors.ENDC+" is available under the same directory RapidScan resides.")
+            print("\tCompleet kwetsbaarheidsrapport voor "+bcolors.OKBLUE+target+bcolors.ENDC+" genaamd "+bcolors.OKGREEN+"`RS-Vulnerability-Report`"+bcolors.ENDC+" is beschikbaar onder dezelfde directory waar dns-scan zich bevindt.")
 
         report.close()
     # Writing all scan files output into RS-Debug-ScanLog for debugging purposes.
@@ -1546,7 +1518,7 @@ elif args_namespace.target:
     print("\tTotale verstreken tijd voor de scan         : "+bcolors.BOLD+bcolors.OKBLUE+display_time(int(rs_total_elapsed))+bcolors.ENDC)
     print("\n")
     print("\tVoor debugging doeleinden kunt u de volledige uitvoer bekijken die is gegenereerd door alle tools met de naam"+bcolors.OKBLUE+"`RS-Debug-ScanLog`"+bcolors.ENDC+" onder dezelfde map.")
-    print(bcolors.BG_ENDL_TXT+"[ Report Generation Phase Completed. ]"+bcolors.ENDC)
+    print(bcolors.BG_ENDL_TXT+"[ Rapportgeneratiefase voltooid. ]"+bcolors.ENDC)
 
     os.system('setterm -cursor on')
-    os.system('rm /tmp/rapidscan_te* > /dev/null 2>&1') # Clearing previous scan files
+    os.system('rm /tmp/dns-scan_te* > /dev/null 2>&1') # Clearing previous scan files
