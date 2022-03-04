@@ -457,16 +457,16 @@ tool_cmd   = [
                 ["host ",""],
 
                 #2
-                ["wget -O /tmp/rapidscan_temp_aspnet_config_err --tries=1 ","/%7C~.aspx"],
+                ["wget -O /tmp/dns-scan_temp_aspnet_config_err --tries=1 ","/%7C~.aspx"],
 
                 #3
-                ["wget -O /tmp/rapidscan_temp_wp_check --tries=1 ","/wp-admin"],
+                ["wget -O /tmp/dns-scan_temp_wp_check --tries=1 ","/wp-admin"],
 
                 #4
-                ["wget -O /tmp/rapidscan_temp_drp_check --tries=1 ","/user"],
+                ["wget -O /tmp/dns-scan_temp_drp_check --tries=1 ","/user"],
 
                 #5
-                ["wget -O /tmp/rapidscan_temp_joom_check --tries=1 ","/administrator"],
+                ["wget -O /tmp/dns-scan_temp_joom_check --tries=1 ","/administrator"],
 
                 #6
                 ["uniscan -e -u ",""],
@@ -676,7 +676,7 @@ tool_cmd   = [
                 ["nmap -p161 -sU --open -Pn ",""],
 
                 #75
-                ["wget -O /tmp/rapidscan_temp_aspnet_elmah_axd --tries=1 ","/elmah.axd"],
+                ["wget -O /tmp/dns-scan_temp_aspnet_elmah_axd --tries=1 ","/elmah.axd"],
 
                 #76
                 ["nmap -p445,137-139 --open -Pn ",""],
@@ -685,7 +685,7 @@ tool_cmd   = [
                 ["nmap -p137,138 --open -Pn ",""],
 
                 #78
-                ["wapiti "," -f txt -o rapidscan_temp_wapiti"],
+                ["wapiti "," -f txt -o dns-scan_temp_wapiti"],
 
                 #79
                 ["nmap -p80 --script=http-iis-webdav-vuln -Pn ",""],
@@ -1307,8 +1307,8 @@ def get_parser():
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('-h', '--help', action='store_true', 
                         help='Show help message and exit.')
-    #parser.add_argument('-u', '--update', action='store_true', 
-    #                    help='Update RapidScan.')
+    parser.add_argument('-u', '--update', action='store_true', 
+                        help='Update dns-scan.')
     parser.add_argument('-s', '--skip', action='append', default=[],
                         help='Skip some tools', choices=[t[0] for t in tools_precheck])
     parser.add_argument('-n', '--nospinner', action='store_true', 
@@ -1408,7 +1408,7 @@ elif args_namespace.target:
         clear()
     unavail_tools_names = list(set(unavail_tools_names))
     if len(unavail_tools_names) == 0:
-        print("\t"+bcolors.OKGREEN+"Alle scantools zijn beschikbaar. Volledige kwetsbaarheidscontroles worden uitgevoerd door RapidScan."+bcolors.ENDC)
+        print("\t"+bcolors.OKGREEN+"Alle scantools zijn beschikbaar. Volledige kwetsbaarheidscontroles worden uitgevoerd door Dns-scan."+bcolors.ENDC)
     else:
         print("\t"+bcolors.WARNING+"Sommige van deze tools "+bcolors.BADFAIL+str(unavail_tools_names)+bcolors.ENDC+bcolors.WARNING+" zijn niet beschikbaar of worden overgeslagen. DNS-Scan zal de rest van de tests nog steeds uitvoeren. Installeer deze tools om de functionaliteit van DNS-Scan volledig te benutten."+bcolors.ENDC)
     print(bcolors.BG_ENDL_TXT+"[ Beschikbare tools voor beveiligingsscannen controleren Fase... Voltooid. ]"+bcolors.ENDC)
@@ -1501,7 +1501,7 @@ elif args_namespace.target:
     for file_index, file_name in enumerate(tool_names):
         with open("RS-Debug-ScanLog", "a") as report:
             try:
-                with open("/tmp/rapidscan_temp_"+file_name[arg1], 'r') as temp_report:
+                with open("/tmp/dns-scan_temp_"+file_name[arg1], 'r') as temp_report:
                         data = temp_report.read()
                         report.write(file_name[arg2])
                         report.write("\n------------------------\n\n")
