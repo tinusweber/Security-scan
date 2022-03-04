@@ -109,14 +109,14 @@ def vul_remed_info(v1,v2,v3):
 def helper():
         print(bcolors.OKBLUE+"Informatie:"+bcolors.ENDC)
         print("------------")
-        print("\t./vuln-scan.py example.com: Scans de domein example.com.")
-        print("\t./vuln-scan.py example.com --skip dmitry --skip theHarvester: Skip de 'dmitry' en 'theHarvester' tests.")
-        print("\t./vuln-scan.py example.com --nospinner: Zet de idle loader/spinner uit.")
-        print("\t./vuln-scan.py --help     : Weergeeft de help context.")
+        print("\t./dns-vuln-scan-fast.py example.com: Scans de domein example.com.")
+        print("\t./dns-vuln-scan-fast.py example.com --skip dmitry --skip theHarvester: Skip de 'dmitry' en 'theHarvester' tests.")
+        print("\t./dns-vuln-scan-fast.py example.com --nospinner: Zet de idle loader/spinner uit.")
+        print("\t./dns-vuln-scan-fast.py --help     : Weergeeft de help context.")
         print(bcolors.OKBLUE+"Interactief:"+bcolors.ENDC)
         print("------------")
         print("\tCtrl+C: Slaat huidige test over.")
-        print("\tCtrl+Z: Sluit vuln-scan af.")
+        print("\tCtrl+Z: Sluit vdns-vuln-scan-fast af.")
         print(bcolors.OKBLUE+"Legends:"+bcolors.ENDC)
         print("--------")
         print("\t["+proc_high+"]: Scan process may take longer times (not predictable).")
@@ -237,9 +237,6 @@ tool_names = [
                 #10
                 ["dnsrecon","DNSRecon - Pogingen om meerdere zones over te dragen op naamservers.","dnsrecon",1],
 
-                #11
-                #["fierce","Fierce - Attempts Zone Transfer [No Brute Forcing]","fierce",1],
-
                 #12
                 ["dnswalk","DNSWalk - Pogingen Zone Transfer.","dnswalk",1],
 
@@ -248,9 +245,6 @@ tool_names = [
 
                 #14
                 ["nmap_header","Nmap [XSS Filter Check] - Controleert of XSS Protection Header aanwezig is.","nmap",1],
-
-                #15
-                ["nmap_sloris","Nmap [Slowloris DoS] - Controles op een denial-of-service-kwetsbaarheid van Slowloris.","nmap",1],
 
                 #16
                 ["sslyze_hbleed","SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.","sslyze",1],
@@ -289,7 +283,7 @@ tool_names = [
                 ["golismero_dns_malware","Golismero - Controleert of het domein is spoofed of hijacked.","golismero",1],
 
                 #28
-                ["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
+                #["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
 
                 #29
                 ["golismero_brute_url_predictables","Golismero - BruteForces voor bepaalde bestanden op het domein.","golismero",1],
@@ -299,9 +293,6 @@ tool_names = [
 
                 #31
                 ["golismero_sqlmap","Golismero - SQLMap [Retrieves only the DB Banner]","golismero",1],
-
-                #32
-                ["dirb","DirB - Brutes het doelwit voor Open Directory's.","dirb",1],
 
                 #33
                 ["xsser","XSSer - Controle voor Cross-Site Scripting [XSS] Attacks.","xsser",1],
@@ -315,20 +306,8 @@ tool_names = [
                 #36
                 ["golismero_nikto","Golismero Nikto Scans - Gebruikt Nikto Plugin om kwetsbaarheden te detecteren.","golismero",1],
 
-                #37
-                ["golismero_brute_subdomains","Golismero Subdomains Bruter - Brute Forces Subdomein ontdekken.","golismero",1],
-
-                #38
-                ["dnsenum_zone_transfer","DNSEnum - Pogingen Zone Transfer.","dnsenum",1],
-
-                #39
-                ["fierce_brute_subdomains","Fierce Subdomains Bruter - Brute Forces Subdomein ontdekken.","fierce",1],
-
                 #40
                 ["dmitry_email","DMitry - Verzamelt passief e-mails van het domein.","dmitry",1],
-
-                #41
-                ["dmitry_subdomains","DMitry - Verzamelt passief subdomeinen van het domein.","dmitry",1],
 
                 #42
                 ["nmap_telnet","Nmap [TELNET] - Controleert of de TELNET-service actief is.","nmap",1],
@@ -366,9 +345,6 @@ tool_names = [
                 #53
                 ["nikto_subrute","Nikto - Brute subdomeinen.","nikto",1],
 
-                #54
-                ["nikto_shellshock","Nikto - Controles op Shellshock-bug.","nikto",1],
-
                 #55
                 ["nikto_internalip","Nikto - Controles op intern IP-lek.","nikto",1],
 
@@ -402,9 +378,6 @@ tool_names = [
                 #65
                 ["nikto_paths","Nikto - Controles op injecteerbare paden.","nikto",1],
 
-                #66
-                ["dnsmap_brute","DNSMap - Brute subdomeinen.","dnsmap",1],
-
                 #67
                 ["nmap_sqlserver","Nmap - Controles voor MS-SQL Server DB","nmap",1],
 
@@ -419,12 +392,6 @@ tool_names = [
 
                 #71
                 ["nmap_rdp_tcp","Nmap - Controles voor Remote Desktop Service via TCP","nmap",1],
-
-                #72
-                ["nmap_full_ps_tcp","Nmap - Voert een Full TCP Port Scan uit","nmap",1],
-
-                #73
-                ["nmap_full_ps_udp","Nmap - Voert een Full UDP Port Scan uit","nmap",1],
 
                 #74
                 ["nmap_snmp","Nmap - Controles voor SNMP-service","nmap",1],
@@ -445,10 +412,7 @@ tool_names = [
                 ["nmap_iis","Nmap - Controles voor IIS WebDAV","nmap",1],
 
                 #80
-                ["whatweb","WhatWeb - Controles voor X-XSS Protection Header","whatweb",1],
-
-                #81
-                ["amass","AMass - Brutes-domein voor subdomeinen","amass",1]
+                ["whatweb","WhatWeb - Controles voor X-XSS Protection Header","whatweb",1]
             ]
 
 # Command that is used to initiate the tool (with parameters and extra params)
@@ -469,7 +433,7 @@ tool_cmd   = [
                 ["wget -O /tmp/dns-scan_temp_joom_check --tries=1 ","/administrator"],
 
                 #6
-                ["uniscan -e -u ",""],
+                ["sudo uniscan -e -u ",""],
 
                 #7
                 ["wafw00f ",""],
@@ -483,9 +447,6 @@ tool_cmd   = [
                 #10
                 ["dnsrecon -d ",""],
 
-                #11
-                #["fierce -wordlist xxx -dns ",""],
-
                 #12
                 ["dnswalk -d ","."],
 
@@ -494,9 +455,6 @@ tool_cmd   = [
 
                 #14
                 ["nmap -p80 --script http-security-headers -Pn ",""],
-
-                #15
-                ["nmap -p80,443 --script http-slowloris --max-parallelism 500 -Pn ",""],
 
                 #16
                 ["sslyze --heartbleed ",""],
@@ -535,7 +493,7 @@ tool_cmd   = [
                 ["golismero -e dns_malware scan ",""],
 
                 #28
-                ["golismero -e heartbleed scan ",""],
+                #["golismero -e heartbleed scan ",""],
 
                 #29
                 ["golismero -e brute_url_predictables scan ",""],
@@ -545,9 +503,6 @@ tool_cmd   = [
 
                 #31
                 ["golismero -e sqlmap scan ",""],
-
-                #32
-                ["dirb http://"," -fi"],
 
                 #33
                 ["xsser --all=http://",""],
@@ -561,20 +516,8 @@ tool_cmd   = [
                 #36
                 ["golismero -e nikto scan ",""],
 
-                #37
-                ["golismero -e brute_dns scan ",""],
-
-                #38
-                ["dnsenum ",""],
-
-                #39
-                ["fierce --domain ",""],
-
                 #40
                 ["dmitry -e ",""],
-
-                #41
-                ["dmitry -s ",""],
 
                 #42
                 ["nmap -p23 --open -Pn ",""],
@@ -592,28 +535,25 @@ tool_cmd   = [
                 ["golismero -e fingerprint_web scan ",""],
 
                 #47
-                ["uniscan -w -u ",""],
+                ["sudo uniscan -w -u ",""],
 
                 #48
-                ["uniscan -q -u ",""],
+                ["sudo uniscan -q -u ",""],
 
                 #49
-                ["uniscan -r -u ",""],
+                ["sudo uniscan -r -u ",""],
 
                 #50
-                ["uniscan -s -u ",""],
+                ["sudo uniscan -s -u ",""],
 
                 #51
-                ["uniscan -d -u ",""],
+                ["sudo uniscan -d -u ",""],
 
                 #52
                 ["nikto -Plugins 'apache_expect_xss' -host ",""],
 
                 #53
                 ["nikto -Plugins 'subdomain' -host ",""],
-
-                #54
-                ["nikto -Plugins 'shellshock' -host ",""],
 
                 #55
                 ["nikto -Plugins 'cookies' -host ",""],
@@ -648,9 +588,6 @@ tool_cmd   = [
                 #65
                 ["nikto -Plugins 'paths' -host ",""],
 
-                #66
-                ["dnsmap ",""],
-
                 #67
                 ["nmap -p1433 --open -Pn ",""],
 
@@ -665,12 +602,6 @@ tool_cmd   = [
 
                 #71
                 ["nmap -p3389 --open -sT -Pn ",""],
-
-                #72
-                ["nmap -p1-65535 --open -Pn ",""],
-
-                #73
-                ["nmap -p1-65535 -sU --open -Pn ",""],
 
                 #74
                 ["nmap -p161 -sU --open -Pn ",""],
@@ -691,10 +622,7 @@ tool_cmd   = [
                 ["nmap -p80 --script=http-iis-webdav-vuln -Pn ",""],
                 
                 #80
-                ["whatweb "," -a 1"],
-
-                #81
-                ["amass enum -d ",""]
+                ["whatweb "," -a 1"]
             ]
 
 # Tool Responses (Begins) [Responses + Severity (c - critical | h - high | m - medium | l - low | i - informational) + Reference for Vuln Definition and Remediation]
@@ -729,9 +657,6 @@ tool_resp   = [
                 #10
                 ["Zone Transfer Succesvol met DNSRecon. Configureer DNS onmiddellijk opnieuw.","h",10],
 
-                #11
-                #["Zone Transfer Successful using fierce. Reconfigure DNS immediately.","h",10],
-
                 #12
                 ["Zone Transfer Succesvol met dnswalk. Configureer DNS onmiddellijk opnieuw.","h",10],
 
@@ -740,9 +665,6 @@ tool_resp   = [
 
                 #14
                 ["XSS-beschermingsfilter is uitgeschakeld.","m",12],
-
-                #15
-                ["Kwetsbaar voor Slowloris Denial of Service.","c",13],
 
                 #16
                 ["HEARTBLEED-kwetsbaarheid gevonden met SSLyze.","h",14],
@@ -781,7 +703,7 @@ tool_resp   = [
                 ["Domein is spoofed/hijacked.","h",24],
 
                 #28
-                ["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
+                #["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
 
                 #29
                 ["Open bestanden gevonden met Golismero BruteForce.","m",25],
@@ -791,9 +713,6 @@ tool_resp   = [
 
                 #31
                 ["DB Banner opgehaald met SQLMap.","l",27],
-
-                #32
-                ["Open mappen gevonden met DirB.","m",26],
 
                 #33
                 ["XSSer heeft XSS-kwetsbaarheden gevonden.","c",28],
@@ -807,20 +726,8 @@ tool_resp   = [
                 #36
                 ["Golismero Nikto Plugin heeft kwetsbaarheden gevonden.","m",30],
 
-                #37
-                ["Subdomeinen gevonden met Golismero.","m",31],
-
-                #38
-                ["Zone Transfer Succesvol met DNSEnum. Configureer DNS onmiddellijk opnieuw.","h",10],
-
-                #39
-                ["Subdomeinen gevonden met Fierce.","m",31],
-
                 #40
                 ["E-mailadressen ontdekt met DMitry.","l",9],
-
-                #41
-                ["Subdomeinen ontdekt met DMitry.","m",31],
 
                 #42
                 ["Telnet-service gedetecteerd.","h",32],
@@ -858,9 +765,6 @@ tool_resp   = [
                 #53
                 ["Subdomeinen gevonden met Nikto.","m",31],
 
-                #54
-                ["Webserver kwetsbaar voor Shellshock Bug.","c",40],
-
                 #55
                 ["Webserver lekt interne IP.","l",41],
 
@@ -894,9 +798,6 @@ tool_resp   = [
                 #65
                 ["Injecteerbare Paths gedetecteerd.","l",46],
 
-                #66
-                ["Gevonden subdomeinen met DNSMap.","m",31],
-
                 #67
                 ["MS-SQL DB-service gedetecteerd.","l",47],
 
@@ -911,12 +812,6 @@ tool_resp   = [
 
                 #71
                 ["RDP-server gedetecteerd via TCP.","h",48],
-
-                #72
-                ["TCP-poorten zijn open","l",8],
-
-                #73
-                ["UDP-poorten zijn open","l",8],
 
                 #74
                 ["SNMP-service gedetecteerd.","m",49],
@@ -937,10 +832,7 @@ tool_resp   = [
                 ["IIS WebDAV is ingeschakeld","m",35],
 
                 #80
-                ["X-XSS-beveiliging is niet aanwezig","m",12],
-
-                #81
-                ["Gevonden subdomeinen met AMass","m",31]
+                ["X-XSS-beveiliging is niet aanwezig","m",12]
             ]
 
 # Tool Responses (Ends)
@@ -977,9 +869,6 @@ tool_status = [
                 #10
                 ["[+] Zone Transfer was successful!!",0,proc_low," < 20s","dnsreconzt",["Could not resolve domain"]],
 
-                #11
-                #["Whoah, it worked",0,proc_low," < 30s","fiercezt",["none"]],
-
                 #12
                 ["0 errors",0,proc_low," < 35s","dnswalkzt",["!!!0 failures, 0 warnings, 3 errors."]],
 
@@ -988,9 +877,6 @@ tool_status = [
 
                 #14
                 ["XSS filter is disabled",0,proc_low," < 20s","nmapxssh",["Failed to resolve"]],
-
-                #15
-                ["VULNERABLE",0,proc_high," < 45m","nmapdos",["Failed to resolve"]],
 
                 #16
                 ["Server is vulnerable to Heartbleed",0,proc_low," < 40s","sslyzehb",["Could not resolve hostname"]],
@@ -1029,7 +915,7 @@ tool_status = [
                 ["No vulnerabilities found",1,proc_low," < 45s","golism1",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #28
-                ["No vulnerabilities found",1,proc_low," < 40s","golism2",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 40s","golism2",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #29
                 ["No vulnerabilities found",1,proc_low," < 45s","golism3",["Cannot resolve domain name","No vulnerabilities found"]],
@@ -1039,9 +925,6 @@ tool_status = [
 
                 #31
                 ["No vulnerabilities found",1,proc_low," < 45s","golism5",["Cannot resolve domain name","No vulnerabilities found"]],
-
-                #32
-                ["FOUND: 0",1,proc_high," < 35m","dirb",["COULDNT RESOLVE HOST","FOUND: 0"]],
 
                 #33
                 ["Could not find any vulnerability!",1,proc_med," <  4m","xsser",["XSSer is not working propertly!","Could not find any vulnerability!"]],
@@ -1055,20 +938,8 @@ tool_status = [
                 #36
                 ["Nikto found 0 vulnerabilities",1,proc_med," <  4m","golism8",["Cannot resolve domain name","Nikto found 0 vulnerabilities"]],
 
-                #37
-                ["Possible subdomain leak",0,proc_high," < 30m","golism9",["Cannot resolve domain name"]],
-
-                #38
-                ["AXFR record query failed:",1,proc_low," < 45s","dnsenumzt",["NS record query failed:","AXFR record query failed","no NS record for"]],
-
-                #39
-                ["Found 0 entries",1,proc_high," < 75m","fierce2",["Found 0 entries","is gimp"]],
-
                 #40
                 ["Found 0 E-Mail(s)",1,proc_low," < 30s","dmitry1",["Unable to locate Host IP addr","Found 0 E-Mail(s)"]],
-
-                #41
-                ["Found 0 possible subdomain(s)",1,proc_low," < 35s","dmitry2",["Unable to locate Host IP addr","Found 0 possible subdomain(s)"]],
 
                 #42
                 ["open",0,proc_low," < 15s","nmaptelnet",["Failed to resolve"]],
@@ -1106,9 +977,6 @@ tool_status = [
                 #53
                 ["0 item(s) reported",1,proc_low," < 35s","nikto2",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #54
-                ["0 item(s) reported",1,proc_low," < 35s","nikto3",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
-
                 #55
                 ["0 item(s) reported",1,proc_low," < 35s","nikto4",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
@@ -1142,9 +1010,6 @@ tool_status = [
                 #65
                 ["0 item(s) reported",1,proc_low," < 35s","nikto14","ERROR: Cannot resolve hostname , 0 item(s) reported"],
 
-                #66
-                ["#1",0,proc_high," < 30m","dnsmap_brute",["[+] 0 (sub)domains and 0 IP address(es) found"]],
-
                 #67
                 ["open",0,proc_low," < 15s","nmapmssql",["Failed to resolve"]],
 
@@ -1159,12 +1024,6 @@ tool_status = [
 
                 #71
                 ["open",0,proc_low," < 15s","nmaptcprdp",["Failed to resolve"]],
-
-                #72
-                ["open",0,proc_high," > 50m","nmapfulltcp",["Failed to resolve"]],
-
-                #73
-                ["open",0,proc_high," > 75m","nmapfulludp",["Failed to resolve"]],
 
                 #74
                 ["open",0,proc_low," < 30s","nmapsnmp",["Failed to resolve"]],
@@ -1185,10 +1044,7 @@ tool_status = [
                 ["WebDAV is ENABLED",0,proc_low," < 40s","nmapwebdaviis",["Failed to resolve"]],
 
                 #80
-                ["X-XSS-Protection[1",1,proc_med," < 3m","whatweb",["Timed out","Socket error","X-XSS-Protection[1"]],
-
-                #81
-                ["No names were discovered",1,proc_med," < 15m","amass",["The system was unable to build the pool of resolvers"]]
+                ["X-XSS-Protection[1",1,proc_med," < 3m","whatweb",["Timed out","Socket error","X-XSS-Protection[1"]]
             ]
 
 # Vulnerabilities and Remediation
@@ -1252,7 +1108,7 @@ tools_fix = [
                     [29, "SSL-gerelateerde kwetsbaarheden doorbreken de vertrouwelijkheidsfactor. Een aanvaller kan een MiTM-aanval uitvoeren, de communicatie interpreteren en afluisteren.",
                             "Een juiste implementatie en geüpgradede versie van SSL- en TLS libraries zijn erg belangrijk als het gaat om het blokkeren van SSL-gerelateerde kwetsbaarheden."],
                     [30, "Particular Scanner heeft meerdere kwetsbaarheden gevonden die een aanvaller kan proberen het doelwit te misbruiken.",
-                            "Raadpleeg RS-Vulnerability-Report om de volledige informatie over de kwetsbaarheid te bekijken, zodra de scan is voltooid."],
+                            "Raadpleeg Vulnerability-Report om de volledige informatie over de kwetsbaarheid te bekijken, zodra de scan is voltooid."],
                     [31, "Aanvallers kunnen meer informatie verzamelen uit subdomeinen die betrekking hebben op het bovenliggende domein. Aanvallers kunnen zelfs andere services van de subdomeinen vinden en proberen de architectuur van het doelwit te leren. Er zijn zelfs kansen voor de aanvaller om kwetsbaarheden te vinden naarmate het aanvalsoppervlak groter wordt naarmate er meer subdomeinen worden ontdekt.",
                             "Soms is het verstandig om subdomeinen zoals development, staging naar de buitenwereld te blokkeren, omdat dit de aanvaller meer informatie geeft over de tech stack. Complexe naamgevingspraktijken helpen ook bij het verkleinen van het aanvalsoppervlak, aangezien aanvallers moeite hebben om subdomein bruteforcing uit te voeren via dictionaries en wordlists."],
                     [32, "Via dit verouderde protocol kan een aanvaller mogelijk MiTM en andere gecompliceerde aanvallen uitvoeren.",
@@ -1481,7 +1337,7 @@ elif args_namespace.target:
     if len(rs_vul_list)==0:
         print("\t"+bcolors.OKGREEN+"Geen kwetsbaarheid gedecteerd."+bcolors.ENDC)
     else:
-        with open("RS-Vulnerability-Report", "a") as report:
+        with open("DNS-Fast-Vulnerability-Report", "a") as report:
             while(rs_vul < len(rs_vul_list)):
                 vuln_info = rs_vul_list[rs_vul].split('*')
                 report.write(vuln_info[arg2])
@@ -1494,12 +1350,12 @@ elif args_namespace.target:
                 temp_report.close()
                 rs_vul = rs_vul + 1
 
-            print("\tCompleet kwetsbaarheidsrapport voor "+bcolors.OKBLUE+target+bcolors.ENDC+" genaamd "+bcolors.OKGREEN+"`RS-Vulnerability-Report`"+bcolors.ENDC+" is beschikbaar onder dezelfde directory waar dns-scan zich bevindt.")
+            print("\tCompleet kwetsbaarheidsrapport voor "+bcolors.OKBLUE+target+bcolors.ENDC+" genaamd "+bcolors.OKGREEN+"`DNS-Fast-Vulnerability-Report`"+bcolors.ENDC+" is beschikbaar onder dezelfde directory waar dns-scan zich bevindt.")
 
         report.close()
-    # Writing all scan files output into RS-Debug-ScanLog for debugging purposes.
+    # Writing all scan files output into DNS-Debug-ScanLog for debugging purposes.
     for file_index, file_name in enumerate(tool_names):
-        with open("RS-Debug-ScanLog", "a") as report:
+        with open("DNS-Fast-Debug-ScanLog", "a") as report:
             try:
                 with open("/tmp/dns-scan_temp_"+file_name[arg1], 'r') as temp_report:
                         data = temp_report.read()
@@ -1517,7 +1373,7 @@ elif args_namespace.target:
     print("\tTotaal aantal gedetecteerde kwetsbaarheden  : "+bcolors.BOLD+bcolors.BADFAIL+str(len(rs_vul_list))+bcolors.ENDC)
     print("\tTotale verstreken tijd voor de scan         : "+bcolors.BOLD+bcolors.OKBLUE+display_time(int(rs_total_elapsed))+bcolors.ENDC)
     print("\n")
-    print("\tVoor debugging doeleinden kunt u de volledige uitvoer bekijken die is gegenereerd door alle tools met de naam"+bcolors.OKBLUE+"`RS-Debug-ScanLog`"+bcolors.ENDC+" onder dezelfde map.")
+    print("\tVoor debugging doeleinden kunt u de volledige uitvoer bekijken die is gegenereerd door alle tools met de naam"+bcolors.OKBLUE+"`DNS-Fast-Debug-ScanLog`"+bcolors.ENDC+" onder dezelfde map.")
     print(bcolors.BG_ENDL_TXT+"[ Rapportgeneratiefase voltooid. ]"+bcolors.ENDC)
 
     os.system('setterm -cursor on')
