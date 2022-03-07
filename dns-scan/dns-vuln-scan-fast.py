@@ -279,32 +279,8 @@ tool_names = [
                 #26
                 ["lbd","LBD - Controleert op DNS/HTTP Load Balancers.","lbd",1],
 
-                #27
-                ["golismero_dns_malware","Golismero - Controleert of het domein is spoofed of hijacked.","golismero",1],
-
-                #28
-                #["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
-
-                #29
-                ["golismero_brute_url_predictables","Golismero - BruteForces voor bepaalde bestanden op het domein.","golismero",1],
-
-                #30
-                ["golismero_brute_directories","Golismero - BruteForces voor bepaalde mappen op het domein.","golismero",1],
-
-                #31
-                ["golismero_sqlmap","Golismero - SQLMap [Retrieves only the DB Banner]","golismero",1],
-
                 #33
                 ["xsser","XSSer - Controle voor Cross-Site Scripting [XSS] Attacks.","xsser",1],
-
-                #34
-                ["golismero_ssl_scan","Golismero SSL Scans - Voert SSL-gerelateerde scans uit.","golismero",1],
-
-                #35
-                ["golismero_zone_transfer","Golismero Zone Transfer - Pogingen Zone Transfer.","golismero",1],
-
-                #36
-                ["golismero_nikto","Golismero Nikto Scans - Gebruikt Nikto Plugin om kwetsbaarheden te detecteren.","golismero",1],
 
                 #40
                 ["dmitry_email","DMitry - Verzamelt passief e-mails van het domein.","dmitry",1],
@@ -320,9 +296,6 @@ tool_names = [
 
                 #45
                 ["webdav","WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.","davtest",1],
-
-                #46
-                ["golismero_finger","Golismero - Voltooid een fingerprint op het domein.","golismero",1],
 
                 #47
                 ["uniscan_filebrute","Uniscan - Brutes voor bestandsnamen op het domein.","uniscan",1],
@@ -489,32 +462,8 @@ tool_cmd   = [
                 #26
                 ["lbd ",""],
 
-                #27
-                ["golismero -e dns_malware scan ",""],
-
-                #28
-                #["golismero -e heartbleed scan ",""],
-
-                #29
-                ["golismero -e brute_url_predictables scan ",""],
-
-                #30
-                ["golismero -e brute_directories scan ",""],
-
-                #31
-                ["golismero -e sqlmap scan ",""],
-
                 #33
                 ["xsser --all=http://",""],
-
-                #34
-                ["golismero -e sslscan scan ",""],
-
-                #35
-                ["golismero -e zone_transfer scan ",""],
-
-                #36
-                ["golismero -e nikto scan ",""],
 
                 #40
                 ["dmitry -e ",""],
@@ -530,9 +479,6 @@ tool_cmd   = [
 
                 #45
                 ["davtest -url http://",""],
-
-                #46
-                ["golismero -e fingerprint_web scan ",""],
 
                 #47
                 ["sudo uniscan -w -u ",""],
@@ -699,32 +645,8 @@ tool_resp   = [
                 #26
                 ["Geen op DNS/HTTP gebaseerde load balancers gevonden.","l",23],
 
-                #27
-                ["Domein is spoofed/hijacked.","h",24],
-
-                #28
-                #["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
-
-                #29
-                ["Open bestanden gevonden met Golismero BruteForce.","m",25],
-
-                #30
-                ["Open mappen gevonden met Golismero BruteForce.","m",26],
-
-                #31
-                ["DB Banner opgehaald met SQLMap.","l",27],
-
                 #33
                 ["XSSer heeft XSS-kwetsbaarheden gevonden.","c",28],
-
-                #34
-                ["SSL-gerelateerde kwetsbaarheden gevonden met Golismero.","m",29],
-
-                #35
-                ["Zoneoverdracht succesvol met Golismero. Configureer DNS onmiddellijk opnieuw.","h",10],
-
-                #36
-                ["Golismero Nikto Plugin heeft kwetsbaarheden gevonden.","m",30],
 
                 #40
                 ["E-mailadressen ontdekt met DMitry.","l",9],
@@ -740,9 +662,6 @@ tool_resp   = [
 
                 #45
                 ["WebDAV ingeschakeld.","m",35],
-
-                #46
-                ["Informatie gevonden via Fingerprinting.","l",36],
 
                 #47
                 ["Open bestanden gevonden met Uniscan.","m",25],
@@ -911,32 +830,8 @@ tool_status = [
                 #26
                 ["does NOT use Load-balancing",0,proc_med," <  4m","lbd",["NOT FOUND"]],
 
-                #27
-                ["No vulnerabilities found",1,proc_low," < 45s","golism1",["Cannot resolve domain name","No vulnerabilities found"]],
-
-                #28
-                #["No vulnerabilities found",1,proc_low," < 40s","golism2",["Cannot resolve domain name","No vulnerabilities found"]],
-
-                #29
-                ["No vulnerabilities found",1,proc_low," < 45s","golism3",["Cannot resolve domain name","No vulnerabilities found"]],
-
-                #30
-                ["No vulnerabilities found",1,proc_low," < 40s","golism4",["Cannot resolve domain name","No vulnerabilities found"]],
-
-                #31
-                ["No vulnerabilities found",1,proc_low," < 45s","golism5",["Cannot resolve domain name","No vulnerabilities found"]],
-
                 #33
                 ["Could not find any vulnerability!",1,proc_med," <  4m","xsser",["XSSer is not working propertly!","Could not find any vulnerability!"]],
-
-                #34
-                ["Occurrence ID",0,proc_low," < 45s","golism6",["Cannot resolve domain name"]],
-
-                #35
-                ["DNS zone transfer successful",0,proc_low," < 30s","golism7",["Cannot resolve domain name"]],
-
-                #36
-                ["Nikto found 0 vulnerabilities",1,proc_med," <  4m","golism8",["Cannot resolve domain name","Nikto found 0 vulnerabilities"]],
 
                 #40
                 ["Found 0 E-Mail(s)",1,proc_low," < 30s","dmitry1",["Unable to locate Host IP addr","Found 0 E-Mail(s)"]],
@@ -952,9 +847,6 @@ tool_status = [
 
                 #45
                 ["SUCCEED",0,proc_low," < 30s","webdav",["is not DAV enabled or not accessible."]],
-
-                #46
-                ["No vulnerabilities found",1,proc_low," < 15s","golism10",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #47
                 ["[+]",0,proc_med," <  2m","uniscan2",["Use of uninitialized value in unpack at"]],

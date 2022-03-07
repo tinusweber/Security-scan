@@ -286,19 +286,19 @@ tool_names = [
                 ["lbd","LBD - Controleert op DNS/HTTP Load Balancers.","lbd",1],
 
                 #27
-                ["golismero_dns_malware","Golismero - Controleert of het domein is spoofed of hijacked.","golismero",1],
+                #["golismero_dns_malware","Golismero - Controleert of het domein is spoofed of hijacked.","golismero",1],
 
                 #28
-                ["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
+                #["golismero_heartbleed","Golismero - Controleert alleen op Heartbleed-kwetsbaarheid.","golismero",1],
 
                 #29
-                ["golismero_brute_url_predictables","Golismero - BruteForces voor bepaalde bestanden op het domein.","golismero",1],
+                #["golismero_brute_url_predictables","Golismero - BruteForces voor bepaalde bestanden op het domein.","golismero",1],
 
                 #30
-                ["golismero_brute_directories","Golismero - BruteForces voor bepaalde mappen op het domein.","golismero",1],
+                #["golismero_brute_directories","Golismero - BruteForces voor bepaalde mappen op het domein.","golismero",1],
 
                 #31
-                ["golismero_sqlmap","Golismero - SQLMap [Retrieves only the DB Banner]","golismero",1],
+                #["golismero_sqlmap","Golismero - SQLMap [Retrieves only the DB Banner]","golismero",1],
 
                 #32
                 ["dirb","DirB - Brutes het doelwit voor Open Directory's.","dirb",1],
@@ -307,16 +307,16 @@ tool_names = [
                 ["xsser","XSSer - Controle voor Cross-Site Scripting [XSS] Attacks.","xsser",1],
 
                 #34
-                ["golismero_ssl_scan","Golismero SSL Scans - Voert SSL-gerelateerde scans uit.","golismero",1],
+                #["golismero_ssl_scan","Golismero SSL Scans - Voert SSL-gerelateerde scans uit.","golismero",1],
 
                 #35
-                ["golismero_zone_transfer","Golismero Zone Transfer - Pogingen Zone Transfer.","golismero",1],
+                #["golismero_zone_transfer","Golismero Zone Transfer - Pogingen Zone Transfer.","golismero",1],
 
                 #36
-                ["golismero_nikto","Golismero Nikto Scans - Gebruikt Nikto Plugin om kwetsbaarheden te detecteren.","golismero",1],
+                #["golismero_nikto","Golismero Nikto Scans - Gebruikt Nikto Plugin om kwetsbaarheden te detecteren.","golismero",1],
 
                 #37
-                ["golismero_brute_subdomains","Golismero Subdomains Bruter - Brute Forces Subdomein ontdekken.","golismero",1],
+                #["golismero_brute_subdomains","Golismero Subdomains Bruter - Brute Forces Subdomein ontdekken.","golismero",1],
 
                 #38
                 ["dnsenum_zone_transfer","DNSEnum - Pogingen Zone Transfer.","dnsenum",1],
@@ -532,19 +532,19 @@ tool_cmd   = [
                 ["lbd ",""],
 
                 #27
-                ["golismero -e dns_malware scan ",""],
+                #["golismero -e dns_malware scan ",""],
 
                 #28
-                ["golismero -e heartbleed scan ",""],
+                #["golismero -e heartbleed scan ",""],
 
                 #29
-                ["golismero -e brute_url_predictables scan ",""],
+                #["golismero -e brute_url_predictables scan ",""],
 
                 #30
-                ["golismero -e brute_directories scan ",""],
+                #["golismero -e brute_directories scan ",""],
 
                 #31
-                ["golismero -e sqlmap scan ",""],
+                #["golismero -e sqlmap scan ",""],
 
                 #32
                 ["dirb http://"," -fi"],
@@ -553,16 +553,16 @@ tool_cmd   = [
                 ["xsser --all=http://",""],
 
                 #34
-                ["golismero -e sslscan scan ",""],
+                #["golismero -e sslscan scan ",""],
 
                 #35
-                ["golismero -e zone_transfer scan ",""],
+                #["golismero -e zone_transfer scan ",""],
 
                 #36
-                ["golismero -e nikto scan ",""],
+                #["golismero -e nikto scan ",""],
 
                 #37
-                ["golismero -e brute_dns scan ",""],
+                #["golismero -e brute_dns scan ",""],
 
                 #38
                 ["dnsenum ",""],
@@ -778,19 +778,19 @@ tool_resp   = [
                 ["Geen op DNS/HTTP gebaseerde load balancers gevonden.","l",23],
 
                 #27
-                ["Domein is spoofed/hijacked.","h",24],
+                #["Domein is spoofed/hijacked.","h",24],
 
                 #28
-                ["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
+                #["HEARTBLEED-kwetsbaarheid gevonden met Golismero.","h",14],
 
                 #29
-                ["Open bestanden gevonden met Golismero BruteForce.","m",25],
+                #["Open bestanden gevonden met Golismero BruteForce.","m",25],
 
                 #30
-                ["Open mappen gevonden met Golismero BruteForce.","m",26],
+                #["Open mappen gevonden met Golismero BruteForce.","m",26],
 
                 #31
-                ["DB Banner opgehaald met SQLMap.","l",27],
+                #["DB Banner opgehaald met SQLMap.","l",27],
 
                 #32
                 ["Open mappen gevonden met DirB.","m",26],
@@ -799,16 +799,16 @@ tool_resp   = [
                 ["XSSer heeft XSS-kwetsbaarheden gevonden.","c",28],
 
                 #34
-                ["SSL-gerelateerde kwetsbaarheden gevonden met Golismero.","m",29],
+                #["SSL-gerelateerde kwetsbaarheden gevonden met Golismero.","m",29],
 
                 #35
-                ["Zoneoverdracht succesvol met Golismero. Configureer DNS onmiddellijk opnieuw.","h",10],
+                #["Zoneoverdracht succesvol met Golismero. Configureer DNS onmiddellijk opnieuw.","h",10],
 
                 #36
-                ["Golismero Nikto Plugin heeft kwetsbaarheden gevonden.","m",30],
+                #["Golismero Nikto Plugin heeft kwetsbaarheden gevonden.","m",30],
 
                 #37
-                ["Subdomeinen gevonden met Golismero.","m",31],
+                #["Subdomeinen gevonden met Golismero.","m",31],
 
                 #38
                 ["Zone Transfer Succesvol met DNSEnum. Configureer DNS onmiddellijk opnieuw.","h",10],
@@ -1026,19 +1026,19 @@ tool_status = [
                 ["does NOT use Load-balancing",0,proc_med," <  4m","lbd",["NOT FOUND"]],
 
                 #27
-                ["No vulnerabilities found",1,proc_low," < 45s","golism1",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 45s","golism1",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #28
-                ["No vulnerabilities found",1,proc_low," < 40s","golism2",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 40s","golism2",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #29
-                ["No vulnerabilities found",1,proc_low," < 45s","golism3",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 45s","golism3",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #30
-                ["No vulnerabilities found",1,proc_low," < 40s","golism4",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 40s","golism4",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #31
-                ["No vulnerabilities found",1,proc_low," < 45s","golism5",["Cannot resolve domain name","No vulnerabilities found"]],
+                #["No vulnerabilities found",1,proc_low," < 45s","golism5",["Cannot resolve domain name","No vulnerabilities found"]],
 
                 #32
                 ["FOUND: 0",1,proc_high," < 35m","dirb",["COULDNT RESOLVE HOST","FOUND: 0"]],
@@ -1047,16 +1047,16 @@ tool_status = [
                 ["Could not find any vulnerability!",1,proc_med," <  4m","xsser",["XSSer is not working propertly!","Could not find any vulnerability!"]],
 
                 #34
-                ["Occurrence ID",0,proc_low," < 45s","golism6",["Cannot resolve domain name"]],
+                #["Occurrence ID",0,proc_low," < 45s","golism6",["Cannot resolve domain name"]],
 
                 #35
-                ["DNS zone transfer successful",0,proc_low," < 30s","golism7",["Cannot resolve domain name"]],
+                #["DNS zone transfer successful",0,proc_low," < 30s","golism7",["Cannot resolve domain name"]],
 
                 #36
-                ["Nikto found 0 vulnerabilities",1,proc_med," <  4m","golism8",["Cannot resolve domain name","Nikto found 0 vulnerabilities"]],
+                #["Nikto found 0 vulnerabilities",1,proc_med," <  4m","golism8",["Cannot resolve domain name","Nikto found 0 vulnerabilities"]],
 
                 #37
-                ["Possible subdomain leak",0,proc_high," < 30m","golism9",["Cannot resolve domain name"]],
+                #["Possible subdomain leak",0,proc_high," < 30m","golism9",["Cannot resolve domain name"]],
 
                 #38
                 ["AXFR record query failed:",1,proc_low," < 45s","dnsenumzt",["NS record query failed:","AXFR record query failed","no NS record for"]],
