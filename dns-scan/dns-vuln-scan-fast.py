@@ -145,6 +145,7 @@ def logo():
  | |  | |_____/ /_ / ___ \| . \| |___| |\  |
 |___| |_|    /____/_/   \_\_|\_\_____|_| \_|
 
+    -/- Fast vulnerability scanner -/-     
 """
     print(logo_ascii)
     print(bcolors.ENDC)
@@ -265,7 +266,7 @@ tool_names = [
                 ["nmap_logjam","Nmap [LOGJAM] - Controles op LOGJAM-kwetsbaarheid.","nmap",1],
 
                 #22
-                ["sslyze_ocsp","SSLyze - Controles voor OCSP-nieten.","sslyze",1],
+                ["sslyze_ocsp","SSLyze - Controles voor OCSP-Stapling.","sslyze",1],
 
                 #23
                 ["sslyze_zlib","SSLyze - Controles voor ZLib Deflate-compressie.","sslyze",1],
@@ -278,9 +279,6 @@ tool_names = [
 
                 #26
                 ["lbd","LBD - Controleert op DNS/HTTP Load Balancers.","lbd",1],
-
-                #33
-                ["xsser","XSSer - Controle voor Cross-Site Scripting [XSS] Attacks.","xsser",1],
 
                 #40
                 ["dmitry_email","DMitry - Verzamelt passief e-mails van het domein.","dmitry",1],
@@ -296,21 +294,6 @@ tool_names = [
 
                 #45
                 ["webdav","WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.","davtest",1],
-
-                #47
-                ["uniscan_filebrute","Uniscan - Brutes voor bestandsnamen op het domein.","uniscan",1],
-
-                #48
-                ["uniscan_dirbrute", "Uniscan - Brutes Directory's op het domein.","uniscan",1],
-
-                #49
-                ["uniscan_ministresser", "Uniscan - Stress test het domein.","uniscan",1],
-
-                #50
-                ["uniscan_rfi","Uniscan - Controles op LFI, RFI en RCE.","uniscan",1],
-
-                #51
-                ["uniscan_xss","Uniscan - Controles voor XSS, SQLi, BSQLi en andere controles.","uniscan",1],
 
                 #52
                 ["nikto_xss","Nikto - Controles voor Apache Verwacht XSS Header.","nikto",1],
@@ -377,9 +360,6 @@ tool_names = [
 
                 #77
                 ["nmap_udp_smb","Controles voor SMB-service via UDP","nmap",1],
-
-                #78
-                ["wapiti","Wapiti - Controles op SQLi, RCE, XSS en andere kwetsbaarheden","wapiti",1],
 
                 #79
                 ["nmap_iis","Nmap - Controles voor IIS WebDAV","nmap",1],
@@ -448,7 +428,7 @@ tool_cmd   = [
                 ["nmap -p443 --script ssl-dh-params -Pn ",""],
 
                 #22
-                ["sslyze --certinfo=basic ",""],
+                ["sslyze --certinfo ",""],
 
                 #23
                 ["sslyze --compression ",""],
@@ -461,9 +441,6 @@ tool_cmd   = [
 
                 #26
                 ["lbd ",""],
-
-                #33
-                ["xsser --all=http://",""],
 
                 #40
                 ["dmitry -e ",""],
@@ -479,21 +456,6 @@ tool_cmd   = [
 
                 #45
                 ["davtest -url http://",""],
-
-                #47
-                ["sudo uniscan -w -u ",""],
-
-                #48
-                ["sudo uniscan -q -u ",""],
-
-                #49
-                ["sudo uniscan -r -u ",""],
-
-                #50
-                ["sudo uniscan -s -u ",""],
-
-                #51
-                ["sudo uniscan -d -u ",""],
 
                 #52
                 ["nikto -Plugins 'apache_expect_xss' -host ",""],
@@ -544,13 +506,13 @@ tool_cmd   = [
                 ["nmap -p1521 --open -Pn ",""],
 
                 #70
-                ["nmap -p3389 --open -sU -Pn ",""],
+                ["sudo nmap -p3389 --open -sU -Pn ",""],
 
                 #71
                 ["nmap -p3389 --open -sT -Pn ",""],
 
                 #74
-                ["nmap -p161 -sU --open -Pn ",""],
+                ["sudo nmap -p161 -sU --open -Pn ",""],
 
                 #75
                 ["wget -O /tmp/dns-scan_temp_aspnet_elmah_axd --tries=1 ","/elmah.axd"],
@@ -560,9 +522,6 @@ tool_cmd   = [
 
                 #77
                 ["nmap -p137,138 --open -Pn ",""],
-
-                #78
-                ["wapiti "," -f txt -o dns-scan_temp_wapiti"],
 
                 #79
                 ["nmap -p80 --script=http-iis-webdav-vuln -Pn ",""],
@@ -645,9 +604,6 @@ tool_resp   = [
                 #26
                 ["Geen op DNS/HTTP gebaseerde load balancers gevonden.","l",23],
 
-                #33
-                ["XSSer heeft XSS-kwetsbaarheden gevonden.","c",28],
-
                 #40
                 ["E-mailadressen ontdekt met DMitry.","l",9],
 
@@ -662,21 +618,6 @@ tool_resp   = [
 
                 #45
                 ["WebDAV ingeschakeld.","m",35],
-
-                #47
-                ["Open bestanden gevonden met Uniscan.","m",25],
-
-                #48
-                ["Open mappen gevonden met Uniscan.","m",26],
-
-                #49
-                ["Kwetsbaar voor stresstests.","h",37],
-
-                #50
-                ["Uniscan heeft mogelijke LFI, RFI of RCE gedetecteerd.","h",38],
-
-                #51
-                ["Uniscan heeft mogelijke XSS, SQLi, BSQLi gedetecteerd.","h",39],
 
                 #52
                 ["Apache verwacht XSS-header niet aanwezig.","m",12],
@@ -743,9 +684,6 @@ tool_resp   = [
 
                 #77
                 ["SMB-poorten zijn open via UDP","m",51],
-
-                #78
-                ["Wapiti ontdekte een reeks kwetsbaarheden","h",30],
 
                 #79
                 ["IIS WebDAV is ingeschakeld","m",35],
@@ -830,9 +768,6 @@ tool_status = [
                 #26
                 ["does NOT use Load-balancing",0,proc_med," <  4m","lbd",["NOT FOUND"]],
 
-                #33
-                ["Could not find any vulnerability!",1,proc_med," <  4m","xsser",["XSSer is not working propertly!","Could not find any vulnerability!"]],
-
                 #40
                 ["Found 0 E-Mail(s)",1,proc_low," < 30s","dmitry1",["Unable to locate Host IP addr","Found 0 E-Mail(s)"]],
 
@@ -847,21 +782,6 @@ tool_status = [
 
                 #45
                 ["SUCCEED",0,proc_low," < 30s","webdav",["is not DAV enabled or not accessible."]],
-
-                #47
-                ["[+]",0,proc_med," <  2m","uniscan2",["Use of uninitialized value in unpack at"]],
-
-                #48
-                ["[+]",0,proc_med," <  5m","uniscan3",["Use of uninitialized value in unpack at"]],
-
-                #49
-                ["[+]",0,proc_med," <  9m","uniscan4",["Use of uninitialized value in unpack at"]],
-
-                #50
-                ["[+]",0,proc_med," <  8m","uniscan5",["Use of uninitialized value in unpack at"]],
-
-                #51
-                ["[+]",0,proc_med," <  9m","uniscan6",["Use of uninitialized value in unpack at"]],
 
                 #52
                 ["0 item(s) reported",1,proc_low," < 35s","nikto1",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
@@ -928,9 +848,6 @@ tool_status = [
 
                 #77
                 ["open",0,proc_low," < 20s","nmapudpsmb",["Failed to resolve"]],
-
-                #78
-                ["Host:",0,proc_med," < 5m","wapiti",["none"]],
 
                 #79
                 ["WebDAV is ENABLED",0,proc_low," < 40s","nmapwebdaviis",["Failed to resolve"]],
@@ -1047,7 +964,7 @@ tools_fix = [
 
 # Tool Set
 tools_precheck = [
-                    ["wapiti"], ["whatweb"], ["nmap"], ["golismero"], ["host"], ["wget"], ["uniscan"], ["wafw00f"], ["dirb"], ["davtest"], ["theHarvester"], ["xsser"], ["dnsrecon"],["fierce"], ["dnswalk"], ["whois"], ["sslyze"], ["lbd"], ["golismero"], ["dnsenum"],["dmitry"], ["davtest"], ["nikto"], ["dnsmap"], ["amass"]
+                    ["whatweb"], ["nmap"], ["host"], ["wget"], ["uniscan"], ["wafw00f"], ["dirb"], ["davtest"], ["theHarvester"], ["dnsrecon"],["fierce"], ["dnswalk"], ["whois"], ["sslyze"], ["lbd"], ["dnsenum"],["dmitry"], ["nikto"], ["dnsmap"], ["amass"]
                  ]
 
 def get_parser():
