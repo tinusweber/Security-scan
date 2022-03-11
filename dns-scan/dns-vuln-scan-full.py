@@ -1089,7 +1089,7 @@ tools_fix = [
                             "OpenSSL-versies 0.9.8h tot 0.9.8q en 1.0.0 tot 1.0.0c zijn kwetsbaar. Het wordt aanbevolen om de OpenSSL-versie te upgraden. Meer bronnen en informatie vindt u hier. https://www.openssl.org/news/secadv/20110208.txt"],
                     [20, "Ook wel BREACH-aanval genoemd, maakt gebruik van de compression in het onderliggende HTTP-protocol. Een aanvaller kan e-mailadressen, sessietokens, enz. verkrijgen van het TLS-gecodeerde webverkeer.",
                             "Het uitschakelen van TLS compression verkleint dit beveiligingslek niet. De eerste stap naar mitigatie is om Zlib compression uit te schakelen, gevolgd door andere maatregelen die in deze bron worden genoemd. http://breachattack.com/"],
-                    [21, "Wordt ook wel Plain-Text Injection-aanval genoemd, waarmee MiTM-aanvallers gegevens kunnen invoegen in HTTPS-sessies, en mogelijk andere soorten sessies die worden beschermd door TLS of SSL, door een niet-geverifieerd verzoek te verzenden dat met terugwerkende kracht wordt verwerkt door een server in een context na pot-renegotiation.",
+                    [21, "Wordt ook wel Plain-Text Injection-aanval genoemd, waarmee MiTM-aanvallers gegevens kunnen invoegen in HTTPS-sessies, en mogelijk andere soorten sessies die worden beschermd door TLS of SSL, door een niet-geverifieerd verzoek te verzenden dat met terugwerkende kracht wordt verwerkt door een server in een context na post-renegotiation.",
                             "Gedetailleerde herstelstappen zijn te vinden in deze bronnen. https://securingtomorrow.mcafee.com/technical-how-to/tips-securing-ssl-renegotiation/ https://www.digicert.com/news/2011-06-03-ssl-renego/"],
                     [22, "Door dit beveiligingslek kunnen aanvallers bestaande TLS-sessies van gebruikers stelen.",
                             "Beter advies is om het hervatten van sessies uit te schakelen. Volg deze bron met aanzienlijke informatie om de hervatting van de sessie te verharden. https://wiki.crashtest-security.com/display/KB/Harden+TLS+Session+Resumption"],
@@ -1369,9 +1369,9 @@ elif args_namespace.target:
         report.close()
 
     print("\tTotaal aantal kwetsbaarheidscontroles       : "+bcolors.BOLD+bcolors.OKGREEN+str(len(tool_names))+bcolors.ENDC)
-    print("\tTotal Number of Vulnerability Checks Skipped: "+bcolors.BOLD+bcolors.WARNING+str(rs_skipped_checks)+bcolors.ENDC)
+    print("\tTotaal aantal checks overgeslagen           : "+bcolors.BOLD+bcolors.WARNING+str(rs_skipped_checks)+bcolors.ENDC)
     print("\tTotaal aantal gedetecteerde kwetsbaarheden  : "+bcolors.BOLD+bcolors.BADFAIL+str(len(rs_vul_list))+bcolors.ENDC)
-    print("\tTotale verstreken tijd voor de scan         : "+bcolors.BOLD+bcolors.OKBLUE+display_time(int(rs_total_elapsed))+bcolors.ENDC)
+    print("\tTotaal verstreken tijd voor de scan         : "+bcolors.BOLD+bcolors.OKBLUE+display_time(int(rs_total_elapsed))+bcolors.ENDC)
     print("\n")
     print("\tVoor debugging doeleinden kunt u de volledige uitvoer bekijken die is gegenereerd door alle tools met de naam"+bcolors.OKBLUE+"`DNS-Debug-ScanLog`"+bcolors.ENDC+" onder dezelfde map.")
     print(bcolors.BG_ENDL_TXT+"[ Rapportgeneratiefase voltooid. ]"+bcolors.ENDC)

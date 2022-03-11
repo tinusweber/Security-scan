@@ -1,42 +1,122 @@
-Joomla Checker - Controleert op Joomla-installatie.
-------------------------
-
---2022-03-08 15:49:04--  http://it-zaken.com/administrator
-Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://it-zaken.com/administrator [following]
---2022-03-08 15:49:04--  https://it-zaken.com/administrator
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2022-03-08 15:49:06 ERROR 404: Not Found.
-
-
-
-SSLyze - Controles voor veilige heronderhandelingsondersteuning en klantheronderhandeling.
+Wafw00f - Controles voor applicatie-firewalls.
 ------------------------
 
 
- CHECKING CONNECTIVITY TO SERVER(S)
- ----------------------------------
+                [1;97m______
+               [1;97m/      \
+              [1;97m(  W00f! )
+               [1;97m\  ____/
+               [1;97m,,    [1;92m__            [1;93m404 Hack Not Found
+           [1;96m|`-.__   [1;92m/ /                     [1;91m __     __
+           [1;96m/"  _/  [1;92m/_/                       [1;91m\ \   / /
+          [1;94m*===*    [1;92m/                          [1;91m\ \_/ /  [1;93m405 Not Allowed
+         [1;96m/     )__//                           [1;91m\   /
+    [1;96m/|  /     /---`                        [1;93m403 Forbidden
+    [1;96m\\/`   \ |                                 [1;91m/ _ \
+    [1;96m`\    /_\\_              [1;93m502 Bad Gateway  [1;91m/ / \ \  [1;93m500 Internal Error
+      [1;96m`_____``-`                             [1;91m/_/   \_\
 
-   it-zaken.com:443          => 79.143.220.71 
+                        [1;96m~ WAFW00F : [1;94mv2.1.0 ~[1;97m
+        The Web Application Firewall Fingerprinting Toolkit
+    [0m
+[*] Checking https://it-zaken.com
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
 
- SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
- -------------------------------------------------
 
- * Session Renegotiation:
-       Client Renegotiation DoS Attack:   OK - Not vulnerable
-       Secure Renegotiation:              OK - Supported
+Nikto - Controles voor HTTP PUT DEL.
+------------------------
 
- SCANS COMPLETED IN 0.335644 S
- -----------------------------
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:48:16 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 233 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:48:24 (GMT1) (8 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
 
- COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
- --------------------------------------------
 
-    Disabled; use --mozilla-config={old, intermediate, modern}.
+Nmap - Controles voor MySQL DB
+------------------------
 
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:48 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.20 seconds
+
+
+Nmap - Fast Scan [Only Few Port Checks]
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:48 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up (0.048s latency).
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+Not shown: 97 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE
+143/tcp open  imap
+443/tcp open  https
+587/tcp open  submission
+
+Nmap done: 1 IP address (1 host up) scanned in 2.33 seconds
+
+
+DMitry - Verzamelt passief e-mails van het domein.
+------------------------
+
+Deepmagic Information Gathering Tool
+"There be some deep magic going on"
+
+ERROR: Unable to locate Host IP addr. for it-zaken.com
+Continuing with limited modules
+HostIP:
+HostName:it-zaken.com
+
+Gathered E-Mail information for it-zaken.com
+---------------------------------
+Searching Google.com:80...
+Searching Altavista.com:80...
+Found 0 E-Mail(s) for host it-zaken.com, Searched 0 pages containing 0 results
+
+All scans completed, exiting
+
+
+Nmap [POODLE] - Controleert alleen op Poodle-kwetsbaarheid.
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:49 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up (0.017s latency).
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT    STATE SERVICE
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 0.70 seconds
+
+
+Nikto - Controleert op interessante bestanden op het domein.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:49:17 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 440 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:49:31 (GMT1) (14 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
 
 
 Nikto - Voert SSL-controles uit.
@@ -47,24 +127,32 @@ Nikto - Voert SSL-controles uit.
 + Target IP:          79.143.220.71
 + Target Hostname:    it-zaken.com
 + Target Port:        80
-+ Start Time:         2022-03-08 15:49:08 (GMT1)
++ Start Time:         2022-03-11 09:49:32 (GMT1)
 ---------------------------------------------------------------------------
 + Server: Apache/2
 + Root page / redirects to: https://it-zaken.com/
 + 232 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:49:13 (GMT1) (5 seconds)
++ End Time:           2022-03-11 09:49:36 (GMT1) (4 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 
 
-Nmap [TELNET] - Controleert of de TELNET-service actief is.
+ASP.Net Misconfiguratie - Controleert op ASP.Net Misconfiguratie.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:49 CET
-Nmap done: 1 IP address (1 host up) scanned in 2.16 seconds
+--2022-03-11 09:49:36--  http://it-zaken.com/%7C~.aspx
+Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://it-zaken.com/%7c~.aspx [following]
+--2022-03-11 09:49:36--  https://it-zaken.com/%7c~.aspx
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-03-11 09:49:37 ERROR 404: Not Found.
 
 
-SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.
+
+SSLyze - Controles voor ZLib Deflate-compressie.
 ------------------------
 
 
@@ -76,10 +164,10 @@ SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.
  SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
  -------------------------------------------------
 
- * OpenSSL Heartbleed:
-                                          OK - Not vulnerable to Heartbleed
+ * Deflate Compression:
+                                          OK - Compression disabled
 
- SCANS COMPLETED IN 0.313237 S
+ SCANS COMPLETED IN 0.299975 S
  -----------------------------
 
  COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
@@ -88,203 +176,6 @@ SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.
     Disabled; use --mozilla-config={old, intermediate, modern}.
 
 
-
-Nmap [STUXNET] - Controleert of de host wordt beïnvloed door STUXNET Worm.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:49 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up.
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT    STATE    SERVICE
-445/tcp filtered microsoft-ds
-
-Nmap done: 1 IP address (1 host up) scanned in 2.48 seconds
-
-
-Nikto - Controles op MS10-070-beveiligingslek.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:49:19 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 232 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:49:24 (GMT1) (5 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Nmap - Controles voor MS-SQL Server DB
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:49 CET
-Nmap done: 1 IP address (1 host up) scanned in 2.14 seconds
-
-
-Nikto - Controleert de domeinheaders.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:49:27 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ The anti-clickjacking X-Frame-Options header is not present.
-+ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
-+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
-+ Root page / redirects to: https://it-zaken.com/
-+ 259 requests: 0 error(s) and 3 item(s) reported on remote host
-+ End Time:           2022-03-08 15:49:33 (GMT1) (6 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-WordPress Checker - Controles voor WordPress-installatie.
-------------------------
-
-<!DOCTYPE html>
-	<html lang="nl">
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Inloggen &lsaquo; IT Zaken BV &#8212; WordPress</title>
-	<meta name='robots' content='noindex, follow' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel='stylesheet' id='dashicons-css'  href='https://it-zaken.com/wp-includes/css/dashicons.min.css?ver=5.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='buttons-css'  href='https://it-zaken.com/wp-includes/css/buttons.min.css?ver=5.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='forms-css'  href='https://it-zaken.com/wp-admin/css/forms.min.css?ver=5.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='l10n-css'  href='https://it-zaken.com/wp-admin/css/l10n.min.css?ver=5.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='login-css'  href='https://it-zaken.com/wp-admin/css/login.min.css?ver=5.9.1' type='text/css' media='all' />
-	<meta name='referrer' content='strict-origin-when-cross-origin' />
-		<meta name="viewport" content="width=device-width" />
-	<link rel="icon" href
-     0K ........                                               11.0M=0.001s
-
-2022-03-08 15:49:36 (11.0 MB/s) - ‘/tmp/dns-scan_temp_wp_check’ saved [8569]
-
-ontent/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-192x192.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://it-zaken.com/wp-content/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-180x180.png" />
-<meta name="msapplication-TileImage" content="https://it-zaken.com/wp-content/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-270x270.png" />
-	</head>
-	<body class="login no-js login-action-login wp-core-ui  locale-nl-nl">
-	<script type="text/javascript">
-		document.body.className = document.body.className.replace('no-js','js');
-	</script>
-		<div id="login">
-		<h1><a href="https://nl.wordpress.org/">Aangedreven door WordPress</a></h1>
-	
-		<form name="loginform" id="loginform" action="https://it-zaken.com/wp-login.php" method="post">
-			<p>
-				<label for="user_login">Gebruikersnaam of e-mailadres</label>
-				<input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="off" />
-			</p>
-
-			<div class="user-pass-wrap">
-				<label for="user_pass">Wachtwoord</label>
-				<div class="wp-pwd">
-					<input type="password" name="pwd" id="user_pass" class="input password-input" value="" size="20" />
-					<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Wachtwoord tonen">
-						<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
-					</button>
-				</div>
-			</div>
-						<p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> <label for="rememberme">Onthoud mij</label></p>
-			<p class="submit">
-				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Inloggen" />
-									<input type="hidden" name="redirect_to" value="https://it-zaken.com/wp-admin/" />
-									<input type="hidden" name="testcookie" value="1" />
-			</p>
-		</form>
-
-					<p id="nav">
-								<a href="https://it-zaken.com/wp-login.php?action=lostpassword">Wachtwoord vergeten?</a>
-			</p>
-					<script type="text/javascript">
-			function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_login" );d.focus(); d.select();} catch( er ) {}}, 200);}
-wp_attempt_focus();
-if ( typeof wpOnload === 'function' ) { wpOnload() }		</script>
-				<p id="backtoblog">
-			<a href="https://it-zaken.com/">&larr; Ga naar IT Zaken BV</a>		</p>
-			</div>
-				<div class="language-switcher">
-				<form id="language-switcher" action="" method="get">
-
-					<label for="language-switcher-locales">
-						<span class="dashicons dashicons-translation" aria-hidden="true"></span>
-						<span class="screen-reader-text">Taal</span>
-					</label>
-
-					<select name="wp_lang" id="language-switcher-locales"><option value="en_US" lang="en" data-installed="1">English (United States)</option>
-<option value="nl_NL" lang="nl" selected='selected' data-installed="1">Nederlands</option></select>
-					
-											<input type="hidden" name="redirect_to" value="https://it-zaken.com/wp-admin/" />
-					
-					
-						<input type="submit" class="button" value="Wijzigen">
-
-					</form>
-				</div>
-				<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-<script type='text/javascript' id='zxcvbn-async-js-extra'>
-/* <![CDATA[ */
-var _zxcvbnSettings = {"src":"https:\/\/it-zaken.com\/wp-includes\/js\/zxcvbn.min.js"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/zxcvbn-async.min.js?ver=1.0' id='zxcvbn-async-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/hooks.min.js?ver=1e58c8c5a32b2e97491080c5b10dc71c' id='wp-hooks-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/i18n.min.js?ver=30fcecb428a0e8383d3776bcdd3a7834' id='wp-i18n-js'></script>
-<script type='text/javascript' id='wp-i18n-js-after'>
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script type='text/javascript' id='password-strength-meter-js-extra'>
-/* <![CDATA[ */
-var pwsL10n = {"unknown":"Sterkte wachtwoord onbekend","short":"Erg zwak","bad":"Zwak","good":"Gemiddeld","strong":"Sterk","mismatch":"Verkeerde combinatie"};
-/* ]]> */
-</script>
-<script type='text/javascript' id='password-strength-meter-js-translations'>
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", {"translation-revision-date":"2022-02-02 18:51:37+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s is verouderd sinds versie %2$s! Gebruik in plaats daarvan %3$s. Overweeg om meer inclusieve code te schrijven."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );
-</script>
-<script type='text/javascript' src='https://it-zaken.com/wp-admin/js/password-strength-meter.min.js?ver=5.9.1' id='password-strength-meter-js'></script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/underscore.min.js?ver=1.13.1' id='underscore-js'></script>
-<script type='text/javascript' id='wp-util-js-extra'>
-/* <![CDATA[ */
-var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/wp-util.min.js?ver=5.9.1' id='wp-util-js'></script>
-<script type='text/javascript' id='user-profile-js-extra'>
-/* <![CDATA[ */
-var userProfileL10n = {"user_id":"0","nonce":"e493a358eb"};
-/* ]]> */
-</script>
-<script type='text/javascript' id='user-profile-js-translations'>
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", {"translation-revision-date":"2022-02-02 18:51:37+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Your new password has not been saved.":["Je nieuwe wachtwoord is niet opgeslagen."],"Hide":["Verbergen"],"Show":["Tonen"],"Confirm use of weak password":["Bevestig het gebruik van een zwak wachtwoord"],"Hide password":["Wachtwoord verbergen"],"Show password":["Wachtwoord tonen"]}},"comment":{"reference":"wp-admin\/js\/user-profile.js"}} );
-</script>
-<script type='text/javascript' src='https://it-zaken.com/wp-admin/js/user-profile.min.js?ver=5.9.1' id='user-profile-js'></script>
-	<div class="clear"></div>
-	</body>
-	</html>
-	
 
 Drupal Checker - Controles voor Drupal-installatie.
 ------------------------
@@ -305,10 +196,10 @@ Drupal Checker - Controles voor Drupal-installatie.
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="User Videos - IT Zaken BV" />
 	<meta property="og:url" content="https://it-zaken.com/user-
-     0K .......... .......... .......... .......... .......... 1.96M
-    50K .......... ..........                                  8.55M=0.03s
+     0K .......... .......... .......... .......... .......... 1.19M
+    50K .......... ..........                                  1.70M=0.05s
 
-2022-03-08 15:49:37 (2.52 MB/s) - ‘/tmp/dns-scan_temp_drp_check’ saved [71993]
+2022-03-11 09:49:39 (1.30 MB/s) - ‘/tmp/dns-scan_temp_drp_check’ saved [71993]
 
 ication/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://it-zaken.com/#organization","name":"IT Zaken BV","url":"https://it-zaken.com/","sameAs":["https://www.facebook.com/itzaken/","https://www.instagram.com/itzaken/","https://www.linkedin.com/company/itzaken/"],"logo":{"@type":"ImageObject","@id":"https://it-zaken.com/#logo","inLanguage":"nl","url":"https://mlzkqtwooxwl.i.optimole.com/KS2TCZc-nGaCK6aU/w:auto/h:auto/q:55/https://it-zaken.com/wp-content/uploads/2020/04/it-zaken-logo_.png","contentUrl":"https://mlzkqtwooxwl.i.optimole.com/KS2TCZc-nGaCK6aU/w:auto/h:auto/q:55/https://it-zaken.com/wp-content/uploads/2020/04/it-zaken-logo_.png","width":1921,"height":700,"caption":"IT Zaken BV"},"image":{"@id":"https://it-zaken.com/#logo"}},{"@type":"WebSite","@id":"https://it-zaken.com/#website","url":"https://it-zaken.com/","name":"IT Zaken BV","description":"Doelgericht naar de beste oplossing!","publisher":{"@id":"https://it-zaken.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://it-zaken.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"nl"},{"@type":"WebPage","@id":"https://it-zaken.com/user-videos/#webpage","url":"https://it-zaken.com/user-videos/","name":"User Videos - IT Zaken BV","isPartOf":{"@id":"https://it-zaken.com/#website"},"datePublished":"2021-03-29T19:07:34+00:00","dateModified":"2021-03-29T19:07:34+00:00","breadcrumb":{"@id":"https://it-zaken.com/user-videos/#breadcrumb"},"inLanguage":"nl","potentialAction":[{"@type":"ReadAction","target":["https://it-zaken.com/user-videos/"]}]},{"@type":"BreadcrumbList","@id":"https://it-zaken.com/user-videos/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://it-zaken.com/"},{"@type":"ListItem","position":2,"name":"User Videos"}]}]}</script>
 	<!-- / Yoast SEO plugin. -->
@@ -1358,231 +1249,18 @@ BTW NL853671746B01</p>
 
 <!-- super cache -->
 
-Nmap [POODLE] - Controleert alleen op Poodle-kwetsbaarheid.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:49 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.016s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT    STATE SERVICE
-443/tcp open  https
-
-Nmap done: 1 IP address (1 host up) scanned in 0.69 seconds
-
-
-DNSRecon - Pogingen om meerdere zones over te dragen op naamservers.
-------------------------
-
-[*] std: Performing General Enumeration against: it-zaken.com...
-[-] DNSSEC is not configured for it-zaken.com
-[*] 	 SOA it-ad02.home.vanschendel.com 172.16.25.11
-[*] 	 NS it-ad02.home.vanschendel.com 172.16.25.11
-[-] 	 Recursion enabled on NS Server 172.16.25.11
-[*] 	 NS it-ad03.home.vanschendel.com 172.16.26.11
-[*] 	 NS it-ad03.home.vanschendel.com fd5e:69c2:6c9:45db:51c2:e9c4:ed83:166d
-[*] 	 NS it-ad01.home.vanschendel.com 172.16.25.14
-[-] 	 Recursion enabled on NS Server 172.16.25.14
-[*] 	 A it-zaken.com 79.143.220.71
-[*] Enumerating SRV Records
-[+] 	 SRV _autodiscover._tcp.it-zaken.com smtp.it-zaken.com 172.16.25.35 443
-[+] 1 Records Found
-
-
-Nikto - Controles voor HTTP PUT DEL.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:49:46 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 233 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:49:51 (GMT1) (5 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Host - Controlen op bestaan van IPV6-adres.
-------------------------
-
-it-zaken.com has address 79.143.220.71
-
-
-WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.
-------------------------
-
-OPEN		FAIL:	http://it-zaken.com	The URL "http://it-zaken.com/" is not DAV enabled or not accessible.
-********************************************************
- Testing DAV connection
-
-
 DNSWalk - Pogingen Zone Transfer.
 ------------------------
 
 Getting zone transfer of it-zaken.com. from it-ad02.home.vanschendel.com...failed
-!Getting zone transfer of it-zaken.com. from it-ad03.home.vanschendel.com...failed
 !Getting zone transfer of it-zaken.com. from it-ad01.home.vanschendel.com...failed
+!Getting zone transfer of it-zaken.com. from it-ad03.home.vanschendel.com...failed
 !!3 failures, 0 warnings, 1 errors.
 Checking it-zaken.com.
 FAIL: Zone transfer of it-zaken.com. from it-ad02.home.vanschendel.com failed: REFUSED
-FAIL: Zone transfer of it-zaken.com. from it-ad03.home.vanschendel.com failed: Connection refused
 FAIL: Zone transfer of it-zaken.com. from it-ad01.home.vanschendel.com failed: REFUSED
+FAIL: Zone transfer of it-zaken.com. from it-ad03.home.vanschendel.com failed: Network is unreachable
 BAD: All zone transfer attempts of it-zaken.com. failed!
-
-
-ASP.Net Misconfiguratie - Controleert op ASP.Net Misconfiguratie.
-------------------------
-
---2022-03-08 15:50:14--  http://it-zaken.com/%7C~.aspx
-Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://it-zaken.com/%7c~.aspx [following]
---2022-03-08 15:50:14--  https://it-zaken.com/%7c~.aspx
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2022-03-08 15:50:15 ERROR 404: Not Found.
-
-
-
-Nikto - Controles voor Apache Verwacht XSS Header.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:50:16 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 234 requests: 1 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:50:41 (GMT1) (25 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Nikto - Controles op injecteerbare paden.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:50:42 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 233 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:50:48 (GMT1) (6 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Nikto - Controles op intern IP-lek.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:50:49 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 232 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:50:56 (GMT1) (7 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Wafw00f - Controles voor applicatie-firewalls.
-------------------------
-
-
-                [1;97m______
-               [1;97m/      \
-              [1;97m(  W00f! )
-               [1;97m\  ____/
-               [1;97m,,    [1;92m__            [1;93m404 Hack Not Found
-           [1;96m|`-.__   [1;92m/ /                     [1;91m __     __
-           [1;96m/"  _/  [1;92m/_/                       [1;91m\ \   / /
-          [1;94m*===*    [1;92m/                          [1;91m\ \_/ /  [1;93m405 Not Allowed
-         [1;96m/     )__//                           [1;91m\   /
-    [1;96m/|  /     /---`                        [1;93m403 Forbidden
-    [1;96m\\/`   \ |                                 [1;91m/ _ \
-    [1;96m`\    /_\\_              [1;93m502 Bad Gateway  [1;91m/ / \ \  [1;93m500 Internal Error
-      [1;96m`_____``-`                             [1;91m/_/   \_\
-
-                        [1;96m~ WAFW00F : [1;94mv2.1.0 ~[1;97m
-        The Web Application Firewall Fingerprinting Toolkit
-    [0m
-[*] Checking https://it-zaken.com
-[+] Generic Detection results:
-[-] No WAF detected by the generic detection
-[~] Number of requests: 7
-
-
-Nmap - Controles voor SNMP-service
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up.
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT    STATE         SERVICE
-161/udp open|filtered snmp
-
-Nmap done: 1 IP address (1 host up) scanned in 2.23 seconds
-
-
-LBD - Controleert op DNS/HTTP Load Balancers.
-------------------------
-
-
-lbd - load balancing detector 0.4 - Checks if a given domain uses load-balancing.
-                                    Written by Stefan Behte (http://ge.mine.nu)
-                                    Proof-of-concept! Might give false positives.
-
-Checking for DNS-Loadbalancing: NOT FOUND
-Checking for HTTP-Loadbalancing [Server]: 
- Apache/2
- NOT FOUND
-
-Checking for HTTP-Loadbalancing [Date]: 14:51:08, 14:51:08, 14:51:08, 14:51:08, 14:51:08, 14:51:08, 14:51:08, 14:51:09, 14:51:09, 14:51:09, 14:51:09, 14:51:09, 14:51:09, 14:51:09, 14:51:10, 14:51:10, 14:51:10, 14:51:10, 14:51:10, 14:51:11, 14:51:11, 14:51:11, 14:51:11, 14:51:11, 14:51:12, 14:51:12, 14:51:12, 14:51:12, 14:51:12, 14:51:13, 14:51:13, 14:51:13, 14:51:13, 14:51:13, 14:51:13, 14:51:13, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:14, 14:51:15, 14:51:15, NOT FOUND
-
-Checking for HTTP-Loadbalancing [Diff]: NOT FOUND
-
-it-zaken.com does NOT use Load-balancing.
-
-
-
-Nikto - Brute subdomeinen.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:51:19 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 232 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:51:24 (GMT1) (5 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
 
 
 WHOis - Controles voor de contactgegevens van de beheerder.
@@ -1607,7 +1285,7 @@ WHOis - Controles voor de contactgegevens van de beheerder.
    DNSSEC: signedDelegation
    DNSSEC DS Data: 31281 7 2 08B60BF16C29F8D3F9E72A206ECDD1A643B40DAFA8B8A052EB0734363B97BFEA
    URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
->>> Last update of whois database: 2022-03-08T14:51:09Z <<<
+>>> Last update of whois database: 2022-03-11T08:49:42Z <<<
 
 For more information on Whois status codes, please visit https://icann.org/epp
 
@@ -1704,7 +1382,7 @@ Registrar Abuse Contact Email: abuse@mijninternetoplossing.nl
 Registrar Abuse Contact Phone: +31.362024021
 URL of the ICANN WHOIS Data Problem Reporting System:
 http://wdprs.internic.net/
->>> Last update of WHOIS database: 2022-03-08T14:51:24Z <<<
+>>> Last update of WHOIS database: 2022-03-11T08:50:01Z <<<
 
 For more information on Whois status codes, please visit https://icann.org/epp
 
@@ -1725,153 +1403,67 @@ To contact the registrant, please e-ail the Registrant Email.
 
 
 
-Nmap - Controles voor ORACLE DB
+Nmap [OpenSSL CCS Injection] - Controleert alleen voor CCS-injectie.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap done: 1 IP address (1 host up) scanned in 2.34 seconds
-
-
-Nmap [XSS Filter Check] - Controleert of XSS Protection Header aanwezig is.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
 Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.018s latency).
+Host is up (0.016s latency).
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT    STATE SERVICE
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 0.65 seconds
+
+
+Nmap - Controles voor IIS WebDAV
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up (0.016s latency).
 rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
 
 PORT   STATE SERVICE
 80/tcp open  http
-| http-security-headers: 
-|   Cache_Control: 
-|_    Header: Cache-Control: max-age=3, must-revalidate
 
-Nmap done: 1 IP address (1 host up) scanned in 0.71 seconds
+Nmap done: 1 IP address (1 host up) scanned in 14.58 seconds
 
 
-Controles voor SMB-service via TCP
+Nmap [STUXNET] - Controleert of de host wordt beïnvloed door STUXNET Worm.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap done: 1 IP address (1 host up) scanned in 3.23 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up.
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+Nmap done: 1 IP address (1 host up) scanned in 2.53 seconds
+
+
+Nmap - Controles voor Remote Desktop Service via TCP
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.38 seconds
 
 
 Nmap [Heartbleed] - Controleert alleen op Heartbleed-kwetsbaarheid.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
 Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.017s latency).
+Host is up (0.019s latency).
 rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
 
 PORT    STATE SERVICE
 443/tcp open  https
 
-Nmap done: 1 IP address (1 host up) scanned in 0.78 seconds
-
-
-Nmap [LOGJAM] - Controles op LOGJAM-kwetsbaarheid.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.020s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT    STATE SERVICE
-443/tcp open  https
-
-Nmap done: 1 IP address (1 host up) scanned in 1.41 seconds
-
-
-Nikto - Controles op HTTP-opties op het domein.
-------------------------
-
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:51:34 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 241 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:51:39 (GMT1) (5 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-
-
-Nmap - Controles voor Remote Desktop Service via UDP
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up.
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT     STATE         SERVICE
-3389/udp open|filtered ms-wbt-server
-
-Nmap done: 1 IP address (1 host up) scanned in 2.23 seconds
-
-
-SSLyze - Controles voor ondersteuning voor sessiehervatting met [Session IDs/TLS Tickets].
-------------------------
-
-
- CHECKING CONNECTIVITY TO SERVER(S)
- ----------------------------------
-
-   it-zaken.com:443          => 79.143.220.71 
-
- SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
- -------------------------------------------------
-
- * TLS 1.2 Session Resumption Support:
-      With Session IDs: OK - Supported (5 successful resumptions out of 5 attempts).
-      With TLS Tickets: OK - Supported (5 successful resumptions out of 5 attempts).
-
- SCANS COMPLETED IN 0.538191 S
- -----------------------------
-
- COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
- --------------------------------------------
-
-    Disabled; use --mozilla-config={old, intermediate, modern}.
-
-
-
-Nmap - Controles voor MySQL DB
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap done: 1 IP address (1 host up) scanned in 2.13 seconds
-
-
-SSLyze - Controles voor ZLib Deflate-compressie.
-------------------------
-
-
- CHECKING CONNECTIVITY TO SERVER(S)
- ----------------------------------
-
-   it-zaken.com:443          => 79.143.220.71 
-
- SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
- -------------------------------------------------
-
- * Deflate Compression:
-                                          OK - Compression disabled
-
- SCANS COMPLETED IN 0.321544 S
- -----------------------------
-
- COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
- --------------------------------------------
-
-    Disabled; use --mozilla-config={old, intermediate, modern}.
-
+Nmap done: 1 IP address (1 host up) scanned in 0.84 seconds
 
 
 Nikto - Controleert of de server verouderd is.
@@ -1882,18 +1474,183 @@ Nikto - Controleert of de server verouderd is.
 + Target IP:          79.143.220.71
 + Target Hostname:    it-zaken.com
 + Target Port:        80
-+ Start Time:         2022-03-08 15:51:47 (GMT1)
++ Start Time:         2022-03-11 09:50:23 (GMT1)
 ---------------------------------------------------------------------------
 + Server: Apache/2
 + Root page / redirects to: https://it-zaken.com/
 + Apache/2 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
 + 232 requests: 0 error(s) and 1 item(s) reported on remote host
-+ End Time:           2022-03-08 15:51:51 (GMT1) (4 seconds)
++ End Time:           2022-03-11 09:50:28 (GMT1) (5 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 
 
-Nikto - Enumerates CGI Directories.
+LBD - Controleert op DNS/HTTP Load Balancers.
+------------------------
+
+
+lbd - load balancing detector 0.4 - Checks if a given domain uses load-balancing.
+                                    Written by Stefan Behte (http://ge.mine.nu)
+                                    Proof-of-concept! Might give false positives.
+
+Checking for DNS-Loadbalancing: NOT FOUND
+Checking for HTTP-Loadbalancing [Server]: 
+ Apache/2
+ NOT FOUND
+
+Checking for HTTP-Loadbalancing [Date]: 08:50:33, 08:50:33, 08:50:33, 08:50:33, 08:50:33, 08:50:33, 08:50:33, 08:50:33, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:34, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:35, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:36, 08:50:37, 08:50:37, 08:50:37, 08:50:37, 08:50:37, 08:50:37, 08:50:37, NOT FOUND
+
+Checking for HTTP-Loadbalancing [Diff]: NOT FOUND
+
+it-zaken.com does NOT use Load-balancing.
+
+
+
+Controles voor SMB-service via TCP
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
+Nmap done: 1 IP address (1 host up) scanned in 3.13 seconds
+
+
+WordPress Checker - Controles voor WordPress-installatie.
+------------------------
+
+<!DOCTYPE html>
+	<html lang="nl">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Inloggen &lsaquo; IT Zaken BV &#8212; WordPress</title>
+	<meta name='robots' content='noindex, follow' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='dashicons-css'  href='https://it-zaken.com/wp-includes/css/dashicons.min.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css'  href='https://it-zaken.com/wp-includes/css/buttons.min.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forms-css'  href='https://it-zaken.com/wp-admin/css/forms.min.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='l10n-css'  href='https://it-zaken.com/wp-admin/css/l10n.min.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='login-css'  href='https://it-zaken.com/wp-admin/css/login.min.css?ver=5.9.1' type='text/css' media='all' />
+	<meta name='referrer' content='strict-origin-when-cross-origin' />
+		<meta name="viewport" content="width=device-width" />
+	<link rel="icon" href
+     0K ........                                               50.8M=0s
+
+2022-03-11 09:50:45 (50.8 MB/s) - ‘/tmp/dns-scan_temp_wp_check’ saved [8569]
+
+wp-content/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://it-zaken.com/wp-content/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-180x180.png" />
+<meta name="msapplication-TileImage" content="https://it-zaken.com/wp-content/uploads/2019/10/cropped-itzaken-beeldmerk-48-x-50-270x270.png" />
+	</head>
+	<body class="login no-js login-action-login wp-core-ui  locale-nl-nl">
+	<script type="text/javascript">
+		document.body.className = document.body.className.replace('no-js','js');
+	</script>
+		<div id="login">
+		<h1><a href="https://nl.wordpress.org/">Aangedreven door WordPress</a></h1>
+	
+		<form name="loginform" id="loginform" action="https://it-zaken.com/wp-login.php" method="post">
+			<p>
+				<label for="user_login">Gebruikersnaam of e-mailadres</label>
+				<input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="off" />
+			</p>
+
+			<div class="user-pass-wrap">
+				<label for="user_pass">Wachtwoord</label>
+				<div class="wp-pwd">
+					<input type="password" name="pwd" id="user_pass" class="input password-input" value="" size="20" />
+					<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Wachtwoord tonen">
+						<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+						<p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> <label for="rememberme">Onthoud mij</label></p>
+			<p class="submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Inloggen" />
+									<input type="hidden" name="redirect_to" value="https://it-zaken.com/wp-admin/" />
+									<input type="hidden" name="testcookie" value="1" />
+			</p>
+		</form>
+
+					<p id="nav">
+								<a href="https://it-zaken.com/wp-login.php?action=lostpassword">Wachtwoord vergeten?</a>
+			</p>
+					<script type="text/javascript">
+			function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_login" );d.focus(); d.select();} catch( er ) {}}, 200);}
+wp_attempt_focus();
+if ( typeof wpOnload === 'function' ) { wpOnload() }		</script>
+				<p id="backtoblog">
+			<a href="https://it-zaken.com/">&larr; Ga naar IT Zaken BV</a>		</p>
+			</div>
+				<div class="language-switcher">
+				<form id="language-switcher" action="" method="get">
+
+					<label for="language-switcher-locales">
+						<span class="dashicons dashicons-translation" aria-hidden="true"></span>
+						<span class="screen-reader-text">Taal</span>
+					</label>
+
+					<select name="wp_lang" id="language-switcher-locales"><option value="en_US" lang="en" data-installed="1">English (United States)</option>
+<option value="nl_NL" lang="nl" selected='selected' data-installed="1">Nederlands</option></select>
+					
+											<input type="hidden" name="redirect_to" value="https://it-zaken.com/wp-admin/" />
+					
+					
+						<input type="submit" class="button" value="Wijzigen">
+
+					</form>
+				</div>
+				<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='zxcvbn-async-js-extra'>
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https:\/\/it-zaken.com\/wp-includes\/js\/zxcvbn.min.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/zxcvbn-async.min.js?ver=1.0' id='zxcvbn-async-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/hooks.min.js?ver=1e58c8c5a32b2e97491080c5b10dc71c' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/dist/i18n.min.js?ver=30fcecb428a0e8383d3776bcdd3a7834' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='password-strength-meter-js-extra'>
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"Sterkte wachtwoord onbekend","short":"Erg zwak","bad":"Zwak","good":"Gemiddeld","strong":"Sterk","mismatch":"Verkeerde combinatie"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='password-strength-meter-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2022-02-02 18:51:37+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s is verouderd sinds versie %2$s! Gebruik in plaats daarvan %3$s. Overweeg om meer inclusieve code te schrijven."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );
+</script>
+<script type='text/javascript' src='https://it-zaken.com/wp-admin/js/password-strength-meter.min.js?ver=5.9.1' id='password-strength-meter-js'></script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/underscore.min.js?ver=1.13.1' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://it-zaken.com/wp-includes/js/wp-util.min.js?ver=5.9.1' id='wp-util-js'></script>
+<script type='text/javascript' id='user-profile-js-extra'>
+/* <![CDATA[ */
+var userProfileL10n = {"user_id":"0","nonce":"791da1bf66"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='user-profile-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2022-02-02 18:51:37+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Your new password has not been saved.":["Je nieuwe wachtwoord is niet opgeslagen."],"Hide":["Verbergen"],"Show":["Tonen"],"Confirm use of weak password":["Bevestig het gebruik van een zwak wachtwoord"],"Hide password":["Wachtwoord verbergen"],"Show password":["Wachtwoord tonen"]}},"comment":{"reference":"wp-admin\/js\/user-profile.js"}} );
+</script>
+<script type='text/javascript' src='https://it-zaken.com/wp-admin/js/user-profile.min.js?ver=5.9.1' id='user-profile-js'></script>
+	<div class="clear"></div>
+	</body>
+	</html>
+	
+
+Nikto - Controles op serverproblemen.
 ------------------------
 
 - Nikto v2.1.6
@@ -1901,149 +1658,24 @@ Nikto - Enumerates CGI Directories.
 + Target IP:          79.143.220.71
 + Target Hostname:    it-zaken.com
 + Target Port:        80
-+ Start Time:         2022-03-08 15:51:52 (GMT1)
++ Start Time:         2022-03-11 09:50:46 (GMT1)
 ---------------------------------------------------------------------------
 + Server: Apache/2
 + Root page / redirects to: https://it-zaken.com/
-+ No CGI Directories found (use '-C all' to force check all possible dirs)
-+ 255 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:51:59 (GMT1) (7 seconds)
++ 232 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:50:51 (GMT1) (5 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 
 
-Nmap - Fast Scan [Only Few Port Checks]
+Controles voor SMB-service via UDP
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:51 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.025s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-Not shown: 93 filtered tcp ports (no-response)
-Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
-PORT    STATE SERVICE
-21/tcp  open  ftp
-22/tcp  open  ssh
-80/tcp  open  http
-143/tcp open  imap
-443/tcp open  https
-587/tcp open  submission
-993/tcp open  imaps
-
-Nmap done: 1 IP address (1 host up) scanned in 1.97 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:50 CET
+Nmap done: 1 IP address (1 host up) scanned in 3.15 seconds
 
 
-Nmap - Controles voor Remote Desktop Service via TCP
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:52 CET
-Failed to resolve "it-zaken.com".
-WARNING: No targets were specified, so 0 hosts scanned.
-Nmap done: 0 IP addresses (0 hosts up) scanned in 20.13 seconds
-
-
-WhatWeb - Controles voor X-XSS Protection Header
-------------------------
-
-[1m[34mhttp://it-zaken.com/[0m [301 Moved Permanently] [1mApache[0m[[1m[32m2[0m], [1mCountry[0m[[0m[22mNETHERLANDS[0m][[1m[31mNL[0m], [1mHTTPServer[0m[[1m[36mApache/2[0m], [1mIP[0m[[0m[22m79.143.220.71[0m], [1mRedirectLocation[0m[[0m[22mhttps://it-zaken.com/[0m], [1mTitle[0m[[1m[33m301 Moved Permanently[0m]
-[1m[34mhttps://it-zaken.com/[0m [200 OK] [1mApache[0m[[1m[32m2[0m], [1mCountry[0m[[0m[22mNETHERLANDS[0m][[1m[31mNL[0m], [1mEmail[0m[[0m[22mInfo@it-zaken.com,info@it-zaken.com[0m], [1mFrame[0m, [1mHTML5[0m, [1mHTTPServer[0m[[1m[36mApache/2[0m], [1mIP[0m[[0m[22m79.143.220.71[0m], [1mJQuery[0m[[1m[32m3.6.0[0m], [1mMetaGenerator[0m[[0m[22mOptimole 3.2.1,WordPress 5.9[0m], [1mOpen-Graph-Protocol[0m[[1m[32mwebsite[0m], [1mScript[0m[[0m[22mapplication/javascript,application/ld+json,text/javascript[0m], [1mTitle[0m[[1m[33mThuis - IT Zaken BV[0m], [1mUncommonHeaders[0m[[0m[22mupgrade[0m], [1mWordPress[0m[[1m[32m5.9[0m], [1mWordpressSuperCache[0m
-
-
-Nmap [OpenSSL CCS Injection] - Controleert alleen voor CCS-injectie.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:52 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.015s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT    STATE SERVICE
-443/tcp open  https
-
-Nmap done: 1 IP address (1 host up) scanned in 0.59 seconds
-
-
-DMitry - Verzamelt passief e-mails van het domein.
-------------------------
-
-Deepmagic Information Gathering Tool
-"There be some deep magic going on"
-
-HostIP:79.143.220.71
-HostName:it-zaken.com
-
-Gathered E-Mail information for it-zaken.com
----------------------------------
-Searching Google.com:80...
-Searching Altavista.com:80...
-Found 0 E-Mail(s) for host it-zaken.com, Searched 0 pages containing 0 results
-
-All scans completed, exiting
-
-
-Nmap [FTP] - Controleert of de FTP-service actief is.
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:52 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.025s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT   STATE SERVICE
-21/tcp open  ftp
-
-Nmap done: 1 IP address (1 host up) scanned in 0.17 seconds
-
-
-The Harvester - Scant op e-mails met de passieve zoekfunctie van Google.
-------------------------
-
-
-[93m*******************************************************************
-*  _   _                                            _             *
-* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
-* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
-* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
-*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
-*                                                                 *
-* theHarvester 4.0.3                                              *
-* Coded by Christian Martorella                                   *
-* Edge-Security Research                                          *
-* cmartorella@edge-security.com                                   *
-*                                                                 *
-******************************************************************* 
-
-[0m
-[94m[*] Target: it-zaken.com 
- [0m
-	Searching 0 results.
-[94m[*] Searching Google. [0m
-
-[*] No IPs found.
-
-[*] No emails found.
-
-[*] Hosts found: 2
----------------------
-it-web02.it-zaken.com:79.143.220.71
-www.it-zaken.com:79.143.220.71
-
-
-Nmap - Controles voor IIS WebDAV
-------------------------
-
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:53 CET
-Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.031s latency).
-rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
-
-PORT   STATE SERVICE
-80/tcp open  http
-
-Nmap done: 1 IP address (1 host up) scanned in 14.84 seconds
-
-
-Nikto - Controleert op interessante bestanden op het domein.
+Nikto - Controles op HTTP-opties op het domein.
 ------------------------
 
 - Nikto v2.1.6
@@ -2051,29 +1683,22 @@ Nikto - Controleert op interessante bestanden op het domein.
 + Target IP:          79.143.220.71
 + Target Hostname:    it-zaken.com
 + Target Port:        80
-+ Start Time:         2022-03-08 15:53:16 (GMT1)
++ Start Time:         2022-03-11 09:50:55 (GMT1)
 ---------------------------------------------------------------------------
 + Server: Apache/2
 + Root page / redirects to: https://it-zaken.com/
-+ 440 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:53:26 (GMT1) (10 seconds)
++ 242 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:51:03 (GMT1) (8 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 
 
-Controles voor ASP.net Elmah Logger
+WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.
 ------------------------
 
---2022-03-08 15:53:26--  http://it-zaken.com/elmah.axd
-Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://it-zaken.com/elmah.axd [following]
---2022-03-08 15:53:26--  https://it-zaken.com/elmah.axd
-Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2022-03-08 15:53:27 ERROR 404: Not Found.
-
+OPEN		FAIL:	http://it-zaken.com	The URL "http://it-zaken.com/" is not DAV enabled or not accessible.
+********************************************************
+ Testing DAV connection
 
 
 SSLyze - Controles voor OCSP-Stapling.
@@ -2127,7 +1752,7 @@ SSLyze - Controles voor OCSP-Stapling.
      Certificate #0 - OCSP Stapling
                                           NOT SUPPORTED - Server did not send back an OCSP response
 
- SCANS COMPLETED IN 0.575363 S
+ SCANS COMPLETED IN 0.442767 S
  -----------------------------
 
  COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
@@ -2137,30 +1762,107 @@ SSLyze - Controles voor OCSP-Stapling.
 
 
 
-Nikto - Controles op serverproblemen.
+Nmap [TELNET] - Controleert of de TELNET-service actief is.
 ------------------------
 
-- Nikto v2.1.6
----------------------------------------------------------------------------
-+ Target IP:          79.143.220.71
-+ Target Hostname:    it-zaken.com
-+ Target Port:        80
-+ Start Time:         2022-03-08 15:53:29 (GMT1)
----------------------------------------------------------------------------
-+ Server: Apache/2
-+ Root page / redirects to: https://it-zaken.com/
-+ 232 requests: 0 error(s) and 0 item(s) reported on remote host
-+ End Time:           2022-03-08 15:53:35 (GMT1) (6 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:51 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.12 seconds
+
+
+Nmap - Controles voor SNMP-service
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:51 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up.
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT    STATE         SERVICE
+161/udp open|filtered snmp
+
+Nmap done: 1 IP address (1 host up) scanned in 2.24 seconds
+
+
+The Harvester - Scant op e-mails met de passieve zoekfunctie van Google.
+------------------------
+
+
+[93m*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.0.3                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+******************************************************************* 
+
+[0m
+[94m[*] Target: it-zaken.com 
+ [0m
+	Searching 0 results.
+[94m[*] Searching Google. [0m
+
+[*] No IPs found.
+
+[*] No emails found.
+
+[*] Hosts found: 2
+---------------------
+it-web02.it-zaken.com:79.143.220.71
+www.it-zaken.com:79.143.220.71
+
+
+Nmap [LOGJAM] - Controles op LOGJAM-kwetsbaarheid.
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:51 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up (0.014s latency).
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT    STATE SERVICE
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 1.09 seconds
+
+
+SSLyze - Controles voor ondersteuning voor sessiehervatting met [Session IDs/TLS Tickets].
+------------------------
+
+
+ CHECKING CONNECTIVITY TO SERVER(S)
+ ----------------------------------
+
+   it-zaken.com:443          => 79.143.220.71 
+
+ SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
+ -------------------------------------------------
+
+ * TLS 1.2 Session Resumption Support:
+      With Session IDs: OK - Supported (5 successful resumptions out of 5 attempts).
+      With TLS Tickets: OK - Supported (5 successful resumptions out of 5 attempts).
+
+ SCANS COMPLETED IN 0.295777 S
+ -----------------------------
+
+ COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
+ --------------------------------------------
+
+    Disabled; use --mozilla-config={old, intermediate, modern}.
+
 
 
 Nmap [FREAK] - Controleert alleen op FREAK-kwetsbaarheid.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:53 CET
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:51 CET
 Nmap scan report for it-zaken.com (79.143.220.71)
-Host is up (0.013s latency).
+Host is up (0.018s latency).
 rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
 
 PORT    STATE SERVICE
@@ -2178,7 +1880,61 @@ PORT    STATE SERVICE
 |       Key exchange (ecdh_x25519) of lower strength than certificate key
 |_  least strength: A
 
-Nmap done: 1 IP address (1 host up) scanned in 1.04 seconds
+Nmap done: 1 IP address (1 host up) scanned in 1.10 seconds
+
+
+Nikto - Controles op MS10-070-beveiligingslek.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:51:17 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 232 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:51:22 (GMT1) (5 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Nikto - Controles voor Apache Verwacht XSS Header.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:51:22 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 234 requests: 1 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:51:48 (GMT1) (26 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Nikto - Brute subdomeinen.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:51:49 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 232 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:51:56 (GMT1) (7 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
 
 
 Uniscan - Controles op robots.txt & sitemap.xml
@@ -2191,7 +1947,7 @@ Uniscan - Controles op robots.txt & sitemap.xml
 V. 6.3
 
 
-Scan date: 8-3-2022 15:53:37
+Scan date: 11-3-2022 9:51:57
 ===================================================================================================
 | Domain: http://it-zaken.com/
 | Server: Apache/2
@@ -2212,17 +1968,250 @@ Scan date: 8-3-2022 15:53:37
 | [+] https://it-zaken.com/author-sitemap.xml
 ===================================================================================================
 ===================================================================================================
-Scan end date: 8-3-2022 15:53:40
+Scan end date: 11-3-2022 9:52:1
 
 
 
 HTML report saved in: report/it-zaken.com.html
 
 
-Controles voor SMB-service via UDP
+DNSRecon - Pogingen om meerdere zones over te dragen op naamservers.
 ------------------------
 
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 15:53 CET
-Nmap done: 1 IP address (1 host up) scanned in 3.14 seconds
+[*] std: Performing General Enumeration against: it-zaken.com...
+[-] DNSSEC is not configured for it-zaken.com
+[*] 	 SOA it-ad02.home.vanschendel.com 172.16.25.11
+[*] 	 NS it-ad02.home.vanschendel.com 172.16.25.11
+[-] 	 Recursion enabled on NS Server 172.16.25.11
+[*] 	 NS it-ad03.home.vanschendel.com 172.16.26.11
+[*] 	 NS it-ad03.home.vanschendel.com fd5e:69c2:6c9:45db:51c2:e9c4:ed83:166d
+[*] 	 NS it-ad01.home.vanschendel.com 172.16.25.14
+[-] 	 Recursion enabled on NS Server 172.16.25.14
+[*] 	 A it-zaken.com 79.143.220.71
+[*] Enumerating SRV Records
+[+] 	 SRV _autodiscover._tcp.it-zaken.com smtp.it-zaken.com 172.16.25.35 443
+[+] 1 Records Found
+
+
+WhatWeb - Controles voor X-XSS Protection Header
+------------------------
+
+[1m[34mhttp://it-zaken.com/[0m [301 Moved Permanently] [1mApache[0m[[1m[32m2[0m], [1mCountry[0m[[0m[22mNETHERLANDS[0m][[1m[31mNL[0m], [1mHTTPServer[0m[[1m[36mApache/2[0m], [1mIP[0m[[0m[22m79.143.220.71[0m], [1mRedirectLocation[0m[[0m[22mhttps://it-zaken.com/[0m], [1mTitle[0m[[1m[33m301 Moved Permanently[0m]
+[1m[34mhttps://it-zaken.com/[0m [200 OK] [1mApache[0m[[1m[32m2[0m], [1mCountry[0m[[0m[22mNETHERLANDS[0m][[1m[31mNL[0m], [1mEmail[0m[[0m[22mInfo@it-zaken.com,info@it-zaken.com[0m], [1mFrame[0m, [1mHTML5[0m, [1mHTTPServer[0m[[1m[36mApache/2[0m], [1mIP[0m[[0m[22m79.143.220.71[0m], [1mJQuery[0m[[1m[32m3.6.0[0m], [1mMetaGenerator[0m[[0m[22mOptimole 3.2.1,WordPress 5.9.1[0m], [1mOpen-Graph-Protocol[0m[[1m[32mwebsite[0m], [1mScript[0m[[0m[22mapplication/javascript,application/ld+json,text/javascript[0m], [1mTitle[0m[[1m[33mThuis - IT Zaken BV[0m], [1mUncommonHeaders[0m[[0m[22mupgrade[0m], [1mWordPress[0m[[1m[32m5.9.1[0m], [1mWordpressSuperCache[0m
+
+
+Joomla Checker - Controleert op Joomla-installatie.
+------------------------
+
+--2022-03-11 09:52:15--  http://it-zaken.com/administrator
+Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://it-zaken.com/administrator [following]
+--2022-03-11 09:52:15--  https://it-zaken.com/administrator
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-03-11 09:52:16 ERROR 404: Not Found.
+
+
+
+SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.
+------------------------
+
+
+ CHECKING CONNECTIVITY TO SERVER(S)
+ ----------------------------------
+
+   it-zaken.com:443          => 79.143.220.71 
+
+ SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
+ -------------------------------------------------
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ SCANS COMPLETED IN 0.295881 S
+ -----------------------------
+
+ COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
+ --------------------------------------------
+
+    Disabled; use --mozilla-config={old, intermediate, modern}.
+
+
+
+Nmap - Controles voor Remote Desktop Service via UDP
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:52 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up.
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT     STATE         SERVICE
+3389/udp open|filtered ms-wbt-server
+
+Nmap done: 1 IP address (1 host up) scanned in 2.19 seconds
+
+
+Nmap [XSS Filter Check] - Controleert of XSS Protection Header aanwezig is.
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:52 CET
+Nmap scan report for it-zaken.com (79.143.220.71)
+Host is up (0.013s latency).
+rDNS record for 79.143.220.71: IT-Web02.it-zaken.com
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: max-age=3, must-revalidate
+
+Nmap done: 1 IP address (1 host up) scanned in 0.66 seconds
+
+
+Nikto - Controles op intern IP-lek.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:52:20 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 232 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:52:25 (GMT1) (5 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Controles voor ASP.net Elmah Logger
+------------------------
+
+--2022-03-11 09:52:25--  http://it-zaken.com/elmah.axd
+Resolving it-zaken.com (it-zaken.com)... 79.143.220.71
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://it-zaken.com/elmah.axd [following]
+--2022-03-11 09:52:25--  https://it-zaken.com/elmah.axd
+Connecting to it-zaken.com (it-zaken.com)|79.143.220.71|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-03-11 09:52:26 ERROR 404: Not Found.
+
+
+
+Nikto - Controleert de domeinheaders.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:52:27 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Root page / redirects to: https://it-zaken.com/
++ 259 requests: 0 error(s) and 3 item(s) reported on remote host
++ End Time:           2022-03-11 09:52:33 (GMT1) (6 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Host - Controlen op bestaan van IPV6-adres.
+------------------------
+
+it-zaken.com has address 79.143.220.71
+
+
+Nmap - Controles voor ORACLE DB
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:52 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.12 seconds
+
+
+Nmap - Controles voor MS-SQL Server DB
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:52 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.13 seconds
+
+
+Nikto - Controles op injecteerbare paden.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:52:39 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ 233 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:52:44 (GMT1) (5 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Nikto - Enumerates CGI Directories.
+------------------------
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          79.143.220.71
++ Target Hostname:    it-zaken.com
++ Target Port:        80
++ Start Time:         2022-03-11 09:52:44 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2
++ Root page / redirects to: https://it-zaken.com/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ 255 requests: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2022-03-11 09:52:49 (GMT1) (5 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Nmap [FTP] - Controleert of de FTP-service actief is.
+------------------------
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-11 09:52 CET
+Nmap done: 1 IP address (1 host up) scanned in 2.13 seconds
+
+
+SSLyze - Controles voor veilige heronderhandelingsondersteuning en klantheronderhandeling.
+------------------------
+
+
+ CHECKING CONNECTIVITY TO SERVER(S)
+ ----------------------------------
+
+   it-zaken.com:443          => 79.143.220.71 
+
+ SCAN RESULTS FOR IT-ZAKEN.COM:443 - 79.143.220.71
+ -------------------------------------------------
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ SCANS COMPLETED IN 0.325482 S
+ -----------------------------
+
+ COMPLIANCE AGAINST MOZILLA TLS CONFIGURATION
+ --------------------------------------------
+
+    Disabled; use --mozilla-config={old, intermediate, modern}.
+
 
 

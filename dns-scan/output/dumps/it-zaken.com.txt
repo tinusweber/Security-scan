@@ -5,23 +5,23 @@ dns_scan
 
 Version : 1.0.2
 
-Date : 2022-03-04
+Date : 2022-03-11
 
 Target : https://it-zaken.com
 
 IP Address : 79.143.220.71
 
-Start Time : 10:01:50 AM
+Start Time : 10:39:53 AM
 
-End Time : 10:01:56 AM
+End Time : 10:40:02 AM
 
-Completion Time : 0:00:05.914130
+Completion Time : 0:00:09.544881
 
 #######
 Headers
 #######
 
-Date : Fri, 04 Mar 2022 09:01:50 GMT
+Date : Fri, 11 Mar 2022 09:39:54 GMT
 
 Server : Apache/2
 
@@ -35,7 +35,7 @@ Connection : Upgrade, Keep-Alive
 
 Content-Encoding : gzip
 
-Content-Length : 19612
+Content-Length : 19655
 
 Keep-Alive : timeout=2, max=100
 
@@ -108,34 +108,25 @@ Subdomain Enumeration
 Links
 =====
 
-crm.it-zaken.com
-helpdesk.it-zaken.com
 sharepointzmw.it-zaken.com
-it-zaken.com
+smtp.it-zaken.com
 *.it-zaken.com
-event.it-zaken.com
-securemail.it-zaken.com
+directadmin.it-zaken.com
 pgb.it-zaken.com
 testcrm.it-zaken.com
-smtp.it-zaken.com
 antivirus.it-zaken.com
-it-web02.it-zaken.com
-directadmin.it-zaken.com
-webmail.it-zaken.com
+securemail.it-zaken.com
+helpdesk.it-zaken.com
 www.it-zaken.com
-rmm.it-zaken.com
 sharepoint.it-zaken.com
+it-web02.it-zaken.com
+rmm.it-zaken.com
+webmail.it-zaken.com
+it-zaken.com
+crm.it-zaken.com
 
-Total Unique Sub Domains Found : 17
+Total Unique Sub Domains Found : 16
 
 #########
 Port Scan
 #########
-
-22 : ssh
-
-143 : http
-
-21 : http
-
-80 : http

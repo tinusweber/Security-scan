@@ -16,10 +16,10 @@ home = os.getenv('HOME')
 #conf_path = home + '/.config/dns-scan'
 pid_path = home + '/Tools/Security-scan/dns-scan/output/dns-scan.pid'
 usr_data = home + '/Tools/Security-scan/dns-scan/output/dumps/'
-conf_path = home + '/Tools/Security-scan/dns-scan/conf'
+conf_path = home + '/Tools/Security-scan/dns-scan/output/conf/'
 
 path_to_script = os.path.dirname(os.path.realpath(__file__))
-src_conf_path = path_to_script + '/conf/'
+src_conf_path = path_to_script + 'output/conf/'
 fail = False
 
 #Definieer logo/banner
@@ -155,7 +155,7 @@ meta = {}
 
 #Define full reconnaissance.
 def full_recon():
-    from modules.headers import headers
+    from scans.modules.headers import headers
     from scans.sslinfo import cert
     from scans.whois import whois_lookup
     from scans.portscan import ps  
@@ -228,14 +228,14 @@ try:
 		    'export': False
 		    }
             
-    from modules.export import export
+    from scans.modules.export import export
     #Full scan
     if full == True:
         full_recon()
 
     #Header Information.
     if headinfo == True:
-        from modules.headers import headers
+        from scans.modules.headers import headers
         headers(target, output, data)
 
     #WhoIs scan.    
