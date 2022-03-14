@@ -1164,7 +1164,7 @@ def get_parser():
     parser.add_argument('-h', '--help', action='store_true', 
                         help='Show help message and exit.')
     parser.add_argument('-u', '--update', action='store_true', 
-                        help='Update dns-scan.')
+                        help='Update dns-scan. (Not working)')
     parser.add_argument('-s', '--skip', action='append', default=[],
                         help='Skip some tools', choices=[t[0] for t in tools_precheck])
     parser.add_argument('-n', '--nospinner', action='store_true', 
