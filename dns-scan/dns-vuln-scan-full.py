@@ -237,181 +237,181 @@ tool_names = [
                 #10
                 ["dnsrecon","DNSRecon - Pogingen om meerdere zones over te dragen op naamservers.","dnsrecon",1],
 
-                #12
+                #11
                 ["dnswalk","DNSWalk - Pogingen Zone Transfer.","dnswalk",1],
 
-                #13
+                #12
                 ["whois","WHOis - Controles voor de contactgegevens van de beheerder.","whois",1],
 
-                #14
+                #13
                 ["nmap_header","Nmap [XSS Filter Check] - Controleert of XSS Protection Header aanwezig is.","nmap",1],
 
-                #15
+                #14
                 ["nmap_sloris","Nmap [Slowloris DoS] - Controles op een denial-of-service-kwetsbaarheid van Slowloris.","nmap",1],
 
-                #16
+                #15
                 ["sslyze_hbleed","SSLyze - Controleert alleen op Heartbleed-kwetsbaarheid.","sslyze",1],
 
-                #17
+                #16
                 ["nmap_hbleed","Nmap [Heartbleed] - Controleert alleen op Heartbleed-kwetsbaarheid.","nmap",1],
 
-                #18
+                #17
                 ["nmap_poodle","Nmap [POODLE] - Controleert alleen op Poodle-kwetsbaarheid.","nmap",1],
 
-                #19
+                #18
                 ["nmap_ccs","Nmap [OpenSSL CCS Injection] - Controleert alleen voor CCS-injectie.","nmap",1],
 
-                #20
+                #19
                 ["nmap_freak","Nmap [FREAK] - Controleert alleen op FREAK-kwetsbaarheid.","nmap",1],
 
-                #21
+                #20
                 ["nmap_logjam","Nmap [LOGJAM] - Controles op LOGJAM-kwetsbaarheid.","nmap",1],
 
-                #22
+                #21
                 ["sslyze_ocsp","SSLyze - Controles voor OCSP-Stapling.","sslyze",1],
 
-                #23
+                #22
                 ["sslyze_zlib","SSLyze - Controles voor ZLib Deflate-compressie.","sslyze",1],
 
-                #24
-                ["sslyze_reneg","SSLyze - Controles voor veilige heronderhandelingsondersteuning en klantheronderhandeling.","sslyze",1],
+                #23
+                ["sslyze_reneg","SSLyze - Controles voor veilige heronderhandeling support en klantheronderhandeling.","sslyze",1],
 
-                #25
+                #24
                 ["sslyze_resum","SSLyze - Controles voor ondersteuning voor sessiehervatting met [Session IDs/TLS Tickets].","sslyze",1],
 
-                #26
+                #25
                 ["lbd","LBD - Controleert op DNS/HTTP Load Balancers.","lbd",1],
 
-                #32
+                #26
                 ["dirb","DirB - Brutes het doelwit voor Open Directory's.","dirb",1],
 
-                #38
+                #27
                 ["dnsenum_zone_transfer","DNSEnum - Pogingen Zone Transfer.","dnsenum",1],
 
-                #39
+                #28
                 ["fierce_brute_subdomains","Fierce Subdomains Bruter - Brute Forces Subdomein ontdekken.","fierce",1],
 
-                #40
+                #29
                 ["dmitry_email","DMitry - Verzamelt passief e-mails van het domein.","dmitry",1],
 
-                #41
+                #30
                 ["dmitry_subdomains","DMitry - Verzamelt passief subdomeinen van het domein.","dmitry",1],
 
-                #42
+                #31
                 ["nmap_telnet","Nmap [TELNET] - Controleert of de TELNET-service actief is.","nmap",1],
 
-                #43
+                #32
                 ["nmap_ftp","Nmap [FTP] - Controleert of de FTP-service actief is.","nmap",1],
 
-                #44
+                #33
                 ["nmap_stuxnet","Nmap [STUXNET] - Controleert of de host wordt beïnvloed door STUXNET Worm.","nmap",1],
 
-                #45
+                #34
                 ["webdav","WebDAV - Controleert of WEBDAV is ingeschakeld in de Home directory.","davtest",1],
 
-                #47
+                #35
                 ["uniscan_filebrute","Uniscan - Brutes voor bestandsnamen op het domein.","uniscan",1],
 
-                #48
+                #36
                 ["uniscan_dirbrute", "Uniscan - Brutes Directory's op het domein.","uniscan",1],
 
-                #49
+                #37
                 ["uniscan_ministresser", "Uniscan - Stress test het domein.","uniscan",1],
 
-                #50
+                #38
                 ["uniscan_rfi","Uniscan - Controles op LFI, RFI en RCE.","uniscan",1],
 
-                #51
+                #39
                 ["uniscan_xss","Uniscan - Controles voor XSS, SQLi, BSQLi en andere controles.","uniscan",1],
 
-                #52
+                #40
                 ["nikto_xss","Nikto - Controles voor Apache Verwacht XSS Header.","nikto",1],
 
-                #53
+                #41
                 ["nikto_subrute","Nikto - Brute subdomeinen.","nikto",1],
 
-                #54
+                #42
                 ["nikto_shellshock","Nikto - Controles op Shellshock-bug.","nikto",1],
 
-                #55
+                #43
                 ["nikto_internalip","Nikto - Controles op intern IP-lek.","nikto",1],
 
-                #56
+                #44
                 ["nikto_putdel","Nikto - Controles voor HTTP PUT DEL.","nikto",1],
 
-                #57
+                #45
                 ["nikto_headers","Nikto - Controleert de domeinheaders.","nikto",1],
 
-                #58
+                #46
                 ["nikto_ms01070","Nikto - Controles op MS10-070-beveiligingslek.","nikto",1],
 
-                #59
+                #47
                 ["nikto_servermsgs","Nikto - Controles op serverproblemen.","nikto",1],
 
-                #60
+                #48
                 ["nikto_outdated","Nikto - Controleert of de server verouderd is.","nikto",1],
 
-                #61
+                #49
                 ["nikto_httpoptions","Nikto - Controles op HTTP-opties op het domein.","nikto",1],
 
-                #62
+                #50
                 ["nikto_cgi","Nikto - Enumerates CGI Directories.","nikto",1],
 
-                #63
+                #51
                 ["nikto_ssl","Nikto - Voert SSL-controles uit.","nikto",1],
 
-                #64
+                #52
                 ["nikto_sitefiles","Nikto - Controleert op interessante bestanden op het domein.","nikto",1],
 
-                #65
+                #53
                 ["nikto_paths","Nikto - Controles op injecteerbare paden.","nikto",1],
 
-                #66
+                #54
                 ["dnsmap_brute","DNSMap - Brute subdomeinen.","dnsmap",1],
 
-                #67
+                #55
                 ["nmap_sqlserver","Nmap - Controles voor MS-SQL Server DB","nmap",1],
 
-                #68
+                #56
                 ["nmap_mysql", "Nmap - Controles voor MySQL DB","nmap",1],
 
-                #69
+                #57
                 ["nmap_oracle", "Nmap - Controles voor ORACLE DB","nmap",1],
 
-                #70
+                #58
                 ["nmap_rdp_udp","Nmap - Controles voor Remote Desktop Service via UDP","nmap",1],
 
-                #71
+                #59
                 ["nmap_rdp_tcp","Nmap - Controles voor Remote Desktop Service via TCP","nmap",1],
 
-                #72
+                #60
                 ["nmap_full_ps_tcp","Nmap - Voert een Full TCP Port Scan uit","nmap",1],
 
-                #73
+                #61
                 ["nmap_full_ps_udp","Nmap - Voert een Full UDP Port Scan uit","nmap",1],
 
-                #74
+                #62
                 ["nmap_snmp","Nmap - Controles voor SNMP-service","nmap",1],
 
-                #75
+                #63
                 ["aspnet_elmah_axd","Controles voor ASP.net Elmah Logger","wget",1],
 
-                #76
+                #64
                 ["nmap_tcp_smb","Controles voor SMB-service via TCP","nmap",1],
 
-                #77
+                #65
                 ["nmap_udp_smb","Controles voor SMB-service via UDP","nmap",1],
 
-                #78
+                #66
                 ["wapiti","Wapiti - Controles op SQLi, RCE, XSS en andere kwetsbaarheden","wapiti",1],
 
-                #79
+                #67
                 ["nmap_iis","Nmap - Controles voor IIS WebDAV","nmap",1],
 
-                #80
+                #68
                 ["whatweb","WhatWeb - Controles voor X-XSS Protection Header","whatweb",1],
 
-                #81
+                #69
                 ["amass","AMass - Brutes-domein voor subdomeinen","amass",1]
             ]
 
@@ -447,181 +447,181 @@ tool_cmd   = [
                 #10
                 ["dnsrecon -d ",""],
 
-                #12
+                #11
                 ["dnswalk -d ","."],
 
-                #13
+                #12
                 ["whois ",""],
 
-                #14
+                #13
                 ["nmap -p80 --script http-security-headers -Pn ",""],
 
-                #15
+                #14
                 ["nmap -p80,443 --script http-slowloris --max-parallelism 500 -Pn ",""],
 
-                #16
+                #15
                 ["sslyze --heartbleed ",""],
 
-                #17
+                #16
                 ["nmap -p443 --script ssl-heartbleed -Pn ",""],
 
-                #18
+                #17
                 ["nmap -p443 --script ssl-poodle -Pn ",""],
 
-                #19
+                #18
                 ["nmap -p443 --script ssl-ccs-injection -Pn ",""],
 
-                #20
+                #19
                 ["nmap -p443 --script ssl-enum-ciphers -Pn ",""],
 
-                #21
+                #20
                 ["nmap -p443 --script ssl-dh-params -Pn ",""],
 
-                #22
+                #21
                 ["sslyze --certinfo=basic ",""],
 
-                #23
+                #22
                 ["sslyze --compression ",""],
 
-                #24
+                #23
                 ["sslyze --reneg ",""],
 
-                #25
+                #24
                 ["sslyze --resum ",""],
 
-                #26
+                #25
                 ["lbd ",""],
 
-                #32
+                #26
                 ["dirb http://"," -fi"],
 
-                #38
+                #27
                 ["dnsenum ",""],
 
-                #39
+                #28
                 ["fierce --domain ",""],
 
-                #40
+                #29
                 ["dmitry -e ",""],
 
-                #41
+                #30
                 ["dmitry -s ",""],
 
-                #42
+                #31
                 ["nmap -p23 --open -Pn ",""],
 
-                #43
+                #32
                 ["nmap -p21 --open -Pn ",""],
 
-                #44
+                #33
                 ["nmap --script stuxnet-detect -p445 -Pn ",""],
 
-                #45
+                #34
                 ["davtest -url http://",""],
 
-                #47
+                #35
                 ["sudo uniscan -w -u ",""],
 
-                #48
+                #36
                 ["sudo uniscan -q -u ",""],
 
-                #49
+                #37
                 ["sudo uniscan -r -u ",""],
 
-                #50
+                #38
                 ["sudo uniscan -s -u ",""],
 
-                #51
+                #39
                 ["sudo uniscan -d -u ",""],
 
-                #52
+                #40
                 ["nikto -Plugins 'apache_expect_xss' -host ",""],
 
-                #53
+                #41
                 ["nikto -Plugins 'subdomain' -host ",""],
 
-                #54
+                #42
                 ["nikto -Plugins 'shellshock' -host ",""],
 
-                #55
+                #43
                 ["nikto -Plugins 'cookies' -host ",""],
 
-                #56
+                #44
                 ["nikto -Plugins 'put_del_test' -host ",""],
 
-                #57
+                #45
                 ["nikto -Plugins 'headers' -host ",""],
 
-                #58
+                #46
                 ["nikto -Plugins 'ms10-070' -host ",""],
 
-                #59
+                #47
                 ["nikto -Plugins 'msgs' -host ",""],
 
-                #60
+                #48
                 ["nikto -Plugins 'outdated' -host ",""],
 
-                #61
+                #49
                 ["nikto -Plugins 'httpoptions' -host ",""],
 
-                #62
+                #50
                 ["nikto -Plugins 'cgi' -host ",""],
 
-                #63
+                #51
                 ["nikto -Plugins 'ssl' -host ",""],
 
-                #64
+                #52
                 ["nikto -Plugins 'sitefiles' -host ",""],
 
-                #65
+                #53
                 ["nikto -Plugins 'paths' -host ",""],
 
-                #66
+                #54
                 ["dnsmap ",""],
 
-                #67
+                #55
                 ["nmap -p1433 --open -Pn ",""],
 
-                #68
+                #56
                 ["nmap -p3306 --open -Pn ",""],
 
-                #69
+                #57
                 ["nmap -p1521 --open -Pn ",""],
 
-                #70
+                #58
                 ["sudo nmap -p3389 --open -sU -Pn ",""],
 
-                #71
+                #59
                 ["nmap -p3389 --open -sT -Pn ",""],
 
-                #72
+                #60
                 ["nmap -p1-65535 --open -Pn ",""],
 
-                #73
+                #61
                 ["nmap -p1-65535 -sU --open -Pn ",""],
 
-                #74
+                #62
                 ["sudo nmap -p161 -sU --open -Pn ",""],
 
-                #75
+                #63
                 ["wget -O /tmp/dns-scan_temp_aspnet_elmah_axd --tries=1 ","/elmah.axd"],
 
-                #76
+                #64
                 ["nmap -p445,137-139 --open -Pn ",""],
 
-                #77
+                #65
                 ["nmap -p137,138 --open -Pn ",""],
 
-                #78
+                #66
                 ["wapiti -u "," -f txt -o dns-scan_temp_wapiti"],
 
-                #79
+                #67
                 ["nmap -p80 --script=http-iis-webdav-vuln -Pn ",""],
                 
-                #80
+                #68
                 ["whatweb "," -a 1"],
 
-                #81
+                #69
                 ["amass enum -d ",""]
             ]
 
@@ -657,181 +657,181 @@ tool_resp   = [
                 #10
                 ["Zone Transfer Succesvol met DNSRecon. Configureer DNS onmiddellijk opnieuw.","h",10],
 
-                #12
+                #11
                 ["Zone Transfer Succesvol met dnswalk. Configureer DNS onmiddellijk opnieuw.","h",10],
 
-                #13
+                #12
                 ["Whois-informatie openbaar beschikbaar.","i",11],
 
-                #14
+                #13
                 ["XSS-beschermingsfilter is uitgeschakeld.","m",12],
 
-                #15
+                #14
                 ["Kwetsbaar voor Slowloris Denial of Service.","c",13],
 
-                #16
+                #15
                 ["HEARTBLEED-kwetsbaarheid gevonden met SSLyze.","h",14],
 
-                #17
+                #16
                 ["HEARTBLEED-kwetsbaarheid gevonden met Nmap.","h",14],
 
-                #18
+                #17
                 ["POODLE-kwetsbaarheid gedetecteerd.","h",15],
 
-                #19
+                #18
                 ["OpenSSL CCS-injectie gedetecteerd.","h",16],
 
-                #20
+                #19
                 ["FREAK kwetsbaarheid gedetecteerd.","h",17],
 
-                #21
+                #20
                 ["LOGJAM-kwetsbaarheid gedetecteerd.","h",18],
 
-                #22
+                #21
                 ["Onsuccesvolle OCSP-reactie.","m",19],
 
-                #23
+                #22
                 ["Server ondersteunt Deflate Compression.","m",20],
 
-                #24
+                #23
                 ["Beveiligde door de klant geïnitieerde heronderhandeling wordt ondersteund.","m",21],
 
-                #25
+                #24
                 ["Veilige hervatting niet ondersteund met (sessie-ID's/TLS-tickets).","m",22],
 
-                #26
+                #25
                 ["Geen op DNS/HTTP gebaseerde load balancers gevonden.","l",23],
 
-                #32
+                #26
                 ["Open mappen gevonden met DirB.","m",26],
 
-                #38
+                #27
                 ["Zone Transfer Succesvol met DNSEnum. Configureer DNS onmiddellijk opnieuw.","h",10],
 
-                #39
+                #28
                 ["Subdomeinen gevonden met Fierce.","m",31],
 
-                #40
+                #29
                 ["E-mailadressen ontdekt met DMitry.","l",9],
 
-                #41
+                #30
                 ["Subdomeinen ontdekt met DMitry.","m",31],
 
-                #42
+                #31
                 ["Telnet-service gedetecteerd.","h",32],
 
-                #43
+                #32
                 ["FTP-service gedetecteerd.","c",33],
 
-                #44
+                #33
                 ["Kwetsbaar voor STUXNET.","c",34],
 
-                #45
+                #34
                 ["WebDAV ingeschakeld.","m",35],
 
-                #47
+                #35
                 ["Open bestanden gevonden met Uniscan.","m",25],
 
-                #48
+                #36
                 ["Open mappen gevonden met Uniscan.","m",26],
 
-                #49
+                #37
                 ["Kwetsbaar voor stresstests.","h",37],
 
-                #50
+                #38
                 ["Uniscan heeft mogelijke LFI, RFI of RCE gedetecteerd.","h",38],
 
-                #51
+                #39
                 ["Uniscan heeft mogelijke XSS, SQLi, BSQLi gedetecteerd.","h",39],
 
-                #52
+                #40
                 ["Apache verwacht XSS-header niet aanwezig.","m",12],
 
-                #53
+                #41
                 ["Subdomeinen gevonden met Nikto.","m",31],
 
-                #54
+                #42
                 ["Webserver kwetsbaar voor Shellshock Bug.","c",40],
 
-                #55
+                #43
                 ["Webserver lekt interne IP.","l",41],
 
-                #56
+                #44
                 ["HTTP PUT DEL-methoden ingeschakeld.","m",42],
 
-                #57
+                #45
                 ["Enkele kwetsbare headers zichtbaar.","m",43],
 
-                #58
+                #46
                 ["Webserver kwetsbaar voor MS10-070.","h",44],
 
-                #59
+                #47
                 ["Enkele problemen gevonden op de webserver.","m",30],
 
-                #60
+                #48
                 ["Webserver is verouderd.","h",45],
 
-                #61
+                #49
                 ["Sommige problemen gevonden met HTTP-opties.","l",42],
 
-                #62
+                #50
                 ["CGI-directories opgesomd.","l",26],
 
-                #63
+                #51
                 ["Kwetsbaarheden gemeld in SSL-scans.","m",29],
 
-                #64
+                #52
                 ["Interessante bestanden gedetecteerd.","m",25],
 
-                #65
+                #53
                 ["Injecteerbare Paths gedetecteerd.","l",46],
 
-                #66
+                #54
                 ["Gevonden subdomeinen met DNSMap.","m",31],
 
-                #67
+                #55
                 ["MS-SQL DB-service gedetecteerd.","l",47],
 
-                #68
+                #56
                 ["MySQL DB-service gedetecteerd.","l",47],
 
-                #69
+                #57
                 ["ORACLE DB-service gedetecteerd.","l",47],
 
-                #70
+                #58
                 ["RDP-server gedetecteerd via UDP.","h",48],
 
-                #71
+                #59
                 ["RDP-server gedetecteerd via TCP.","h",48],
 
-                #72
+                #60
                 ["TCP-poorten zijn open","l",8],
 
-                #73
+                #61
                 ["UDP-poorten zijn open","l",8],
 
-                #74
+                #62
                 ["SNMP-service gedetecteerd.","m",49],
 
-                #75
+                #63
                 ["Elmah is geconfigureerd.","m",50],
 
-                #76
+                #64
                 ["SMB-poorten zijn open via TCP","m",51],
 
-                #77
+                #65
                 ["SMB-poorten zijn open via UDP","m",51],
 
-                #78
+                #66
                 ["Wapiti ontdekte een reeks kwetsbaarheden","h",30],
 
-                #79
+                #67
                 ["IIS WebDAV is ingeschakeld","m",35],
 
-                #80
+                #68
                 ["X-XSS-beveiliging is niet aanwezig","m",12],
 
-                #81
+                #69
                 ["Gevonden subdomeinen met AMass","m",31]
             ]
 
@@ -869,181 +869,181 @@ tool_status = [
                 #10
                 ["[+] Zone Transfer was successful!!",0,proc_low," < 20s","dnsreconzt",["Could not resolve domain"]],
 
-                #12
+                #11
                 ["0 errors",0,proc_low," < 35s","dnswalkzt",["!!!0 failures, 0 warnings, 3 errors."]],
 
-                #13
+                #12
                 ["Admin Email:",0,proc_low," < 25s","whois",["No match for domain"]],
 
-                #14
+                #13
                 ["XSS filter is disabled",0,proc_low," < 20s","nmapxssh",["Failed to resolve"]],
 
-                #15
+                #14
                 ["VULNERABLE",0,proc_high," < 45m","nmapdos",["Failed to resolve"]],
 
-                #16
+                #15
                 ["Server is vulnerable to Heartbleed",0,proc_low," < 40s","sslyzehb",["Could not resolve hostname"]],
 
-                #17
+                #16
                 ["VULNERABLE",0,proc_low," < 30s","nmap1",["Failed to resolve"]],
 
-                #18
+                #17
                 ["VULNERABLE",0,proc_low," < 35s","nmap2",["Failed to resolve"]],
 
-                #19
+                #18
                 ["VULNERABLE",0,proc_low," < 35s","nmap3",["Failed to resolve"]],
 
-                #20
+                #19
                 ["VULNERABLE",0,proc_low," < 30s","nmap4",["Failed to resolve"]],
 
-                #21
+                #20
                 ["VULNERABLE",0,proc_low," < 35s","nmap5",["Failed to resolve"]],
 
-                #22
+                #21
                 ["ERROR - OCSP response status is not successful",0,proc_low," < 25s","sslyze1",["Could not resolve hostname"]],
 
-                #23
+                #22
                 ["VULNERABLE",0,proc_low," < 30s","sslyze2",["Could not resolve hostname"]],
 
-                #24
+                #23
                 ["VULNERABLE",0,proc_low," < 25s","sslyze3",["Could not resolve hostname"]],
 
-                #25
+                #24
                 ["VULNERABLE",0,proc_low," < 30s","sslyze4",["Could not resolve hostname"]],
 
-                #26
+                #25
                 ["does NOT use Load-balancing",0,proc_med," <  4m","lbd",["NOT FOUND"]],
 
-                #32
+                #26
                 ["FOUND: 0",1,proc_high," < 35m","dirb",["COULDNT RESOLVE HOST","FOUND: 0"]],
 
-                #38
+                #27
                 ["AXFR record query failed:",1,proc_low," < 45s","dnsenumzt",["NS record query failed:","AXFR record query failed","no NS record for"]],
 
-                #39
+                #28
                 ["Found 0 entries",1,proc_high," < 75m","fierce2",["Found 0 entries","is gimp"]],
 
-                #40
+                #29
                 ["Found 0 E-Mail(s)",1,proc_low," < 30s","dmitry1",["Unable to locate Host IP addr","Found 0 E-Mail(s)"]],
 
-                #41
+                #30
                 ["Found 0 possible subdomain(s)",1,proc_low," < 35s","dmitry2",["Unable to locate Host IP addr","Found 0 possible subdomain(s)"]],
 
-                #42
+                #31
                 ["open",0,proc_low," < 15s","nmaptelnet",["Failed to resolve"]],
 
-                #43
+                #32
                 ["open",0,proc_low," < 15s","nmapftp",["Failed to resolve"]],
 
-                #44
+                #33
                 ["open",0,proc_low," < 20s","nmapstux",["Failed to resolve"]],
 
-                #45
+                #34
                 ["SUCCEED",0,proc_low," < 30s","webdav",["is not DAV enabled or not accessible."]],
 
-                #47
+                #35
                 ["[+]",0,proc_med," <  2m","uniscan2",["Use of uninitialized value in unpack at"]],
 
-                #48
+                #36
                 ["[+]",0,proc_med," <  5m","uniscan3",["Use of uninitialized value in unpack at"]],
 
-                #49
+                #37
                 ["[+]",0,proc_med," <  9m","uniscan4",["Use of uninitialized value in unpack at"]],
 
-                #50
+                #38
                 ["[+]",0,proc_med," <  10m","uniscan5",["Use of uninitialized value in unpack at"]],
 
-                #51
+                #39
                 ["[+]",0,proc_med," <  10m","uniscan6",["Use of uninitialized value in unpack at"]],
 
-                #52
+                #40
                 ["0 item(s) reported",1,proc_low," < 35s","nikto1",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #53
+                #41
                 ["0 item(s) reported",1,proc_low," < 35s","nikto2",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #54
+                #42
                 ["0 item(s) reported",1,proc_low," < 35s","nikto3",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #55
+                #43
                 ["0 item(s) reported",1,proc_low," < 35s","nikto4",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #56
+                #44
                 ["0 item(s) reported",1,proc_low," < 35s","nikto5",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #57
+                #45
                 ["0 item(s) reported",1,proc_low," < 35s","nikto6",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #58
+                #46
                 ["0 item(s) reported",1,proc_low," < 35s","nikto7",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #59
+                #47
                 ["0 item(s) reported",1,proc_low," < 35s","nikto8",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #60
+                #48
                 ["0 item(s) reported",1,proc_low," < 35s","nikto9",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #61
+                #49
                 ["0 item(s) reported",1,proc_low," < 35s","nikto10",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #62
+                #50
                 ["0 item(s) reported",1,proc_low," < 35s","nikto11",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #63
+                #51
                 ["0 item(s) reported",1,proc_low," < 35s","nikto12",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #64
+                #52
                 ["0 item(s) reported",1,proc_low," < 35s","nikto13",["ERROR: Cannot resolve hostname","0 item(s) reported","No web server found","0 host(s) tested"]],
 
-                #65
+                #53
                 ["0 item(s) reported",1,proc_low," < 35s","nikto14","ERROR: Cannot resolve hostname , 0 item(s) reported"],
 
-                #66
+                #54
                 ["#1",0,proc_high," < 30m","dnsmap_brute",["[+] 0 (sub)domains and 0 IP address(es) found"]],
 
-                #67
+                #55
                 ["open",0,proc_low," < 15s","nmapmssql",["Failed to resolve"]],
 
-                #68
+                #56
                 ["open",0,proc_low," < 15s","nmapmysql",["Failed to resolve"]],
 
-                #69
+                #57
                 ["open",0,proc_low," < 15s","nmaporacle",["Failed to resolve"]],
 
-                #70
+                #58
                 ["open",0,proc_low," < 15s","nmapudprdp",["Failed to resolve"]],
 
-                #71
+                #59
                 ["open",0,proc_low," < 15s","nmaptcprdp",["Failed to resolve"]],
 
-                #72
+                #60
                 ["open",0,proc_high," > 50m","nmapfulltcp",["Failed to resolve"]],
 
-                #73
+                #61
                 ["open",0,proc_high," > 75m","nmapfulludp",["Failed to resolve"]],
 
-                #74
+                #62
                 ["open",0,proc_low," < 30s","nmapsnmp",["Failed to resolve"]],
 
-                #75
+                #63
                 ["Microsoft SQL Server Error Log",0,proc_low," < 30s","elmahxd",["unable to resolve host address","Connection timed out"]],
 
-                #76
+                #64
                 ["open",0,proc_low," < 20s","nmaptcpsmb",["Failed to resolve"]],
 
-                #77
+                #65
                 ["open",0,proc_low," < 20s","nmapudpsmb",["Failed to resolve"]],
 
-                #78
+                #66
                 ["Host:",0,proc_med," < 5m","wapiti",["none"]],
 
-                #79
+                #67
                 ["WebDAV is ENABLED",0,proc_low," < 40s","nmapwebdaviis",["Failed to resolve"]],
 
-                #80
+                #68
                 ["X-XSS-Protection[1",1,proc_med," < 3m","whatweb",["Timed out","Socket error","X-XSS-Protection[1"]],
 
-                #81
+                #69
                 ["No names were discovered",1,proc_med," < 15m","amass",["The system was unable to build the pool of resolvers"]]
             ]
 
