@@ -32,6 +32,7 @@ def logo():
  | |  | |_____/ /_ / ___ \| . \| |___| |\  |
 |___| |_|    /____/_/   \_\_|\_\_____|_| \_|
 
+    -/- Fast reconnaissance scanner -/-
 '''
 
 	print(G + logo + W + '\n')

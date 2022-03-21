@@ -1,0 +1,146 @@
+
+########
+dns_scan
+########
+
+Version : 1.0.2
+
+Date : 2022-03-15
+
+Target : https://korenbeurs.nl
+
+IP Address : 37.97.200.9
+
+Start Time : 01:13:38 PM
+
+End Time : 01:13:45 PM
+
+Completion Time : 0:00:07.248070
+
+#######
+Headers
+#######
+
+Server : nginx
+
+Date : Tue, 15 Mar 2022 12:13:40 GMT
+
+Content-Type : text/html; charset=UTF-8
+
+Content-Length : 11483
+
+Connection : keep-alive
+
+X-Powered-By : PHP/7.4.27
+
+Link : <https://www.korenbeurs.nl/wp-json/>; rel="https://api.w.org/", <https://www.korenbeurs.nl/>; rel=shortlink
+
+Expires : Thu, 19 Nov 1981 08:52:00 GMT
+
+Cache-Control : no-store, no-cache, must-revalidate
+
+Pragma : no-cache
+
+Set-Cookie : PHPSESSID=c155df9c9588b5644e52d04a2e7ea262; path=/
+
+Vary : Accept-Encoding,User-Agent
+
+Content-Encoding : gzip
+
+###########################
+SSL Certificate Information
+###########################
+
+commonName : Sectigo RSA Domain Validation Secure Server CA
+
+countryName : GB
+
+stateOrProvinceName : Greater Manchester
+
+localityName : Salford
+
+organizationName : Sectigo Limited
+
+version : 3
+
+serialNumber : 4DCB5ED999EBCD6BA4363A1B9B55B08C
+
+notBefore : Mar  3 00:00:00 2022 GMT
+
+notAfter : Apr  3 23:59:59 2023 GMT
+
+subjectAltName : (('DNS', 'www.korenbeurs.nl'), ('DNS', 'korenbeurs.nl'))
+
+OCSP : ('http://ocsp.sectigo.com',)
+
+caIssuers : ('http://crt.sectigo.com/SectigoRSADomainValidationSecureServerCA.crt',)
+
+############
+Whois Lookup
+############
+
+asn_registry : ripencc
+
+asn : 20857
+
+asn_cidr : 37.97.128.0/17
+
+asn_country_code : NL
+
+asn_date : 2012-02-02
+
+asn_description : TRANSIP-AS Amsterdam  the Netherlands  NL
+
+query : 37.97.200.9
+
+cidr : 37.97.128.0/17
+
+name : TRANSIP-AMS4-CUST
+
+handle : IPRO1-RIPE
+
+range : 37.97.128.0 - 37.97.255.255
+
+description : TransIP BV Amsterdam  The Netherlands
+
+country : NL
+
+address : Vondellaan 47 2332 AA Leiden NL
+
+emails : ['abuse@transip.nl']
+
+created : 2014-05-14T14:31:27Z
+
+updated : 2014-05-14T14:31:27Z
+
+#####################
+Subdomain Enumeration
+#####################
+
+Links
+=====
+
+www.korenbeurs.nl
+www.en.korenbeurs.nl
+korenbeurs.nl
+en.korenbeurs.nl
+
+Total Unique Sub Domains Found : 4
+
+#########
+Port Scan
+#########
+
+21 : ftp
+
+25 : smtp
+
+53 : domain
+
+80 : http
+
+110 : pop3
+
+143 : imap2
+
+443 : https
