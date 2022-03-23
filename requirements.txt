@@ -15,12 +15,12 @@ tldextract
 icmplib
 webtech
 cfscrape
+tldextract
 
 plotly
 pandas
 pycountry
 
-xsser
 host
 whois
 sslyze
