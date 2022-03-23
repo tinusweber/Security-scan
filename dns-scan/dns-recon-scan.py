@@ -6,7 +6,7 @@ import importlib.util
 
 R = '\033[31m' # red
 G = '\033[32m' # green
-C = '\033[36m' # cyans  
+C = '\033[36m' # cyans
 W = '\033[0m'  # white
 
 version = '1.0.2'
@@ -49,9 +49,9 @@ if os.path.isfile(pid_path):
         print(G + '[>]' + C + ' If Domain scan crashed, execute : ' + W + 'rm {}'.format(pid_path))
         sys.exit()
 else:
-	os.makedirs(os.path.dirname(pid_path), exist_ok=True)
-	with open(pid_path, 'w') as pidfile:
-		pidfile.write(str(os.getpid()))
+    os.makedirs(os.path.dirname(pid_path), exist_ok=True)
+    with open(pid_path, 'w') as pidfile:
+        pidfile.write(str(os.getpid()))
 
 #Check if configuration path already exists.
 if os.path.exists(conf_path):
@@ -276,7 +276,6 @@ try:
     #Set time scan process.    
     end_time = datetime.datetime.now() - start_time
     print ('\n' + G + '[+]' + C + ' Completed in ' + W + str(end_time) + '\n')
-    
     @atexit.register
     def call_export():
         meta.update({'End Time': str(datetime.datetime.now().strftime('%I:%M:%S %p'))})
@@ -286,8 +285,10 @@ try:
             export(output, data)
             
     os.remove(pid_path)
-    sys.exit() 
+    sys.exit()
+
 except KeyboardInterrupt:
     print (R + '[-]' + C + ' Keyboard Interrupt.' + W + '\n')
     os.remove(pid_path)
     sys.exit()
+
