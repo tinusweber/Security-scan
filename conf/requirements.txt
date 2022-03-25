@@ -10,3 +10,7 @@ icmplib
 webtech
 cfscrape
 tldextract
+streamlit
+urllib3
+
+PyQt5
