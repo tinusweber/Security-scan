@@ -125,3 +125,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/access_wifi/wifisweep/wifisweep/
+/dns-scan/output/dumps/
+/dns-scan/DNS-Fast-Debug-ScanLog
+/dns-scan/DNS-Fast-Vulnerability-Report

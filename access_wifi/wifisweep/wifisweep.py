@@ -6,12 +6,6 @@ import time
 import fileinput
 import numpy as np
 
-
-'''
-FOR EDUCATIONAL PURPOSES ONLY. 
-DO NOT USE ON PEOPLE YOU DON'T HAVE PERMISSION FOR.
-'''
-
 # Card to be monitor
 wlan_code = re.compile('Interface (wlan[0-9]+)')
 
@@ -111,7 +105,6 @@ def captureData():
     except:
         convert(outfile)
 
-
 def convert(file):
 
     print('Networking re-enabled successfully.')
@@ -180,7 +173,6 @@ def matchUP():
                         wowoweewah.write(merged_hashes[y])
                     
                 y += 1
-
             x += 1 
     else:
         print('No password hashes captured, exiting.')
@@ -191,10 +183,6 @@ def quit():
     networking_On()
 
     # Because we are running with sudo, we must change file permissions so we can use later without sudo. 
-
-
-    
-
 if __name__ == '__main__':
     sudo_check()
     new_session()

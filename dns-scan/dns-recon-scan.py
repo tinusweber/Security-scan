@@ -61,7 +61,7 @@ else:
 	shutil.copytree(src_conf_path, conf_path, dirs_exist_ok=True)
 
 #Check if dependencies are installed.
-with open(path_to_script + '/install/requirements.txt', 'r') as rqr:
+with open(path_to_script + '/requirements.txt', 'r') as rqr:
 	pkg_list = rqr.read().strip().split('\n')
 logo()
 print('\n' + G + '[+]' + C + ' Checking Dependencies...' + W + '\n')
