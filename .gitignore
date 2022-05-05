@@ -126,6 +126,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.pcapng
+.hc22000
+/MAC.txt
+
 /access_wifi/wifisweep/wifisweep/
 /dns-scan/output/dumps/
 /dns-scan/DNS-Fast-Debug-ScanLog
