@@ -202,7 +202,6 @@ tfoot input { width: 100% !important;}
     		<xsl:apply-templates select="postscript"/>
    
   	</div>
-  </xsl:template>
 <p>
 	<div class="container-fluid">
 		<div class="row">
@@ -586,9 +585,6 @@ tfoot input { width: 100% !important;}
                   		<!-- End -->
                 	</p>
               </div>
-    </div>
-</div>
-</div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script>
     	function buildChart(arrHasCve, arrPorts, arrCvss, chartServices, chartProduct, chartCPE) {
