@@ -97,11 +97,58 @@
                     <div id="chartPorts" class="box" style="height: 400px; width: 100%;"></div>
                   </div>
                 </p>
+                <hr/>
               </div>
-<!--          <div id="menu1" class="tab-pane fade"> -->
+
+                <p>  
+                  <!-- Start ip/host-->
+                  <div class="table-responsive">  
+                    <table class="table table-bordered">
+                    <h1 id="scannedhosts" class="target">Active Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h1>
+                    <table id="table-test" class="table table-striped dataTable" role="grid">
+                      <thead>
+                        <tr>
+                          <th>Status</th>
+                          <th>Ip</th>
+                          <th>Hostname</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <xsl:choose>
+                          <xsl:when test="/nmaprun/runstats/hosts/@down > 1024">
+                            <xsl:for-each select="/nmaprun/host[status/@state='up']">
+                              <tr>
+                                <td><span class="label label-danger"><xsl:if test="status/@state='up'"><xsl:attribute name="class">label label-success</xsl:attribute></xsl:if><xsl:value-of select="status/@state"/></span></td>
+                                <td><a><xsl:attribute name="href">#onlinehosts-<xsl:value-of select="translate(address/@addr, '.', '-')"/></xsl:attribute><xsl:value-of select="address/@addr"/></a></td>
+                                <td><xsl:value-of select="address/@vendor"/></td>
+                              </tr>
+                            </xsl:for-each>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:for-each select="/nmaprun/host">
+                              <tr>
+                                <td><span class="label label-danger"><xsl:if test="status/@state='up'"><xsl:attribute name="class">label label-success</xsl:attribute></xsl:if><xsl:value-of select="status/@state"/></span></td>
+                                <td><a><xsl:attribute name="href">#onlinehosts-<xsl:value-of select="translate(address/@addr, '.', '-')"/></xsl:attribute><xsl:value-of select="address/@addr"/></a></td>
+                                <td><xsl:value-of select="address/@vendor"/></td>
+                              </tr>
+                            </xsl:for-each>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                      </tbody>
+                    </table>
+                    </table>
+                  </div>
+                  <script>
+                    $(document).ready(function() {
+                      $('#table-overview').DataTable();
+                    });
+                  </script>
+                  <hr/>
+                </p>
+                
                 <p>
                   <!-- Start -->
-                  <!-- <h2 id="scannedhosts" class="target">Scanned Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h2> -->
                   <div class="table-responsive">
                     <table class="table table-bordered">
                     <table id="table-services" class="table table-striped dataTable" role="grid">
@@ -177,10 +224,11 @@
                         </tr>
                       </tfoot>
                     </table>
-					</table>
+					          </table>
                   </div>
                   <script>
                     $(document).ready(function() {
+
                       // Setup - add a text input to each footer cell
                       $('#table-services tfoot th').each( function () {
                           var title = $(this).text();
@@ -192,6 +240,7 @@
                           "pageLength": 10,
                           "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"] ],
                           initComplete: function () {
+                              
                               // Apply the search
                               this.api().columns().every( function () {
                                   var that = this;
@@ -431,7 +480,6 @@
                   </xsl:for-each>
                   <!-- End -->
                 </p>
-              <!--</div>-->
             </div>
           </div>
       </div>
