@@ -48,22 +48,11 @@
         <title>Scan Report Nmap <xsl:value-of select="/nmaprun/@version"/></title>
       </head>
       <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" style="margin-top:10px !important;"></span></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <h1>Scan Report <small>(Nmap <xsl:value-of select="/nmaprun/@version"/>)</small></h1>
-            </div>
+            <small><img src="http://www.solbian.nl/logo%20it-zaken.png" alt="it-zaken-logo"/></small>
           </div>
-        </nav>
         <div class="container-fluid" style="margin-top:80px !important;">
           <div class="table-responsive">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#home">Statistics</a></li>
-              <li><a data-toggle="tab" href="#menu1">Scan Results</a></li>
-            </ul>
 
             <div class="tab-content">
               <div id="home" class="tab-pane fade in active">
@@ -108,27 +97,12 @@
                     <div id="chartPorts" class="box" style="height: 400px; width: 100%;"></div>
                   </div>
                 </p>
-                <p>
-                  <div class="container-fluid">
-                    <div id="chartServices" class="box" style="height: 600px; width: 100%;"></div>
-                  </div>
-                </p>
-                <p>
-                  <div class="container-fluid">
-                    <div id="chartProduct" class="box" style="height: 600px; width: 100%;"></div>
-                  </div>
-                </p>
-                <p>
-                  <div class="container-fluid">
-                    <div id="chartCPE" class="box" style="height: 600px; width: 100%;"></div>
-                  </div>
-                </p>
               </div>
-              <div id="menu1" class="tab-pane fade">
+
                 <p>
                   <!-- Start -->
-                  <!-- <h2 id="scannedhosts" class="target">Scanned Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h2> -->
                   <div class="table-responsive">
+                    <table class="table table-bordered">
                     <table id="table-services" class="table table-striped dataTable" role="grid">
                       <thead>
                         <tr>
@@ -150,7 +124,7 @@
                           <xsl:for-each select="ports/port[state/@state='open']">
                             <tr>
                               <td><a class="btn btn-info btn-sm" style="width: 100%;" data-toggle="modal"><xsl:attribute name="data-target">#Modal_<xsl:value-of select="translate(../../address/@addr, '.', '-')"/></xsl:attribute><xsl:value-of select="../../address/@addr"/></a></td>
-                              <td><xsl:if test="count(../../hostnames/hostname) > 0"><xsl:value-of select="../../hostnames/hostname/@name"/></xsl:if></td>
+                              <td><xsl:if test="count(../../address) > 0"><xsl:value-of select="../../address/@vendor"/></xsl:if></td>
                               <td class="nobreak textcenter openPorts"><xsl:value-of select="@portid"/></td>
                               <td class="nobreak textcenter"><xsl:value-of select="@protocol"/></td>
                               <td class="nobreak textcenter"><xsl:value-of select="service/@name"/></td>
@@ -202,9 +176,11 @@
                         </tr>
                       </tfoot>
                     </table>
+					</table>
                   </div>
                   <script>
                     $(document).ready(function() {
+
                       // Setup - add a text input to each footer cell
                       $('#table-services tfoot th').each( function () {
                           var title = $(this).text();
@@ -216,6 +192,7 @@
                           "pageLength": 10,
                           "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"] ],
                           initComplete: function () {
+                              
                               // Apply the search
                               this.api().columns().every( function () {
                                   var that = this;
@@ -256,51 +233,11 @@
                       arrPorts = []
                       Object.entries(map).forEach(([key, value]) => {
                           arrPorts.push({ label: key, y: value })
-                      }); 
-                      
-
-                      chartServices = table.columns(4).data().toArray()[0];
-                      var map = chartServices.sort().reduce(function(prev, cur) {
-                        prev[cur] = (prev[cur] || 0) + 1;
-                        return prev;
-                      }, {});
-
-                      chartServices = []
-                      Object.entries(map).forEach(([key, value]) => {
-                          chartServices.push({ label: key, y: value })
-                      }); 
-                      
-                      chartProduct = table.columns(5).data().toArray()[0];
-                      var map = chartProduct.sort().reduce(function(prev, cur) {
-                        prev[cur] = (prev[cur] || 0) + 1;
-                        return prev;
-                      }, {});
-
-                      chartProduct = []
-                      Object.entries(map).forEach(([key, value]) => {
-                          if(key != ""){
-                            chartProduct.push({ label: key, y: value });
-                          }
-                      }); 
-                      
-                      chartCPE = table.columns(8).data().toArray()[0];
-                      var map = chartCPE.sort().reduce(function(prev, cur) {
-                        prev[cur] = (prev[cur] || 0) + 1;
-                        return prev;
-                      }, {});
-
-                      chartCPE = []
-                      Object.entries(map).forEach(([key, value]) => {
-                          if($(key)['0'].text != ""){
-                            chartCPE.push({ label: $(key)['0'].text, y: value });
-                          }
-                      }); 
+                      });                                       
 
                       arrCvss = [ { "label":"Medium", "y": $(".cvssm").length }, { "label":"Low", "y": $(".cvssl").length }, { "label":"High", "y": $(".cvssh").length } ]
-    
-
-    
-                      buildChart(arrHasCve, arrPorts, arrCvss, chartServices, chartProduct, chartCPE);
+     
+                      buildChart(arrHasCve, arrPorts, arrCvss);
                     });
 
                   </script>
@@ -320,11 +257,11 @@
                           
                           <div class="container-fluid">
                             <xsl:attribute name="id"><xsl:value-of select="translate(address/@addr, '.', '-')"/></xsl:attribute>
-                            <xsl:if test="count(hostnames/hostname) > 0">
+                            <xsl:if test="count(address) > 0">
                               <h4>Hostname</h4>
                               <ul>
-                                <xsl:for-each select="hostnames/hostname">
-                                  <li><xsl:value-of select="@name"/> (<xsl:value-of select="@type"/>)</li>
+                                <xsl:for-each select="address">
+                                  <li><xsl:value-of select="@vendor"/> (<xsl:value-of select="@type"/>)</li>
                                 </xsl:for-each>
                               </ul>
                             </xsl:if>
@@ -495,13 +432,12 @@
                   </xsl:for-each>
                   <!-- End -->
                 </p>
-              </div>
             </div>
           </div>
       </div>
       <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
       <script>
-        function buildChart(arrHasCve, arrPorts, arrCvss, chartServices, chartProduct, chartCPE) {
+        function buildChart(arrHasCve, arrPorts, arrCvss) {
 
           var chartHosts = new CanvasJS.Chart("chartHosts", {
             animationEnabled: true,
@@ -578,75 +514,12 @@
               indexLabelPlacement: "outside",
               dataPoints: arrPorts
             }]
-          });
-          
-          var chartServices = new CanvasJS.Chart("chartServices", {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "Services"
-            },
-            axisX:{
-              interval: 1,
-              labelFontSize: 10
-            },
-            data: [{
-              type: "bar",
-              indexLabel: "{y}",
-              indexLabelFontColor: "#000",
-              indexLabelPlacement: "outside",
-              indexLabelFontSize: 10,
-              dataPoints: chartServices
-            }]
-          });
-          
-          var chartProduct = new CanvasJS.Chart("chartProduct", {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "Products"
-            },
-            axisX:{
-              interval: 1,
-              labelFontSize: 10
-            },
-            data: [{
-              type: "bar",
-              indexLabel: "{y}",
-              indexLabelFontColor: "#000",
-              indexLabelPlacement: "outside",
-              indexLabelFontSize: 10,
-              dataPoints: chartProduct
-            }]
-          });
-          
-          var chartCPE = new CanvasJS.Chart("chartCPE", {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "CPEs"
-            },
-            axisX:{
-              interval: 1,
-              labelFontSize: 10
-            },
-            data: [{
-              type: "doughnut",
-              indexLabel: "{label}: {y}",
-              indexLabelFontColor: "#000",
-              indexLabelPlacement: "outside",
-              indexLabelFontSize: 10,
-              dataPoints: chartCPE
-            }]
-          });
+          });      
 
           chartHosts.render();
           chartHasCVEs.render();
           chartCvssCVEs.render();
           chartPorts.render();
-          chartServices.render();
-          chartProduct.render();
-          chartCPE.render();
 
         }
       </script>
