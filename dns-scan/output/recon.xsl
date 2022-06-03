@@ -54,56 +54,91 @@
             <img src="http://www.solbian.nl/logo%20it-zaken.png" alt="it-zaken-logo"/>
           </small>
         </div>
-        <div class="container-fluid" style="margin-top:80px !important;">
-          <div class="table-responsive">
+        <xsl:for-each select="dns-scan/modules/moduleName/@id">
+    
+          <xsl:value-of select="dns-scan/modules/moduleName[@id='Headers']">
+            <div class="tab-content">
+              <div id="recon" class="tab-pane fade in active">
+                <table border="1">
+                  <tr bgcolor="#9acd32">
+                    <th>Scan</th>
+                    <th>Info</th>
+                  </tr>
+                  <!--
+                  <tr>
+                    <td>
+                      <xsl:value-of select="/dns-scan/modules/moduleName/dataPair/dataKey/@info"/>
+                    </td>
+                    <td>
+                      <xsl:value-of select="/dns-scan/modules/moduleName/dataPair/dataVal"/>
+                    </td>
+                  </tr>
+                  -->
+                </table>
+              </div>
+            </div>
+          </xsl:value-of>
+        </xsl:for-each>
+
+        <!--
+        <p>
+          <xsl:value-of select="dns-scan/modules/moduleName[@id='dns_scan']">
+            <h1>DNS scan</h1>
 
             <div class="tab-content">
               <div id="recon" class="tab-pane fade in active">
+                <table border="1">
+                  <tr bgcolor="#9acd32">
+                    <th>Scan</th>
+                    <th>Info</th>
+                  </tr>
 
-                <p>
-                  <!-- Start ip/host-->
-                  <div class="table-responsive">
-                    <table class="table table-bordered">
-                      <h1 id="headers" class="target">Headers</h1>
-                    <table id="table-test" class="table table-striped dataTable" role="grid">
-                      <thead>
-                        <tr>
-                          <th class="nobreak textcenter">Scan</th>
-                          <th class="nobreak textcenter">Info</th>
-                        </tr>
-                      </thead>
+                  <xsl:for-each select="/dns-scan/modules/moduleName/dataPair/dataKey[@info]">
+                    <tr>
+                      <td>
+                        <xsl:value-of select="/dns-scan/modules/moduleName/dataPair/dataKey/@info"/>
+                      </td>
+                      <td>
+                        <xsl:value-of select="/dns-scan/modules/moduleName/dataPair/dataVal"/>
+                      </td>
+                    </tr>
+                  </xsl:for-each>
 
-                      <tbody>
-                        <xsl:choose>
-                          <xsl:when test="../@moduleName = Headers">
-                            <xsl:for-each select="../@dataPair">
-                              <tr>
-                                <td class="nobreak textcenter">
-                                  <xsl:value-of select="dataPair/@dataKey"/>
-                                </td>
-                                <td class="nobreak textcenter"> 
-                                  <xsl:value-of select="dataPair/@dataVal"/>
-                                </td>
-                              </tr>
-                            </xsl:for-each>
-                          </xsl:when>
-                        </xsl:choose>
-                      </tbody>
-                    </table>
-                  </table>
-                </div>
-                <script>
-                    $(document).ready(function() {
-                      $('#table-overview').DataTable();
-                    });
-                </script>
-                <hr/>
-              </p>
+                </table>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </body>
-  </html>
-</xsl:template>
+          </xsl:value-of>
+        </p>
+        -->
+        <!--
+        <p>
+          <xsl:for-each select="dns-scan/modules/moduleName[@id='Headers']">
+            <h1>Headers</h1>
+          </xsl:for-each>
+        </p>
+        <p>
+          <xsl:for-each select="dns-scan/modules/moduleName[@id='SSL Certificate Information']">
+            <h1>SSL Certificate Information</h1>
+          </xsl:for-each>
+        </p>
+        <p>
+          <xsl:for-each select="dns-scan/modules/moduleName[@id='Whois Lookup']">
+            <h1>Whois Lookup</h1>
+          </xsl:for-each>
+        </p>
+        <p>
+          <xsl:for-each select="dns-scan/modules/moduleName[@id='Subdomain Enumeration']">
+            <h1>Active Subdomains</h1>
+          </xsl:for-each>
+        </p>
+        <p>
+          <xsl:for-each select="dns-scan/modules/moduleName[@id='Port Scan']">
+            <h1>Port Scan</h1>
+          </xsl:for-each>
+        </p>
+        -->
+
+      </body>
+    </html>
+  </xsl:template>
 </xsl:stylesheet>

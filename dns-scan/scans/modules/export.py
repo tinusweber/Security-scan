@@ -2,18 +2,23 @@ import os
 import csv
 import lxml.etree
 import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as xml
+from matplotlib.pyplot import isinteractive
 
-R = '\033[31m' # red
-G = '\033[32m' # green
-C = '\033[36m' # cyan
+from sympy import init_session
+
+R = '\033[31m'  # red
+G = '\033[32m'  # green
+C = '\033[36m'  # cyan
 W = '\033[0m'  # white
-Y = '\033[33m' # yellow
+Y = '\033[33m'  # yellow
 
 root = ''
 
+
 def export(output, data):
 
-    #if export file is not equal to a txt extension.
+    # if export file is not equal to a txt extension.
     if output['format'] != 'txt':
         if output['export'] == True:
             fname = output['file']
@@ -25,12 +30,13 @@ def export(output, data):
                     print(Y + '[!]' + C + ' Exporting to ' + W + fname + '\n')
                     csv_export(output, data, outfile)
                 if all([output['format'] != 'xml', output['format'] != 'csv']):
-                    print(R + '[-]' + C + ' Invalid Output Format, Valid Formats : ' + W + 'txt, xml, csv')
+                    print(
+                        R + '[-]' + C + ' Invalid Output Format, Valid Formats : ' + W + 'txt, xml, csv')
                     exit()
         else:
             pass
-    
-    #If export file is equal to txt extension.
+
+    # If export file is equal to txt extension.
     elif output['format'] == 'txt':
         fname = output['file']
         print(Y + '[!]' + C + ' Exporting to ' + W + fname + '\n')
@@ -38,7 +44,7 @@ def export(output, data):
             txt_export(data, outfile)
     else:
         pass
-    
+
 def txt_unpack(outfile, k, v):
     if isinstance(v, list):
         for item in v:
@@ -46,7 +52,7 @@ def txt_unpack(outfile, k, v):
                 outfile.write('{}\t{}\t\t{}\n'.format(*item))
             else:
                 outfile.write(str(item) + '\n')
-    
+
     elif isinstance(v, dict):
         for key, val in v.items():
             if isinstance(val, list):
@@ -60,7 +66,7 @@ def txt_unpack(outfile, k, v):
     else:
         pass
 
-#Export as TXT
+# Export as TXT
 def txt_export(data, outfile):
     for k, v in data.items():
         if k.startswith('module'):
@@ -74,13 +80,13 @@ def txt_export(data, outfile):
         elif k.startswith('Type'):
             outfile.write('\n' + data[k] + '\n')
             outfile.write('='*len(data[k]) + '\n\n')
-            
+
         else:
             outfile.write(str(k))
             outfile.write(' : ')
             outfile.write(str(v) + '\n')
 
-#Export as XML
+
 def xml_export(output, data, outfile):
     global root
     root = ET.Element('dns-scan')
@@ -90,16 +96,22 @@ def xml_export(output, data, outfile):
         if k.startswith('module'):
             module = k.split('module-')
             module = module[1]
+
             module_name = ET.Element('moduleName')
-            module_name.text = module
+            module_name.set('id', module)
+            #module_name.text = module
             modules.append(module_name)
-            if isinstance(v, dict):
-                for key, val in v.items():
-                    data_pair = ET.Element('dataPair')
-                    data_key = ET.Element('dataKey')
-                    data_key.text = key
-                    data_pair.append(data_key)
-                    if isinstance(val, list):
+
+        if isinstance(v, dict):
+            for key, val in v.items():
+                data_pair = ET.Element('dataPair')
+                #data_pair.set('id', module_name)
+                data_key = ET.Element('dataKey')
+                data_key.set('info', key)
+                #data_key.text = key
+                data_pair.append(data_key)
+
+                if isinstance(val, list):
                         for item in val:
                             if isinstance(item, list):
                                 data_val = ET.Element('dataVal')
@@ -109,25 +121,25 @@ def xml_export(output, data, outfile):
                                 data_val = ET.Element('dataVal')
                                 data_val.text = str(item)
                                 data_pair.append(data_val)
-                        module_name.append(data_pair)
-                    else:
-                        data_val = ET.Element('dataVal')
-                        data_val.text = str(val)
-                        data_pair.append(data_val)
-                        module_name.append(data_pair)
+                                module_name.append(data_pair)
+                else:
+                    data_val = ET.Element('dataVal')
+                    data_val.text = str(val)
+                    data_pair.append(data_val)
+                    module_name.append(data_pair)
 
     root.append(modules)
     if output['format'] == 'xml':
         tree = ET.ElementTree(root)
         tree.write(outfile.name,
-            encoding='utf8', 
-            xml_declaration=True, 
-            default_namespace=None, 
+            encoding='utf8',
+            xml_declaration=True,
+            default_namespace=None,
             method='xml')
     else:
         pass
 
-#Export as CSV
+# Export as CSV
 def csv_export(output, data, outfile):
     global root
     key_list = []
@@ -142,7 +154,7 @@ def csv_export(output, data, outfile):
     for module_name in module_names:
         module_name_str = module_name.text
         dataPairs = module_name.findall('dataPair')
-        
+
         for dataPair in dataPairs:
             dataKey = dataPair.find('dataKey')
             dataKey = dataKey.text
@@ -159,18 +171,18 @@ def csv_export(output, data, outfile):
                     item = item.replace(',', '/').replace(';', '/')
                     data_str_list.append(item)
                 val_list.append(data_str_list)
-        
+
         with open(outfile.name, 'a') as outfile:
             writer = csv.writer(outfile, delimiter=';')
-            key_list.insert(0,'Module')
+            key_list.insert(0, 'Module')
             writer.writerow(key_list)
             val_list.insert(0, module_name_str)
 
             val_str_list = []
-            
+
             for item in val_list:
                 if isinstance(item, str) == False and isinstance(item, list) == False:
-                    item = item.text 
+                    item = item.text
                 if isinstance(item, list) == True:
                     item = '\n'.join(item)
                 else:
@@ -178,7 +190,7 @@ def csv_export(output, data, outfile):
                 val_str_list.append(item)
             writer.writerow(val_str_list)
 
-            for i in range(1,5):
+            for i in range(1, 5):
                 writer.writerow([])
             key_list = []
             val_list = []

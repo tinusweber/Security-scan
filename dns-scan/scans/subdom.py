@@ -212,7 +212,7 @@ async def query(hostname, tout, conf_path):
 			buffover(hostname, session),
 			thcrowd(hostname, session),
 			anubisdb(hostname, session),
-			thminer(hostname, session),
+			#thminer(hostname, session),
 			fb_cert(hostname, conf_path, session),
 			virust(hostname, conf_path, session),
 			certspot(hostname, session),
