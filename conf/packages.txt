@@ -20,3 +20,5 @@ davtest
 uniscan
 amass
 wget
+hcxdumptool
+hcxtools 

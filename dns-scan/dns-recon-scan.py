@@ -14,9 +14,9 @@ home = os.getenv('HOME')
 #pid_path = home + '/.local/share/dns-scan/dns-scan.pid'
 #usr_data = home + '/.local/share/dns-scan/dumps/'
 #conf_path = home + '/.config/dns-scan'
-pid_path = home + '/Tools/Security-scan/dns-scan/output/dns-scan.pid'
-usr_data = home + '/Tools/Security-scan/dns-scan/output/dumps/'
-conf_path = home + '/Tools/Security-scan/dns-scan/output/conf/'
+pid_path = home + '/Security-scan/dns-scan/output/dns-scan.pid'
+usr_data = home + '/Security-scan/dns-scan/output/dumps/'
+conf_path = home + '/Security-scan/dns-scan/output/conf/'
 
 path_to_script = os.path.dirname(os.path.realpath(__file__))
 src_conf_path = path_to_script + 'output/conf/'
