@@ -11,31 +11,31 @@ Y = '\033[33m' # yellow
 
 found = []
 
-async def buffover(hostname, session):
-	global found
-	print(Y + '[!]' + C + ' Requesting ' + G + 'BuffOver' + W)
-	url = 'https://dns.bufferover.run/dns'
-	bo_params = {
-		'q': '.{}'.format(hostname)
-	}
-	try:
-		async with session.get(url, params=bo_params) as resp:
-			sc = resp.status
-			if sc == 200:
-				output = await resp.text()
-				json_out = json.loads(output)
-				subds = json_out['FDNS_A']
-				if subds == None:
-					pass
-				else:
-					for subd in subds:
-						subd = subd.split(',')
-						for sub in subd:
-							found.append(sub)
-			else:
-				print(R + '[-]' + C + ' BuffOver Status : ' + W + str(sc))
-	except Exception as e:
-		print(R + '[-]' + C + ' BuffOver Exception : ' + W + str(e))
+#async def buffover(hostname, session):
+#	global found
+#	print(Y + '[!]' + C + ' Requesting ' + G + 'BuffOver' + W)
+#	url = 'https://dns.bufferover.run/dns'
+#	bo_params = {
+#		'q': '.{}'.format(hostname)
+#	}
+#	try:
+#		async with session.get(url, params=bo_params) as resp:
+#			sc = resp.status
+#			if sc == 200:
+#				output = await resp.text()
+#				json_out = json.loads(output)
+#				subds = json_out['FDNS_A']
+#				if subds == None:
+#					pass
+#				else:
+#					for subd in subds:
+#						subd = subd.split(',')
+#						for sub in subd:
+#							found.append(sub)
+#			else:
+#				print(R + '[-]' + C + ' BuffOver Status : ' + W + str(sc))
+#	except Exception as e:
+#		print(R + '[-]' + C + ' BuffOver Exception : ' + W + str(e))
 
 async def crtsh(hostname):
 	global found
@@ -209,7 +209,7 @@ async def query(hostname, tout, conf_path):
 	timeout = aiohttp.ClientTimeout(total=tout)
 	async with aiohttp.ClientSession(timeout=timeout) as session:
 		await asyncio.gather(
-			buffover(hostname, session),
+			#buffover(hostname, session),
 			thcrowd(hostname, session),
 			anubisdb(hostname, session),
 			#thminer(hostname, session),
